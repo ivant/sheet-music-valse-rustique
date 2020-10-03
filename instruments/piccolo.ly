@@ -97,10 +97,10 @@ piccoloMusic = \relative c'''' {
   R2. | R2. |
   \tempo "a tempo"
   R2. |
-  r4 r g~ |
-  \repeat unfold 6 { g2.~ | }
+  r4 r gis~ |
+  \repeat unfold 6 { gis2.~ | }
   \tempo "rall."
-  g2.~ | g2.( |
+  gis2.~ | gis2.( |
 
   \bar "||" % measure 131
 
