@@ -83,7 +83,7 @@ fluteIMusic = \relative c''' {
   g2->( f8 e) |
   c2-^ r4 |
 
-  R2.*7
+  R2.*7 |
 
   r4 r d( |
   a2-> g4) |
@@ -100,7 +100,7 @@ fluteIMusic = \relative c''' {
   a2->( g8 fis) |
   d2-> d4 |
   d2-> a4( |
-  d a') a-- |
+  d4 a') a-- |
   a2( b4) |
   fis2.-^~ |
   fis2 r4 |
@@ -181,5 +181,4 @@ fluteIMusic = \relative c''' {
   R2. | R2. | R2.^\fermataMarkup |
 
   \bar "|."
-  \tempo "Tempo di Valse." 2. = 72
 }
