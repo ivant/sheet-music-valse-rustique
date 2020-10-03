@@ -49,20 +49,20 @@
   tagline = ""
 }
 
-\score {
-  \header { piece = "Piccolo" breakbefore = #splitParts }
-  \new Staff \piccoloMusic
-}
+% \score {
+%   \header { piece = "Piccolo" breakbefore = #splitParts }
+%   \new Staff \piccoloMusic
+% }
 
 % \score {
 %   \header { piece = "Flute 1" breakbefore = #splitParts }
 %   \new Staff \fluteIMusic
 % }
 
-% \score {
-%   \header { piece = "Flute 2" breakbefore = #splitParts }
-%   \new Staff \fluteIIMusic
-% }
+  \score {
+    \header { piece = "Flute 2" breakbefore = #splitParts }
+    \new Staff \fluteIIMusic
+  }
 
 % \score {
 %   \header { piece = "Oboe" breakbefore = #splitParts }
