@@ -3,6 +3,7 @@ fluteIIMusic = \relative c''' {
 
   \key a \major
   \time 3/4 \partial 4 
+  \tempo "Tempo di Valse." 2. = 72
   r4 |
   \repeat volta 2 {
     \repeat unfold 16 { R2. | }
@@ -111,7 +112,9 @@ fluteIIMusic = \relative c''' {
   R2.*3 |
   gis,2.( |
   a2.~ |
+  \tempo "poco rit."
   a2. |
+  \tempo "a tempo"
   gis2.~ |
   gis4 fis e) |
   a2.~( |
@@ -121,7 +124,6 @@ fluteIIMusic = \relative c''' {
   gis4 e') e-- |
   bis2->( a8 gis) |
   e2.-^~ |
-  \break
   e4 r r |
 
   R2.*4
@@ -136,11 +138,13 @@ fluteIIMusic = \relative c''' {
   bis2) r4 |
   gis2( b4 |
   gis2) r4 |
+  \tempo "rall."
   b2( gis4 |
   fis4 e d |
 
   \bar "||" % measure 131
 
+  \tempo "a tempo"
   cis4) r r |
 
   R2.*11 |

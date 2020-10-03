@@ -27,7 +27,7 @@ piccoloMusic = \relative c'''' {
     }
   }
 
-  \bar "||"
+  \bar "||" % measure 27
 
   \tempo "con anima"
 
@@ -39,7 +39,7 @@ piccoloMusic = \relative c'''' {
   \tempo "rit."
   R2. | R2. | R2. |
 
-  \bar "||"
+  \bar "||" % measure 35
 
   \tempo "Tempo I˚"
   \key f \major
@@ -50,7 +50,7 @@ piccoloMusic = \relative c'''' {
   \tempo "a tempo"
   R2.*10 |
 
-  \bar "||"
+  \bar "||" % measure 51
 
   \key c \major
   R2.*5
@@ -85,7 +85,7 @@ piccoloMusic = \relative c'''' {
   R2. |
   R2. |
 
-  \bar "||"
+  \bar "||" % measure 99
   
   \key a \major
   \tempo "a tempo"
@@ -131,5 +131,4 @@ piccoloMusic = \relative c'''' {
   R2.^\fermataMarkup |
   \bar "|."
 }
-
 
