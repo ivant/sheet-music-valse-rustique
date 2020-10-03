@@ -1,6 +1,6 @@
 .PHONY: all valse parts
-valse: valse.pdf
 parts: parts.pdf
+valse: valse.pdf
 all: valse parts
 
 valse.pdf: valse.ly instruments/*.ly
