@@ -2,6 +2,8 @@
 % are transposed to concert pitch.
 
 clarinetMusic = \relative c' {
+  \compressFullBarRests
+
   \transposition a
   \key a \major
   \time 3/4 \partial 4 

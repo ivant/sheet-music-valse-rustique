@@ -1,4 +1,6 @@
 tromboneIAndIIMusic = \relative c, {
+  \compressFullBarRests
+
   \clef "bass"
   \key a \major
   \time 3/4 \partial 4 

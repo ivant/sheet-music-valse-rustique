@@ -1,4 +1,6 @@
 violaMusic = \relative c' {
+  \compressFullBarRests
+
   \clef "alto"
   \key a \major
   \time 3/4 \partial 4 

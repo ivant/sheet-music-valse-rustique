@@ -1,4 +1,6 @@
 triangleMusic = \relative c {
+  \compressFullBarRests
+
   \time 3/4 \partial 4 
   \tempo "Tempo di Valse." 2. = 72
   r4 |

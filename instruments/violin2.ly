@@ -1,4 +1,6 @@
 violinIIMusic = \relative c' {
+  \compressFullBarRests
+
   \key a \major
   \time 3/4 \partial 4 
   \tempo "Tempo di Valse." 2. = 72

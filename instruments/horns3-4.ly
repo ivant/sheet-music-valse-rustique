@@ -1,4 +1,6 @@
 hornIIIAndIVMusic = \relative c' {
+  \compressFullBarRests
+
   \transposition f'
 %  \key a \major
   \time 3/4 \partial 4 
