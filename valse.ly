@@ -32,7 +32,7 @@
   tagline = ""
 }
 
-%showLastLength = r2.*4
+%showLastLength = r2.*8
 \score {
   <<
     \new GrandStaff = "StaffGroup_flutes" <<
@@ -109,5 +109,5 @@
     >>
   >>
   \layout { }
-  \midi { }
+  % \midi { }
 }
