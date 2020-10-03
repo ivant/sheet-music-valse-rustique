@@ -66,7 +66,7 @@
 
   \score {
     \header { piece = "Oboe" breakbefore = #splitParts }
-    \new Staff \oboeMusic
+    \new Staff \with { \consists "Merge_rests_engraver" } \oboeMusic
   }
 
 % \score {
