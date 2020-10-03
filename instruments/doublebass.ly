@@ -29,5 +29,6 @@ bassMusic = \relative c {
     {
     }
   }
+  \tempo "Tempo di Valse." 2. = 72
 }
 

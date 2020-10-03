@@ -181,4 +181,5 @@ fluteIMusic = \relative c''' {
   R2. | R2. | R2.^\fermataMarkup |
 
   \bar "|."
+  \tempo "Tempo di Valse." 2. = 72
 }
