@@ -59,15 +59,15 @@
 %   \new Staff \fluteIMusic
 % }
 
-  \score {
-    \header { piece = "Flute 2" breakbefore = #splitParts }
-    \new Staff \fluteIIMusic
-  }
-
 % \score {
-%   \header { piece = "Oboe" breakbefore = #splitParts }
-%   \new Staff \oboeMusic
+%   \header { piece = "Flute 2" breakbefore = #splitParts }
+%   \new Staff \fluteIIMusic
 % }
+
+  \score {
+    \header { piece = "Oboe" breakbefore = #splitParts }
+    \new Staff \oboeMusic
+  }
 
 % \score {
 %   \header { piece = "Clarinet in A" breakbefore = #splitParts }
