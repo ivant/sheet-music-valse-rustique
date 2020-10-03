@@ -127,7 +127,7 @@ piccoloMusic = \relative c'''' {
   R2. |
   \tempo "rit."
   R2. | R2. |
-  R2.\fermata |
+  R2.^\fermataMarkup |
   \bar "|."
 }
 

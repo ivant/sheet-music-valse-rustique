@@ -178,7 +178,7 @@ fluteIMusic = \relative c''' {
   a2 r4 |
   R2. |
   \tempo "rit."
-  R2. | R2. | R2.\fermata |
+  R2. | R2. | R2.^\fermataMarkup |
 
   \bar "|."
 }
