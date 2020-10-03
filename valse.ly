@@ -45,7 +45,7 @@
 
     >>
     \new StaffGroup = "StaffGroup_woodwinds" <<
-      \new Staff = "Staff_oboe" \with { instrumentName = "Oboe" shortInstrumentName = "Ob" }
+      \new Staff = "Staff_oboe" \with { instrumentName = "Oboe" shortInstrumentName = "Ob" \consists "Merge_rests_engraver" }
       \oboeMusic
 
       \new Staff = "Staff_clarinet" \with { instrumentName = "Clarinet in A" shortInstrumentName = "Cl" }

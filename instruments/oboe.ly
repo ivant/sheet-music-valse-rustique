@@ -1,28 +1,30 @@
 oboeMusic = \relative c' {
   \compressFullBarRests
+  %\override Hairpin.minimum-length = #5
 
   \key a \major
   \time 3/4 \partial 4 
   \tempo "Tempo di Valse." 2. = 72
   <<
     {
-      e4( |
+      \override Hairpin.to-barline = ##f
+      e4_\mp\<( |
       \repeat volta 2 {
-        a4 e') e-- |
-        e2->( d8 cis) |
-        a2( a4--) |
+        a4 e') e--\! |
+        e2->( d8\> cis) |
+        a2( a4--\!) |
         a2 e4( |
-        a4 e') e-- |
-        e2( fis4) |
-        cis2.-^~ |
-        cis4 r r |
+        a4\< e') e-- |
+        e2\!( fis4) |
+        cis2.-^\>~ |
+        cis4\! r r |
         R2.*7 |
-        r4 r cis |
-        e4.( d8 b cis) |
-        a2 a4 |
-        a2.-^~ |
+        r4 r cis_\p |
+        e4.\<( d8 b cis) |
+        a2 a4\! |
+        a2.-^_\f~ |
         a4 r cis( |
-        e4.-> d8 b cis) |
+        e4.->_\dim d8\! b cis) |
         a2 a4 |
         \bar "||"
       }
@@ -38,10 +40,19 @@ oboeMusic = \relative c' {
       }
     } \\
     {
-      r4 |
-      \repeat volta 2 { R2.*22 | }
+      s4 | % hidden to make room vertically for mp
+      \repeat volta 2 { 
+        \override MultiMeasureRest.staff-position = #-8
+        R2.*8 |
+        \revert MultiMeasureRest.staff-position
+        R2.*14 |
+      }
       \alternative {
-        { R2.*2 | }
+        {
+          \override MultiMeasureRest.staff-position = #-8
+          R2.*2 |
+          \revert MultiMeasureRest.staff-position
+        }
         { R2.*2 | }
       }
     }
@@ -54,13 +65,13 @@ oboeMusic = \relative c' {
   R2. |
   <<
     {
-      r4 r a4( |
+      r4 r a4_\f( |
       a-> g2) |
       a2 r4 |
     } \\
     {
-      r4 r fis4 |
-      e2. |
+      r4 r fis4( |
+      e2.->) |
       e2 r4 |
     }
   >> |
@@ -78,19 +89,19 @@ oboeMusic = \relative c' {
     {
       R2.*4 |
       \tempo "poco rit."
-      a2.( |
-      d2 aes4) |
+      a2._\p\<( |
+      d2_\sfz\> aes4) |
       \tempo "a tempo"
-      g2.-^~ |
+      g2.-^_\p~ |
       g4 r r |
       R2.*6 |
-      a4( e') e-- |
+      a4_\pp( e') e-- |
       e2->( d8 c) |
     } \\ {
       R2.*10 |
-      f,2.~( |
+      f,2.\<~( |
       f2. |
-      e4) r r |
+      e4_\f) r r |
       R2.*3 |
     }
   >>
@@ -138,27 +149,56 @@ oboeMusic = \relative c' {
       fis2 a,4( |
       dis2) r4 |
     } \\ {
-      R2.*15 |
-      r4 r g, |
-      c,4 g' g |
-      g2 f8 e |
-      c2 r4 |
+      R2.*4 |
+      \override MultiMeasureRest.staff-position = #-8
+      R2.*11 |
+      \revert MultiMeasureRest.staff-position
+      r4 r g,( |
+      c,4 g') g-- |
+      g2->( f8 e) |
+      c2-^ r4 |
       R2.*7
-      r4 r f |
-      a2 g4 |
-      f2 g4 |
-      a4 bes c |
-      d2 e4 |
-      cis2 a4 |
-      fis4 a a |
-      a2 g8 fis |
-      fis2 fis4 |
-      g2 g4 |
-      fis4 a a |
-      a2 b4 |
-      fis2.~ |
+      r4 r f( |
+      a2-> g4) |
+      f2( g4 |
+      a4) bes-- c-- |
+      d2( e4 |
+      cis2) a4( |
+      fis4 a) a-- |
+      a2->( g8 fis) |
+      fis2-> fis4 |
+      g2-> g4( |
+      fis4 a) a-- |
+      a2( b4) |
+      fis2.-^~ |
       fis2 fis4( |
       fis2) r4 |
+    }
+    \new Dynamics {
+      \override Hairpin.to-barline = ##f
+      s2.*4 |
+      s2._\pp\< |
+      s2._\sfz |
+      s2.\> |
+      s2 s4\! |
+      s2.*2 |
+      s2.\< |
+      s2\! s4 |
+      s2._\f |
+      s2.*2 |
+      s2 s4_\pp |
+      s2.\< |
+      s2. |
+      s2.\! |
+      s2.*7 |
+      s2 s4_\f |
+      s2. |
+      s2.\< |
+      s2.*2 |
+      s2\! s4_\ff |
+      s2.*7 |
+      s2 s4\< |
+      s2_\sfz s4 |
     }
   >>
   R2.*5
