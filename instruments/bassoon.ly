@@ -4,7 +4,7 @@ bassoonMusic = \relative c {
   \time 3/4 \partial 4 
   r4 |
   \repeat volta 2 {
-    \repeat unfold 11 { r2. | }
+    \repeat unfold 11 { R2. | }
     r4 r a'( |
     gis2.~ |
     gis2.) |

@@ -13,11 +13,11 @@ celloMusic = \relative c {
     <a e'>2.->~ |
     <a e'>2 r4 |
     <a e'>4^"pizz." r r |
-    r2. 
+    R2. 
     <a e'>4 r r | % TODO: also pizz?
-    r2. 
+    R2. 
     <a e'>4 r r | % TODO: also pizz?
-    r2. 
+    R2. 
     <a e'>4 r r | % TODO: also pizz?
     r4 r cis'^"arco"( |
     e4.-> d8 b cis) |

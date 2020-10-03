@@ -11,7 +11,7 @@ oboeMusic = \relative c' {
     e2( fis4) |
     cis2.-^~ |
     cis4 r r |
-    \repeat unfold 7 { r2. | }
+    \repeat unfold 7 { R2. | }
     r4 r cis |
     e4.( d8 b cis) |
     a2 a4 |

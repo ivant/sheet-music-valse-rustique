@@ -7,7 +7,7 @@ clarinetMusic = \relative c' {
   \time 3/4 \partial 4 
   r4 |
   \repeat volta 2 {
-    \repeat unfold 7 { r2. | }
+    \repeat unfold 7 { R2. | }
     r4 r <cis a'>( |
     <e cis'>2) <e cis'>4( |
     <cis' e>2-> <b d>8 <a cis>) |

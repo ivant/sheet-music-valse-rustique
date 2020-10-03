@@ -8,7 +8,7 @@ violinIMusic = \relative c' {
     <e e'>2.~ |
     <e e'>2.~ |
     <e e'>2 r4 |
-    r2. | r2. |
+    R2. | R2. |
     r4 r cis'( |
     e2) e4( |
     cis'2-> b8 a) |

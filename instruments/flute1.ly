@@ -32,25 +32,25 @@ fluteIMusic = \relative c''' {
   
   \tempo "con anima"
 
-  r2. |
+  R2. |
   r4 r fis( |
   a4-> gis cis) |
   a2 r4 |
-  r2. |
+  R2. |
   \tempo "rit."
-  r2. | r2. | r2. |
+  R2. | R2. | R2. |
 
   \bar "||" % measure 35
   
   \tempo "Tempo I˚"
   \key f \major
 
-  r2. | r2. |
-  r2. | r2. |
+  R2. | R2. |
+  R2. | R2. |
   \tempo "poco rit."
-  r2. | r2. |
+  R2. | R2. |
   \tempo "a tempo"
-  r2. |
+  R2. |
   r4 r c, |
   a'2.~( |
   a4 bes b) |
@@ -67,9 +67,9 @@ fluteIMusic = \relative c''' {
   R2.*5
 
   \tempo "poco rit."
-  r2. |
+  R2. |
   \tempo "a tempo"
-  r2. |
+  R2. |
   r4 r e( |
   c'2.~ |
   c4 d dis) |
@@ -107,7 +107,7 @@ fluteIMusic = \relative c''' {
 
   R2.*6
   \tempo "rall."
-  r2. |
+  R2. |
   r4 r e,( |
 
   \bar "||" % measure 99
@@ -136,9 +136,9 @@ fluteIMusic = \relative c''' {
 
   R2.*4
   \tempo "poco rit."
-  r2. | r2. |
+  R2. | R2. |
   \tempo "a tempo"
-  r2. | r2. |
+  R2. | R2. |
 
   cis2( e4 |
   cis2) r4 |
@@ -172,13 +172,13 @@ fluteIMusic = \relative c''' {
   \tempo "a tempo"
   R2.*8
   \tempo "con anima"
-  r2. |
+  R2. |
   r4 r fis( |
   a4-> gis cis) |
   a2 r4 |
-  r2. |
+  R2. |
   \tempo "rit."
-  r2. | r2. | r2.\fermata |
+  R2. | R2. | R2.\fermata |
 
   \bar "|."
 }

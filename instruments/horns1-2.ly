@@ -4,7 +4,7 @@ hornIAndIIMusic = \relative c' {
   \time 3/4 \partial 4 
   r4 |
   \repeat volta 2 {
-    \repeat unfold 8 { r2. | }
+    \repeat unfold 8 { R2. | }
     \repeat unfold 7 { a2.~ | } a2. |
     <a a'>2.~ |
     <a a'>2 <a a'>4 |
