@@ -30,13 +30,13 @@ piccoloMusic = \relative c'''' {
 
   \tempo "con anima"
 
-  r2. |
+  R2. |
   r4 r fis( |
   a4-> gis cis) |
   a2 r4 |
-  r2. |
+  R2. |
   \tempo "rit."
-  r2. | r2. | r2. |
+  R2. | R2. | R2. |
 
   \bar "||"
 
@@ -45,7 +45,7 @@ piccoloMusic = \relative c'''' {
 
   R2.*4 |
   \tempo "poco rit."
-  r2. | r2. |
+  R2. | R2. |
   \tempo "a tempo"
   R2.*10 |
 
@@ -55,7 +55,7 @@ piccoloMusic = \relative c'''' {
   R2.*5
 
   \tempo "poco rit."
-  r2. |
+  R2. |
   \tempo "a tempo"
   R2.*9 |
 
@@ -66,7 +66,7 @@ piccoloMusic = \relative c'''' {
 
   R2.*11 |
   \tempo "rit."
-  r2. |
+  R2. |
   r4 r
   \tempo "a tempo"
   a'( |
@@ -81,10 +81,54 @@ piccoloMusic = \relative c'''' {
 
   R2.*6 |
   \tempo "rall."
-  r2. |
-  r2. |
+  R2. |
+  R2. |
 
   \bar "||"
+  
+  \key a \major
+  \tempo "a tempo"
+  R2.*5 |
+  \tempo "poco rit."
+  R2. |
+  \tempo "a tempo"
+  R2.*14 |
+  \tempo "poco rit."
+  R2. | R2. |
+  \tempo "a tempo"
+  R2. |
+  r4 r g~ |
+  \repeat unfold 6 { g2.~ | }
+  \tempo "rall."
+  g2.~ | g2.( |
+
+  \bar "||" % measure 131
+
+  \tempo "a tempo"
+  a4) r r |
+  R2.*11 |
+  \tempo "poco rit."
+  R2.*4 |
+
+  \tempo "a tempo"
+  a2.~ |
+  a2 a4 |
+  a2.~ |
+  a2.~ |
+  a2.~ |
+  a2 a4 |
+  a2.-^~ |
+  a4 r r |
+  \tempo "con anima"
+  R2. |
+  r4 r fis( |
+  a4-> gis cis) |
+  a2 r4 |
+  R2. |
+  \tempo "rit."
+  R2. | R2. |
+  R2.\fermata |
+  \bar "|."
 }
 
 
