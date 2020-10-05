@@ -26,7 +26,7 @@ oboeMusic = \relative c' {
   a2.-^~ |
   a4 r e\laissezVibrer |
 
-  a2.-^ |
+  a2.-^~ |
   a4 r r |
 
   % \bar "||" % measure 27
