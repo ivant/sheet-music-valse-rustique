@@ -4,6 +4,7 @@
 
 %#(set-global-staff-size 16)
 
+\include "outline.ly"
 \include "instruments/piccolo.ly"
 \include "instruments/flute1.ly"
 \include "instruments/flute2.ly"
@@ -47,100 +48,100 @@
   tagline = ""
 }
 
-  \score {
-    \header { piece = "Piccolo" breakbefore = #splitParts }
-    \new Staff \piccoloMusic
-  }
+% \score {
+%   \header { piece = "Piccolo" breakbefore = #splitParts }
+%   \new Staff << \outline \piccoloMusic >>
+% }
 
-  \score {
-    \header { piece = "Flute 1" breakbefore = #splitParts }
-    \new Staff \fluteIMusic
-  }
+% \score {
+%   \header { piece = "Flute 1" breakbefore = #splitParts }
+%   \new Staff << \outline \fluteIMusic >>
+% }
 
-  \score {
-    \header { piece = "Flute 2" breakbefore = #splitParts }
-    \new Staff \fluteIIMusic
-  }
+% \score {
+%   \header { piece = "Flute 2" breakbefore = #splitParts }
+%   \new Staff << \outline \fluteIIMusic >>
+% }
 
   \score {
     \header { piece = "Oboe" breakbefore = #splitParts }
-    \new Staff \with { \consists "Merge_rests_engraver" } \oboeMusic
+    \new Staff \with { \consists "Merge_rests_engraver" } << \outline \oboeMusic >>
   }
 
-  \score {
-    \header { piece = "Clarinet in A" breakbefore = #splitParts }
-    \new Staff % Declare that written Middle C in the music
-    % to follow sounds a concert B flat, for
-    % output using sounded pitches such as MIDI.
-    %\transposition a
-    % Print music for a B-flat clarinet
-    \transpose a c' \clarinetMusic
-  }
+% \score {
+%   \header { piece = "Clarinet in A" breakbefore = #splitParts }
+%   \new Staff % Declare that written Middle C in the music
+%   % to follow sounds a concert B flat, for
+%   % output using sounded pitches such as MIDI.
+%   %\transposition a
+%   % Print music for a B-flat clarinet
+%   \transpose a c' \clarinetMusic
+% }
 
-  \score {
-    \header { piece = "Bassoon" breakbefore = #splitParts }
-    \new Staff \bassoonMusic
-  }
+% \score {
+%   \header { piece = "Bassoon" breakbefore = #splitParts }
+%   \new Staff \bassoonMusic
+% }
 
-  \score {
-    \header { piece = "Horns 1-2 in F" breakbefore = #splitParts }
-    \new Staff % \transposition f
-    \transpose f c' \hornIAndIIMusic
-  }
+% \score {
+%   \header { piece = "Horns 1-2 in F" breakbefore = #splitParts }
+%   \new Staff % \transposition f
+%   \transpose f c' \hornIAndIIMusic
+% }
 
-  \score {
-    \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
-    \new Staff % \transposition f
-    \transpose f c' \hornIIIAndIVMusic
-  }
+% \score {
+%   \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
+%   \new Staff % \transposition f
+%   \transpose f c' \hornIIIAndIVMusic
+% }
 
-  \score {
-    \header { piece = "Trumpet in F" breakbefore = #splitParts }
-    \new Staff % \transposition f
-    \transpose f c' \trumpetMusic
-  }
+% \score {
+%   \header { piece = "Trumpet in F" breakbefore = #splitParts }
+%   \new Staff % \transposition f
+%   \transpose f c' \trumpetMusic
+% }
 
-  \score {
-    \header { piece = "Trombones 1-2" breakbefore = #splitParts }
-    \new Staff \tromboneIAndIIMusic
-  }
+% \score {
+%   \header { piece = "Trombones 1-2" breakbefore = #splitParts }
+%   \new Staff \tromboneIAndIIMusic
+% }
 
-  \score {
-    \header { piece = "Trombone III and Tuba" breakbefore = #splitParts }
-    \new Staff \tromboneIIIAndTubaMusic
-  }
+% \score {
+%   \header { piece = "Trombone III and Tuba" breakbefore = #splitParts }
+%   \new Staff \tromboneIIIAndTubaMusic
+% }
 
-  \score {
-    \header { piece = "Timpani, Crash cymbals, Triangle, Bass drum" breakbefore = #splitParts }
-    \new StaffGroup \with {
-      \override VerticalAxisGroup.staff-staff-spacing.stretchability = 10
-    } <<
-      \new Staff \timpaniMusic
-      \percussionStaff
-    >>
-  }
+% \score {
+%   \header { piece = "Timpani, Crash cymbals, Triangle, Bass drum" breakbefore = #splitParts }
+%   \new StaffGroup \with {
+%     \override VerticalAxisGroup.staff-staff-spacing.stretchability = 10
+%   } <<
+%     \new Staff \timpaniMusic
+%     \percussionStaff
+%   >>
+% }
 
- \score {
-   \header { piece = "Violin 1" breakbefore = #splitParts }
-   \new Staff \violinIMusic
- }
+%\score {
+%  \header { piece = "Violin 1" breakbefore = #splitParts }
+%  \new Staff \violinIMusic
+%}
 
-  \score {
-    \header { piece = "Violin 2" breakbefore = #splitParts }
-    \new Staff \violinIIMusic
-  }
+% \score {
+%   \header { piece = "Violin 2" breakbefore = #splitParts }
+%   \new Staff \violinIIMusic
+% }
 
-  \score {
-    \header { piece = "Viola" breakbefore = #splitParts }
-    \new Staff \violaMusic
-  }
+% \score {
+%   \header { piece = "Viola" breakbefore = #splitParts }
+%   \new Staff \violaMusic
+% }
 
-  \score {
-    \header { piece = "Cello" breakbefore = #splitParts }
-    \new Staff \celloMusic
-  }
+% \score {
+%   \header { piece = "Cello" breakbefore = #splitParts }
+%   \new Staff \celloMusic
+% }
 
-  \score {
-    \header { piece = "Double bass" breakbefore = #splitParts }
-    \new Staff \bassMusic
-  }
+% \score {
+%   \header { piece = "Double bass" breakbefore = #splitParts }
+%   \new Staff \bassMusic
+% }
