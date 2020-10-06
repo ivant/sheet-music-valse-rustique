@@ -3,30 +3,22 @@ timpaniMusic = \relative c {
 
   \clef "bass"
   \time 3/4 \partial 4 
-  \tempo "Tempo di Valse." 2. = 72
   r4 |
-  \repeat volta 2 {
-    R2.*8 |
-    <a e'>4_\pp r r |
-    R2.*3 |
-    <a e'>4 r r |
-    R2.*3 |
-    a4 r r |
-    R2.*3 |
-    a4_\p r r |
-    R2. |
-    \bar "||"
-  }
-  \alternative {
-    {
-      a4 r r |
-      R2. |
-    }
-    {
-      a4 r r |
-      r4 r e'-._\pp |
-    }
-  }
+  R2.*8 |
+  <a e'>4_\pp r r |
+  R2.*3 |
+  <a e'>4 r r |
+  R2.*3 |
+  a4 r r |
+  R2.*3 |
+  a4_\p r r |
+  R2. |
+  % \bar "||"
+  a4 r r |
+  R2. |
+
+  a4 r r |
+  r4 r e'-._\pp |
 
   a,4-. e'-. e-. |
   e4-. r r |
@@ -83,9 +75,7 @@ timpaniMusic = \relative c {
   e4-. r r |
   R2.*4 |
   a,2.\<\startTrillSpan |
-  a4_\sf\stopTrillSpan r r^\fermataMarkup |
-
-
+  a4_\sf\stopTrillSpan r r\fermata |
 }
 
 
@@ -93,58 +83,32 @@ percussionMusic = \drummode {
   \compressFullBarRests
 
   \time 3/4 \partial 4 
-  \tempo "Tempo di Valse." 2. = 72
-
   r4 |
-  \repeat volta 2 {
-    R2.*16 |
-    tri4_\pp r r |
-    R2.*3
-    tri4_\p r r |
-    R2.
-    \bar "||"
-  }
-  \alternative {
-    {
-      tri4_\p r r |
-      R2.
-    }
-    {
-      tri4_\p r r |
-      R2.
-    }
-  }
+  R2.*16 |
+  tri4_\pp r r |
+  R2.*3
+  tri4_\p r r |
+  R2.
+  % \bar "||"
+  tri4_\p r r |
+  R2.
+  tri4_\p r r |
+  R2.
 
-  \bar "||" % measure 27
+  % \bar "||" % measure 27
 
-  \tempo "con anima"
-
-  R2.*5 |
-
-  \tempo "rit."
-  R2.*3 |
+  R2.*8 |
 
   \bar "||" % measure 35
-  
-  \tempo "Tempo I˚"
-
-  R2.*4 |
-  \tempo "poco rit."
-  R2.*2 |
-  \tempo "a tempo"
-  R2.*10 |
+  R2.*16 |
 
   \bar "||" % measure 51
-
   tri4-._\ppp r r |
   R2. |
   tri4-. r r |
   R2. |
   tri4-. r r |
-
-  \tempo "poco rit."
   tri4-. r r |
-  \tempo "a tempo"
   tri4-. r r |
   R2. |
   tri4_\pp r r |
@@ -154,14 +118,8 @@ percussionMusic = \drummode {
   tri4-._\f r r |
   tri4-. r r |
   tri4-. r r |
-
-  R2.*15 |
-
-  \tempo "rit."
-  R2. |
-  r2 
-  \tempo "a tempo"
-  r4 |
+  R2.*16 |
+  r2 r4 |
   <bd tri cymc>4_\f r r |
   bd4 r r |
   bd4 r r |
@@ -169,46 +127,20 @@ percussionMusic = \drummode {
   <bd tri cymc>4_\f r r |
   bd4 r r |
   bd4 r r |
-  R2.*7 |
-
-  \tempo "rall."
-  R2.*2
+  R2.*9 |
 
   \bar "||" % measure 99
-
-  \tempo "a tempo"
-
-  R2.*5 |
-  \tempo "poco rit."
-  R2. |
-  \tempo "a tempo"
-  R2.*14 |
-  \tempo "poco rit."
-  R2.*2 |
-  \tempo "a tempo"
-  R2.*8 |
-  \tempo "rall."
-  R2.*2 |
+  R2.*32 |
 
   \bar "||" % measure 131
 
-  \tempo "a tempo"
-  R2.*12 |
-  \tempo "poco rit."
-  R2.*4 |
-  \tempo "a tempo"
+  R2.*16 |
   tri4_\pp r r |
   R2.*3 |
   tri4_\p r r |
   R2. |
   tri4_\p r r |
-  R2. |
-
-  \tempo "con anima"
-  R2.*5 |
-  \tempo "rit."
-  R2.*2 |
-
+  R2.*8 |
   tri4_\sf r r^\fermataMarkup |
 
   \bar "|."
@@ -223,7 +155,7 @@ percussionStaff = \new DrumStaff \with {
                       (bassdrum () #f -2)
                       (crashcymbal cross #f 2)
                       (triangle triangle #f 0)))
-} \percussionMusic
+} << \outline \percussionMusic >>
 
 percussionStaffWithNames = \new DrumStaff \with {
   \override StaffSymbol.line-positions = #'(-2 0 2)
@@ -245,4 +177,4 @@ percussionStaffWithNames = \new DrumStaff \with {
       \line {"BD"}}
   }
 
-} \percussionMusic
+} << \outline \percussionMusic >>

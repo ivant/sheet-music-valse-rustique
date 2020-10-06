@@ -22,6 +22,7 @@ outline = \new NullVoice {
   s2.*3 |
 
   \bar "||" % measure 35
+  \tweak self-alignment-X #CENTER
   \tempo "Tempo I˚"
   s2.*4 |
   \tempo "poco rit."
