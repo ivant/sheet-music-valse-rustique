@@ -6,6 +6,7 @@
   short-indent = 1\cm  % add less space for shortInstrumentName
 }
 
+\include "outline.ly"
 \include "instruments/piccolo.ly"
 \include "instruments/flute1.ly"
 \include "instruments/flute2.ly"
@@ -102,23 +103,28 @@
       \timpaniMusic
       \percussionStaffWithNames
     >>
+
     \new StaffGroup = "StaffGroup_strings" <<
-      \new GrandStaff = "GrandStaff_violins" <<
-        \new Staff = "Staff_violinI" \with { instrumentName = "Violin 1" shortInstrumentName = "Vln 1" }
-        \violinIMusic
+%     \new GrandStaff = "GrandStaff_violins" <<
+%       \new Staff = "Staff_violinI" \with { instrumentName = "Violin 1" shortInstrumentName = "Vln 1" }
+%       \violinIMusic
 
-        \new Staff = "Staff_violinII" \with { instrumentName = "Violin 2" shortInstrumentName = "Vn 2" }
-        \violinIIMusic
-      >>
+%       \new Staff = "Staff_violinII" \with { instrumentName = "Violin 2" shortInstrumentName = "Vn 2" }
+%       \violinIIMusic
+%     >>
 
-      \new Staff = "Staff_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va" }
+      \new Staff = "Staff_viola" \with {
+        instrumentName = "Viola" shortInstrumentName = "Va"
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      }
       \violaMusic
 
-      \new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc" }
-      \celloMusic
+%     \new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc" }
+%     \celloMusic
 
-      \new Staff = "Staff_bass" \with { instrumentName = "Double bass" shortInstrumentName = "Db" }
-      \bassMusic
+%     \new Staff = "Staff_bass" \with { instrumentName = "Double bass" shortInstrumentName = "Db" }
+%     \bassMusic
     >>
   >>
   \layout { }

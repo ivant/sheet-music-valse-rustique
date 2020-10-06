@@ -101,10 +101,10 @@
 %   \transpose f c' \trumpetMusic
 % }
 
-  \score {
-    \header { piece = "Trombones 1-2" breakbefore = #splitParts }
-    \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
-  }
+% \score {
+%   \header { piece = "Trombones 1-2" breakbefore = #splitParts }
+%   \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
+% }
 
 % \score {
 %   \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
@@ -131,10 +131,13 @@
 %   \new Staff \violinIIMusic
 % }
 
-% \score {
-%   \header { piece = "Viola" breakbefore = #splitParts }
-%   \new Staff \violaMusic
-% }
+  \score {
+    \header { piece = "Viola" breakbefore = #splitParts }
+    \new Staff \with {
+      \consists "Merge_rests_engraver"
+      \override Slur.details = #'((stem-encompass-penalty . 1.0))
+    } << \outline \violaMusic >>
+  }
 
 % \score {
 %   \header { piece = "Cello" breakbefore = #splitParts }

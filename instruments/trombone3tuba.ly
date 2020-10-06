@@ -67,12 +67,16 @@ tromboneIIIAndTubaMusic = \relative c, {
   R2.*30
   <<
     \relative c, {
-      a2.-^\<~ |
-      a4_\sf r r\fermata |
+      a2.-^~ |
+      a4 r r\fermata |
     } \\ 
     \relative c,, {
       a2.-^~ |
       a4 r r |
+    }
+    \new Dynamics {
+      s2.\< |
+      s4_\sf r r |
     }
   >>
 }
