@@ -1,5 +1,5 @@
 \version "2.20.0"
-
+%\pointAndClickOff
 #(define splitParts #t)
 
 %#(set-global-staff-size 16)
@@ -131,20 +131,20 @@
 %   \new Staff \violinIIMusic
 % }
 
-  \score {
-    \header { piece = "Viola" breakbefore = #splitParts }
-    \new Staff \with {
-      \consists "Merge_rests_engraver"
-      \override Slur.details = #'((stem-encompass-penalty . 1.0))
-    } << \outline \violaMusic >>
-  }
+% \score {
+%   \header { piece = "Viola" breakbefore = #splitParts }
+%   \new Staff \with {
+%     \consists "Merge_rests_engraver"
+%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
+%   } << \outline \violaMusic >>
+% }
 
 % \score {
 %   \header { piece = "Cello" breakbefore = #splitParts }
 %   \new Staff \celloMusic
 % }
 
-% \score {
-%   \header { piece = "Double bass" breakbefore = #splitParts }
-%   \new Staff \bassMusic
-% }
+  \score {
+    \header { piece = "Double bass" breakbefore = #splitParts }
+    \new Staff << \outline \bassMusic >>
+  }

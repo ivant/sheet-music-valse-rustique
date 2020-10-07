@@ -3,7 +3,7 @@ violaMusic = \relative c' {
 
   \clef "alto"
   \key a \major
-  \time 3/4 \partial 4 
+  \time 3/4 \partial 4
   r4 |
   r4 r a_\mp(^"a2" |
   b2.->) |

@@ -1,6 +1,6 @@
 \version "2.20.0"
-
-#(set-global-staff-size 16)
+%\pointAndClickOff
+#(set-global-staff-size 15)
 \paper {
   indent = 2\cm  % add space for instrumentName
   short-indent = 1\cm  % add less space for shortInstrumentName
@@ -123,8 +123,8 @@
 %     \new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc" }
 %     \celloMusic
 
-%     \new Staff = "Staff_bass" \with { instrumentName = "Double bass" shortInstrumentName = "Db" }
-%     \bassMusic
+      \new Staff = "Staff_bass" \with { instrumentName = "Double bass" shortInstrumentName = "Db" }
+      \bassMusic
     >>
   >>
   \layout { }
