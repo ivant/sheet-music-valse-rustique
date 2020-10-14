@@ -2,6 +2,7 @@
 %\pointAndClickOff
 #(define splitParts #t)
 
+%showLastLength = r2.*24
 %#(set-global-staff-size 16)
 
 \include "outline.ly"
@@ -139,12 +140,15 @@
 %   } << \outline \violaMusic >>
 % }
 
-% \score {
-%   \header { piece = "Cello" breakbefore = #splitParts }
-%   \new Staff \celloMusic
-% }
-
   \score {
-    \header { piece = "Double bass" breakbefore = #splitParts }
-    \new Staff << \outline \bassMusic >>
+    \header { piece = "Cello" breakbefore = #splitParts }
+    \new Staff \with {
+      \consists "Merge_rests_engraver"
+      \override Slur.details = #'((stem-encompass-penalty . 1.0))
+    } << \outline \celloMusic >>
   }
+
+% \score {
+%   \header { piece = "Double bass" breakbefore = #splitParts }
+%   \new Staff << \outline \bassMusic >>
+% }
