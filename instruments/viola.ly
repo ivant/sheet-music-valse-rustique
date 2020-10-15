@@ -5,7 +5,7 @@ violaMusic = \relative c' {
   \key a \major
   \time 3/4 \partial 4
   r4 |
-  r4 r a_\mp(^"a2" |
+  r4 r a_\mp( |
   b2.->) |
   r4 r a( |
   b2.->) |
@@ -13,25 +13,17 @@ violaMusic = \relative c' {
   b2.->) |
   r4 r e,( |
   a2.) | % TODO: no articulation marks from here?
+
   <<
-    \relative c' {
-      r4 r a( |
-      e'2.) |
-      r4 r a,( |
-      e'2.) |
-      r4 r b( |
-      gis'2.) |
-      r4 r b,( |
-      gis'2)
-    } \\ \relative c' {
-      r4 r a( |
-      a2.) |
-      r4 r a( |
-      a2.) |
-      r4 r b( |
-      b2.) |
-      r4 r b( |
-      b2)
+    {
+      r4 r a_( |
+      <a e'>2.) |
+      r4 r a_( |
+      <a e'>2.) |
+      r4 r b_( |
+      <b gis'>2.) |
+      r4 r b_( |
+      <b gis'>2)
     }
     \new Dynamics {
       s2 s4\< |
@@ -45,7 +37,7 @@ violaMusic = \relative c' {
     }
   >>
 
-  gis'4\<(^"a2" |
+  gis'4\<( |
   g2. |
   cis,2.) |
   d2._\f( |
@@ -61,22 +53,12 @@ violaMusic = \relative c' {
 
   % \bar "||" % measure 27
   a4\< e') e-- |
-  e2\!
-  <<
-    \relative c' {
-      c4_\f |
-      d2.-> |
-      e2
-    } \\ \relative c' {
-      c4 |
-      b2.-> |
-      cis2
-    }
-  >>
-  fis,4(^"a2" |
+  e2 c4_\f( |
+  <d b>2.->) |
+  <e cis?>2 fis,4( |
   a4-> gis2) |
-  e2\dim f4\! |
-  e2.-^~( |
+  e2\dim f4--\! |
+  e2.^^~( |
   e2. |
 
   % \bar "||" % measure 35
@@ -100,7 +82,7 @@ violaMusic = \relative c' {
       d2-> r4 |
       r4 e--( e--) |
       e2-> r4 |
-    } \\ \relative c {
+    } \relative c {
       f4--( f--) |
       f2-- r4 |
       r4 f4--( f--) |
@@ -111,8 +93,8 @@ violaMusic = \relative c' {
       c2-- r4 |
       r4 f--( f--) |
       f2-- r4 |
-      r4 f--( f--) |
-      f2-> r4 |
+      s2. | % r4 f--( f--) |
+      s2. | % f2-> r4 |
       r4 e--( e--) |
       e2-> r4 |
       r4 a--( a--) |
@@ -155,11 +137,11 @@ violaMusic = \relative c' {
       fis4 r r |
       r4 e e |
       f4 r r |
-      e2.-^~
+      e2.^^~
       \tweak self-alignment-X #1.5
       ^\markup {"arco"} |
       e4 r r |
-    } \\ \relative c' {
+    } \relative c' {
       r4 a a |
       a4 r r |
       r4 b b |
@@ -198,9 +180,7 @@ violaMusic = \relative c' {
     }
   >>
   R2.*2 |
-  r4 r d''(
-  \tweak self-alignment-X #2
-  ^\markup {"a2"} |
+  r4 r d''( |
   a2->\cresc g4\!) |
   f2( g4 |
   a4) bes-- c-- |
@@ -217,11 +197,11 @@ violaMusic = \relative c' {
   <<
     \relative c'' {
       a2-> a4 |
-    } \\ \relative c' {
+    } \relative c' {
       fis2-> fis4 |
     }
   >>
-  e2->^"a2" e4 |
+  e2-> e4 |
   d4 fis,2-> |
   r4 fis2-> |
   r4 fis2->\< |
@@ -231,23 +211,14 @@ violaMusic = \relative c' {
   fis2-> fis4 |
   fis2-> a4( |
   gis4 gis')
-  << \relative c'' {
-      \stemDown gis--\< |
-      \stemNeutral
-      fis2.-> |
-      e2\!\>( fis,4 |
-      e2 d4 | 
-      % \bar "||" % measure 99
-      \key a \major
-      cis4_\mp) r r |
-    } \\ \relative c' {
-      s4 |
-      a2.-> |
-      gis2( fis4 |
-      e2 d4 |
-      cis4) r r |
-    }
-  >>
+
+  gis--\< |
+  <fis a,>2.-> |
+  <e gis,>2\>( fis,4 |
+  e2 d4 |
+  % \bar "||" % measure 99
+  \key a \major
+  cis4_\mp) r r |
 
   R2.*3 |
   << \relative c' {
@@ -263,44 +234,68 @@ violaMusic = \relative c' {
       %\override DynamicTextSpanner.style = #'none
       r4 cis\dim cis\! |
       dis4 r r |
-    } \\ \relative c' {
-      r4 cis cis |
+    } \relative c' {
+      s2. | % r4 cis cis |
       c4 r r |
-      r4 gis gis |
-      gis4 r r |
+      s2. | % r4 gis gis |
+      s2. | % gis4 r r |
       r4 cis, cis |
       cis4 r r |
-      r4 cis' dis |
-      cis4 r r |
-      r4 e, e |
+      s2. | % r4 cis' dis |
+      s2. | % cis4 r r |
+      r4 e e | % r4 e, e |
       fis4 r r |
     }
   >>
 
-  r4 e,^"a2" dis |
+  r4 e dis |
   e4 r r |
 
-  gis'2(
-  \tweak self-alignment-X #1
-  ^"arco" cis4 |
-  gis2 e'4) |
-  dis2.( |
-  bis2 fis4) |
-  gis2( cis4~ |
-  cis2 ais4) |
-  gis2.-^(
-  dis4 cis bis) |
-  gis'2( cis4 |
-  gis2) r4 |
-  bis2( dis4 |
-  bis2) r4 |
-  gis2( b?4 |
-  gis2) r4 |
-  b2( gis4 |
-  fis4 e d |
+  <<
+    {
+      gis'2(
+      \tweak self-alignment-X #1
+      ^"arco" cis4 |
+      gis2 e'4) |
+      dis2.( |
+      bis2 fis4) |
+      gis2( cis4~ |
+      cis2 ais4) |
+      gis2.-^(
+      dis4 cis bis) |
+      gis'2( cis4 |
+      gis2) r4 |
+      bis2( dis4 |
+      bis2) r4 |
+      gis2( b?4 |
+      gis2) r4 |
+      b2( gis4 |
+      fis4 e d |
+      % \bar "||" % measure 131
+      cis4)
+    }
+    \new Dynamics {
+      s2.\< |
+      s2. |
+      s4\! s2\> |
+      s2. |
+      s2.\< |
+      s2._\sf\> |
+      s2.\! |
+      s2. |
+      s2.\< |
+      s4 s\! s |
+      s2.\> |
+      s4 s\! s |
+      s2.\< |
+      s4 s\! s |
+      s2.\> |
+      s2. |
+      s4\!
+    }
+  >>
 
-  % \bar "||" % measure 131
-  cis4) r a_\mp( |
+  r a_\mp( |
   b2.->) |
   r4 r a( |
   b2.->) |
@@ -310,24 +305,15 @@ violaMusic = \relative c' {
   a2.) |
 
   <<
-    \relative c' {
-      r4 r a( |
-      e'2.) |
-      r4 r a,( |
-      e'2.) |
-      r4 r b( |
-      gis'2.) |
-      r4 r b,( |
-      gis'2)
-    } \\ \relative c' {
-      r4 r a( |
-      a2.) |
-      r4 r a( |
-      a2.) |
-      r4 r b( |
-      b2.) |
-      r4 r b( |
-      b2)
+    {
+      r4 r a_( |
+      <a e'>2.) |
+      r4 r a_( |
+      <a e'>2.) |
+      r4 r b_( |
+      <b gis'>2.) |
+      r4 r b_( |
+      <b gis'>2)
     }
     \new Dynamics {
       s2 s4\< |
@@ -340,7 +326,8 @@ violaMusic = \relative c' {
       s4 s4\!
     }
   >>
-  gis'4\<(^"a2" |
+
+  gis'4\<( |
   g2. |
   cis,2.) |
   d2._\f( |
@@ -359,18 +346,18 @@ violaMusic = \relative c' {
       e2 fis,4( |
       a4-> gis2) |
       e2 f4-- |
-      e2.-^ |
+      e2.^^ |
       cis'4
-      \tweak self-alignment-X #0.5
+      \tweak self-alignment-X #0
       ^"pizz." r r\fermata |
-    } \\ \relative c' {
-      c4( |
-      b2.->) |
-      cis2 fis,4( |
-      a4-> gis2) |
-      e2 f4-- |
-      e2.-^ |
-      e4 r r |
+    } \relative c' {
+      s4 | % c4( |
+      b2.-> | % b2.->) |
+      cis2 s4 | % cis2 fis,4( |
+      s2. | % a4-> gis2) |
+      s2. | % e2 f4-- |
+      s2. | % e2.-^ |
+      s2. | % e4 r r |
     }
     \new Dynamics {
       s4_\f |
