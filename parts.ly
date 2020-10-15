@@ -132,13 +132,13 @@
 %   \new Staff \violinIIMusic
 % }
 
-  \score {
-    \header { piece = "Viola" breakbefore = #splitParts }
-    \new Staff \with {
-      \consists "Merge_rests_engraver"
-      \override Slur.details = #'((stem-encompass-penalty . 1.0))
-    } << \outline \violaMusic >>
-  }
+% \score {
+%   \header { piece = "Viola" breakbefore = #splitParts }
+%   \new Staff \with {
+%     \consists "Merge_rests_engraver"
+%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
+%   } << \outline \violaMusic >>
+% }
 
 % \score {
 %   \header { piece = "Cello" breakbefore = #splitParts }
@@ -148,7 +148,7 @@
 %   } << \outline \celloMusic >>
 % }
 
-% \score {
-%   \header { piece = "Double bass" breakbefore = #splitParts }
-%   \new Staff << \outline \bassMusic >>
-% }
+  \score {
+    \header { piece = "Double bass" breakbefore = #splitParts }
+    \new Staff << \outline \bassMusic >>
+  }

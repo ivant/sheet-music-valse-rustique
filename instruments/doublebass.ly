@@ -6,25 +6,45 @@ bassMusic = \relative c {
   \time 3/4 \partial 4
   r4 |
   R2.*8 |
-  a4^"pizz." r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  d,4 r r |
-  R2. |
-  d4 r r |
-  R2. |
+  <<
+    {
+      a4^"pizz." r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      d,4 r r |
+      R2. |
+      d4 r r |
+      R2. |
+    }
+    \new Dynamics {
+      s2._\mp |
+      s2. |
+      s2. |
+      s2. |
+      s2. |
+      s2. |
+      s2. |
+      s2 s4\< |
+      s2. |
+      s2. |
+      s2._\f |
+      s2. |
+      s4\dim s2\! |
+      s2. |
+    }
+  >>
   % \bar "||"
-  a4 r r |
+  a4_\p r r |
   R2. |
 
-  a4 r r |
+  a4_\p r r |
   r4 r e'_\pp(
   \tweak self-alignment-X #1
   ^"arco" |
@@ -36,7 +56,7 @@ bassMusic = \relative c {
   r4 r dis,_\f( |
   e2.->) |
   a,2\dim a4\! |
-  a2-^ r4 |
+  a2^^ r4 |
   g4
   \tweak self-alignment-X #1
   ^"pizz." r r |
@@ -54,20 +74,32 @@ bassMusic = \relative c {
   R2. |
   f4 r r |
   R2. |
-  d4_\mf r r | % NOTE: replaced "cresc." with "mf"
+  d4 r\cresc r\! |
   R2. |
-  e4_\f r r |
-  e4_\mp r r | % NOTE: replaced "dim." with "mp"
+  e4_\f r r\dim |
+  e4\! r r |
   a,4_\pp r r |
   R2. |
 
   % \bar "||" % measure 51
   \key c \major
   R2.*8 |
-  a'4_\pp r r |
-  R2. |
-  d,4_\mp r r |
-  R2. |
+  <<
+    {
+      a'4 r r |
+      R2. |
+      d,4 r r |
+      R2. |
+    }
+    \new Dynamics {
+      \override Hairpin.to-barline = ##f
+      s2_\pp s4\< |
+      s2. |
+      s2. |
+      s4\! s2 | 
+    }
+  >>
+
   g,4_\f r r |
   R2.
   c4 e g |
@@ -159,7 +191,7 @@ bassMusic = \relative c {
   R2. |
   d,4_\f r r |
   R2. |
-  d4_\mf r r |
+  d4\dim r\! r |
   R2. |
   a4_\p r r |
   r4 r e'_\pp(
@@ -171,7 +203,7 @@ bassMusic = \relative c {
   r4 r dis,( |
   e2.->) |
   a,2\dim a4-- |
-  a2.-^~ |
+  a2.^^~ |
   a4_\sf r r\fermata |
 }
 
