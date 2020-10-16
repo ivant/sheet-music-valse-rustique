@@ -3,18 +3,21 @@ fluteIMusic = \relative c''' {
 
   \key a \major
   \time 3/4 \partial 4 
+  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*6 |
-  a4( e') e-- |
-  e2( fis4) |
-  cis2.-^~( |
+  a4_\p\<( e') e-- |
+  e2( fis4\!) |
+  cis2.-^\>~( |
   cis2 b8 a) |
-  fis2->( e4) |
+  fis2->\!( e4) |
   e2 cis4( |
-  e2) e4( |
-  d'2-> cis8 b) |
-  f2->( e4) |
-  e2 r4 |
+  \override Hairpin.to-barline = ##f
+  e2\<) e4( |
+  d'2\!-> cis8 b) |
+  f2->\>( e4) |
+  e2\! r4 |
+  \override Hairpin.to-barline = ##t
   R2.*6 |
   % \bar "||"
   R2.*4 |
@@ -22,7 +25,7 @@ fluteIMusic = \relative c''' {
   % \bar "||" % measure 27
   
   R2. |
-  r4 r fis( |
+  r4 r fis_\f( |
   a4-> gis cis) |
   a2 r4 |
   R2.*4 |
@@ -32,37 +35,42 @@ fluteIMusic = \relative c''' {
 
   R2.*7 |
   r4 r c, |
-  a'2.~( |
+  a'2.\<~(
+  _\markup{\italic "dolce" }
+  |
   a4 bes b) |
-  c2.~( |
+  c2.\<~( |
   c4 b gis) |
-  a4( e') e-- |
-  e2->( d8 c) |
-  a2.-^~ |
+  a4_\f( e'\dim) e-- |
+  e2->\>( d8 c) |
+  a2.-^_\pp~ |
   a4 r r
 
   % \bar "||" % measure 51
   \key c \major
   R2.*7
-  r4 r e( |
-  c'2.~ |
+  r4 r e_\pp( |
+  c'2.\<~ |
   c4 d dis) |
   e2.~( |
   e4 d b) |
-  c4( g') g-- |
+  c4_\f( g') g-- |
   g2->( f8 e) |
   c2.-^~ |
-  c4 r g( |
-  c4 g') g-- |
+  c4 r g_\pp( |
+  \override Hairpin.to-barline = ##f
+  c4\< g') g-- |
   g2->( f8 e) |
-  c2-^ r4 |
+  c2-^\! r4 |
+  \override Hairpin.to-barline = ##t
+
   R2.*7 |
-  r4 r d( |
-  a2-> g4) |
+  r4 r d_\f( |
+  a2-> g4\<) |
   f2( g4 |
   a4) bes-- c-- |
   d2( e4 |
-  cis2) a4( |
+  cis2) a4_\ff( |
   d4 a') a-- |
   a2->( g8 fis) |
   d2-> d4 |
@@ -72,53 +80,56 @@ fluteIMusic = \relative c''' {
   fis2.-^~ |
   fis2 r4 |
   R2.*7
-  r4 r e,( |
+  r4 r e,_\mp( |
 
   % \bar "||" % measure 99
   \key a \major
 
-  cis'2.~ |
+  cis'2.\<~ |
   cis4 d dis) |
-  e2.~( |
-  e4 d b) |
-  cis2.( |
-  fis2 c4) |
-  b2.-^~ |
+  e2.\>~( |
+  e4\! d b) |
+  cis2.\<( |
+  fis2_\sf\> c4) |
+  b2.-^\!~ |
   b4 r e,( |
-  cis'2.~ |
+  cis'2.\<~ |
   cis4 d dis) |
-  e2.~( |
-  e4 dis bis) |
+  e2._\f~( |
+  e4 dis\dim bis\!) |
   cis4( gis') gis-- |
   gis2->( fis8 e) |
   cis2.-^~ |
   cis4 r r |
   R2.*8 |
-  cis2( e4 |
-  cis2) r4 |
-  dis2( fis4 |
-  dis2) r4 |
-  b?2( e4 |
-  b2) r4 |
-  d?2( e4 |
+  \override Hairpin.to-barline = ##f
+  cis2_\mp\<( e4 |
+  cis2\!) r4 |
+  dis2\>( fis4 |
+  dis2\!) r4 |
+  b?2\<( e4 |
+  b2\!) r4 |
+  \override Hairpin.to-barline = ##t
+  d?2\>( e4 |
   d4 cis b |
 
   % \bar "||" % measure 131
-  a4) r r |
+  a4_\p) r r |
   R2.*5 |
-  a4( e') e-- |
+  a4_\p( e'\<) e-- |
   e2( fis4) |
-  cis2.-^~( |
+  cis2.-^\>~( |
   cis2 b8 a) |
-  fis2->( e4) |
+  fis2->\!( e4) |
   e2 cis4( |
-
-  e2) e4( |
-  d'2-> cis8 b) |
+  \override Hairpin.to-barline = ##f
+  e2\<) e4( |
+  d'2->\! cis8 b) |
+  \override Hairpin.to-barline = ##t
   f2->( e4) |
   e2 r4 |
   R2.*9 |
-  r4 r fis( |
+  r4 r fis_\f( |
   a4-> gis cis) |
   a2 r4 |
   R2.*3 |
