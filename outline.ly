@@ -3,16 +3,16 @@ outline = \new NullVoice {
   \tempo "Tempo di Valse." 2. = 72
   s4 |
   \repeat volta 2 {
-    s2.*22 |
+    s2.*13 |
+    \tempo "poco rit."
+    s2.*3 |
+    \tempo "a tempo"
+    s2.*6 |
     \bar "||"
   }
   \alternative {
-    {
-      s2.*2 |
-    }
-    {
-      s2.*2 |
-    }
+    { s2.*2 | }
+    { s2.*2 | }
   }
 
   \bar "||" % measure 27
