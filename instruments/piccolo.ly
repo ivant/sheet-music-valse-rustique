@@ -4,14 +4,15 @@ piccoloMusic = \relative c'''' {
   \clef "treble^8"
   \key a \major
   \time 3/4 \partial 4 
+  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*16 |
-  a2.~ |
+  a2._\p\<~ |
   a2 a4 |
+  a2._\f~ |
   a2.~ |
-  a2.~ |
-  a2.~ |
-  a2 a4 |
+  a2.\dim~ |
+  a2\! a4 |
   % \bar "||"
   a2.-^~ |
   a4 r r |
@@ -21,7 +22,7 @@ piccoloMusic = \relative c'''' {
 
   % \bar "||" % measure 27
   R2. |
-  r4 r fis( |
+  r4 r fis_\f( |
   a4-> gis cis) |
   a2 r4 |
   R2.*4 |
@@ -34,13 +35,15 @@ piccoloMusic = \relative c'''' {
   \key c \major
   R2.*15
 
-  r4 r g,( |
-  c4 g') g-- |
+  \override Hairpin.to-barline = ##f
+  r4 r g,_\pp( |
+  c4\< g') g-- |
   g2->( f8 e) |
-  c2-^ r4 |
+  c2\!-^ r4 |
+  \override Hairpin.to-barline = ##t
 
   R2.*12 |
-  r4 r a'( |
+  r4 r a'_\ff( |
   d4 a) a-- |
   a2->( g8 fis) |
   d'2-> d4 |
@@ -55,23 +58,29 @@ piccoloMusic = \relative c'''' {
   %\bar "||" % measure 99
   \key a \major
   R2.*23 |
-  r4 r gis~ |
-  \repeat unfold 7 { gis2.~ | }
+  r4 r gis_\mp~ |
+  gis2.\<~ |
+  gis2.~ |
+  gis2.\>~ |
+  gis2.~ |
+  gis2.\<~ |
+  gis2.~ |
+  gis2.\>~ |
   gis2.( |
 
   %\bar "||" % measure 131
-  a4) r r |
+  a4_\p) r r |
   R2.*15 |
-  a2.~ |
+  a2._\p\<~ |
   a2 a4 |
+  a2._\f~ |
   a2.~ |
-  a2.~ |
-  a2.~ |
-  a2 a4 |
+  a2.\dim~ |
+  a2\! a4 |
   a2.-^~ |
   a4 r r |
   R2. |
-  r4 r fis( |
+  r4 r fis_\f( |
   a4-> gis cis) |
   a2 r4 |
   R2.*3 |
