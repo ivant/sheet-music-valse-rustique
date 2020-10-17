@@ -4,6 +4,7 @@ oboeMusic = \relative c' {
 
   \key a \major
   \time 3/4 \partial 4 
+  \override DynamicTextSpanner.style = #'none
   \override Hairpin.to-barline = ##f
   e4_\mp\<(^"1." |
   a4 e') e--\! |
