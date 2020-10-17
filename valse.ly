@@ -43,47 +43,47 @@
       \fluteIIMusic
 
     >>
-    \new StaffGroup = "StaffGroup_woodwinds" <<
-      \new Staff = "Staff_oboe" \with { instrumentName = "Oboe" shortInstrumentName = "Ob" \consists "Merge_rests_engraver" }
-      \oboeMusic
+%   \new StaffGroup = "StaffGroup_woodwinds" <<
+%     \new Staff = "Staff_oboe" \with { instrumentName = "Oboe" shortInstrumentName = "Ob" \consists "Merge_rests_engraver" }
+%     \oboeMusic
 
-      \new Staff = "Staff_clarinet" \with {
-        instrumentName = \markup { \center-column { "Clarinets" \line {"in A"} } }
-        shortInstrumentName = "Cl"
-      }
+%     \new Staff = "Staff_clarinet" \with {
+%       instrumentName = \markup { \center-column { "Clarinets" \line {"in A"} } }
+%       shortInstrumentName = "Cl"
+%     }
 
-      % Declare that written Middle C in the music
-      % to follow sounds a concert B flat, for
-      % output using sounded pitches such as MIDI.
-      %\transposition a
+%     % Declare that written Middle C in the music
+%     % to follow sounds a concert B flat, for
+%     % output using sounded pitches such as MIDI.
+%     %\transposition a
 
-      % Print music for a B-flat clarinet
-      \transpose a c' \clarinetMusic
-      \new Staff = "Staff_bassoon" \with { instrumentName = "Bassoon" shortInstrumentName = "Bn" }
-      \bassoonMusic
-    >>
+%     % Print music for a B-flat clarinet
+%     \transpose a c' \clarinetMusic
+%     \new Staff = "Staff_bassoon" \with { instrumentName = "Bassoon" shortInstrumentName = "Bn" }
+%     \bassoonMusic
+%   >>
 
-    \new GrandStaff = "StaffGroup_horns" <<
-      \new Staff = "Staff_hornsIAndII" \with {
-        instrumentName = \markup { \center-column { "Horns 1-2" \line {"in F"} } }
-        shortInstrumentName = "Hn 1-2"
-      }
-       % \transposition f
-        \transpose f c' \hornIAndIIMusic
-      \new Staff = "Staff_hornsIIIAndIV" \with {
-        instrumentName = \markup { \center-column { "Horns 3-4" \line {"in F"} } }
-        shortInstrumentName = "Hn 3-4"
-      }
-       % \transposition f
-      \transpose f c' \hornIIIAndIVMusic
-    >>
+%   \new GrandStaff = "StaffGroup_horns" <<
+%     \new Staff = "Staff_hornsIAndII" \with {
+%       instrumentName = \markup { \center-column { "Horns 1-2" \line {"in F"} } }
+%       shortInstrumentName = "Hn 1-2"
+%     }
+%      % \transposition f
+%       \transpose f c' \hornIAndIIMusic
+%     \new Staff = "Staff_hornsIIIAndIV" \with {
+%       instrumentName = \markup { \center-column { "Horns 3-4" \line {"in F"} } }
+%       shortInstrumentName = "Hn 3-4"
+%     }
+%      % \transposition f
+%     \transpose f c' \hornIIIAndIVMusic
+%   >>
 
-    \new Staff = "Staff_trumpet" \with {
-      instrumentName = \markup { \center-column { "Trumpet" \line {"in F"} } }
-      shortInstrumentName = "Tpt"
-    }
-    % \transposition f
-    \transpose f c' \trumpetMusic
+%   \new Staff = "Staff_trumpet" \with {
+%     instrumentName = \markup { \center-column { "Trumpet" \line {"in F"} } }
+%     shortInstrumentName = "Tpt"
+%   }
+%   % \transposition f
+%   \transpose f c' \trumpetMusic
 
     \new GrandStaff = "StaffGroup_low_brass" <<
       \new Staff = "Staff_tbn12" \with {
@@ -120,13 +120,13 @@
       }
       \violaMusic
 
-%     \new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc" }
-%     \celloMusic
+      \new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc" }
+      \celloMusic
 
       \new Staff = "Staff_bass" \with { instrumentName = "Double bass" shortInstrumentName = "Db" }
       \bassMusic
     >>
   >>
   \layout { }
-  % \midi { }
+  \midi { }
 }
