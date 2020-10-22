@@ -6,32 +6,34 @@ violinIMusic = \relative c' {
   \override DynamicTextSpanner.style = #'none
 
   r4 |
-  <e e'>2.~ |
+  <e e'>2._\pp~ |
   <e e'>2.~ |
   <e e'>2.~ |
   <e e'>2.~ |
   <e e'>2 r4 |
   R2. | R2. |
-  r4 r cis'( |
+  \override Hairpin.to-barline = ##f
+  r4 r cis'_\mp\<( |
   e2) e4( |
-  cis'2-> b8 a) |
-  fis2->( e4) |
-  e2 cis4( |
+  cis'2-> b8 a\!) |
+  fis2->\>( e4) |
+  e2 cis4\<( |
   e2) e4( |
-  d'2-> cis8 b) |
-  f2->( e4) |
-  e2 cis4( |
+  d'2->\! cis8 b) |
+  f2->\>( e4) |
+  \override Hairpin.to-barline = ##t
+  e2\! cis4\<( |
   e4.-> d8 b cis) |
   a2 a4 |
-  a2.^^~ |
+  a2.^^_\f~ |
   a4 r cis( |
-  e4.-> d8 b cis) |
-  a2 a4 |
+  e4.->\dim d8\! b cis) |
+  a2\> a4 |
 
   % \bar "||"
 
   a2.^^~ |
-  a4 r r |
+  a4\! r r |
 
   a2.^^~ |
   a4 r r |
@@ -205,15 +207,17 @@ violinIMusic = \relative c' {
   <e e,>2.~ |
   <e e,>2 r4 |
   R2.*2 |
-  r4 r cis_\mp( |
-  e2) e4\<( |
-  cis'2-^ b8 a) |
+  \override Hairpin.to-barline = ##f
+  r4 r cis_\mp\<( |
+  e2) e4( |
+  cis'2-^ b8 a\!) |
   fis2->\>( e4) |
   e2 cis4\<( |
   e2) e4( |
-  d'2\! cis8 b) |
+  d'2->\! cis8 b) |
   f2->\>( e4) |
-  e2 cis4\<( |
+  \override Hairpin.to-barline = ##t
+  e2\! cis4\<( |
   e4.-> d8 b cis) |
   a2 a4 |
   a2.^^_\f~ |
@@ -229,7 +233,7 @@ violinIMusic = \relative c' {
   a4-> gis cis) |
   a2\dim( a4--\!) |
   a2.^^ |
-  <a' cis, e, a,>4
+  <a' cis, e, a,>4_\sf
   \tweak self-alignment-X #0.5
   ^\markup {"pizz."}
   r r\fermata |
