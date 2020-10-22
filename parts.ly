@@ -122,18 +122,21 @@
 %   >>
 % }
 
+% \score {
+%   \header { piece = "Violin 1" breakbefore = #splitParts }
+%   \new Staff \with {
+%     \consists "Merge_rests_engraver"
+%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
+%   } << \outline \violinIMusic >>
+% }
+
   \score {
-    \header { piece = "Violin 1" breakbefore = #splitParts }
+    \header { piece = "Violin 2" breakbefore = #splitParts }
     \new Staff \with {
       \consists "Merge_rests_engraver"
       \override Slur.details = #'((stem-encompass-penalty . 1.0))
-    } << \outline \violinIMusic >>
+    } << \outline \violinIIMusic >>
   }
-
-% \score {
-%   \header { piece = "Violin 2" breakbefore = #splitParts }
-%   \new Staff \violinIIMusic
-% }
 
 % \score {
 %   \header { piece = "Viola" breakbefore = #splitParts }
