@@ -49,112 +49,163 @@
   tagline = ""
 }
 
-% \score {
-%   \header { piece = "Piccolo" breakbefore = #splitParts }
-%   \new Staff << \outline \piccoloMusic >>
-% }
-
-% \score {
-%   \header { piece = "Flute 1" breakbefore = #splitParts }
-%   \new Staff << \outline \fluteIMusic >>
-% }
-
-% \score {
-%   \header { piece = "Flute 2" breakbefore = #splitParts }
-%   \new Staff << \outline \fluteIIMusic >>
-% }
-
-% \score {
-%   \header { piece = "Oboe" breakbefore = #splitParts }
-%   \new Staff \with { \consists "Merge_rests_engraver" } << \outline \oboeMusic >>
-% }
-
-% \score {
-%   \header { piece = "Clarinet in A" breakbefore = #splitParts }
-%   \new Staff % Declare that written Middle C in the music
-%   % to follow sounds a concert B flat, for
-%   % output using sounded pitches such as MIDI.
-%   %\transposition a
-%   % Print music for a B-flat clarinet
-%   \transpose a c' \clarinetMusic
-% }
-
-% \score {
-%   \header { piece = "Bassoon" breakbefore = #splitParts }
-%   \new Staff \bassoonMusic
-% }
-
-% \score {
-%   \header { piece = "Horns 1-2 in F" breakbefore = #splitParts }
-%   \new Staff % \transposition f
-%   \transpose f c' \hornIAndIIMusic
-% }
-
-% \score {
-%   \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
-%   \new Staff % \transposition f
-%   \transpose f c' \hornIIIAndIVMusic
-% }
-
-% \score {
-%   \header { piece = "Trumpet in F" breakbefore = #splitParts }
-%   \new Staff % \transposition f
-%   \transpose f c' \trumpetMusic
-% }
-
-% \score {
-%   \header { piece = "Trombones 1-2" breakbefore = #splitParts }
-%   \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
-% }
-
-% \score {
-%   \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
-%   \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIIIAndTubaMusic >>
-% }
-
-% \score {
-%   \header { piece = "Timpani, Crash cymbals, Triangle, Bass drum" breakbefore = #splitParts }
-%   \new StaffGroup \with {
-%     \override VerticalAxisGroup.staff-staff-spacing.stretchability = 10
-%   } <<
-%     \new Staff \timpaniMusic
-%     \percussionStaff
-%   >>
-% }
-
-  \score {
-    \header { piece = "Violin 1" breakbefore = #splitParts }
-    \new Staff \with {
-      \consists "Merge_rests_engraver"
-      \override Slur.details = #'((stem-encompass-penalty . 1.0))
-    } << \outline \violinIMusic >>
+  \book {
+    \bookOutputSuffix "piccolo"
+    \score {
+      \header { piece = "Piccolo" breakbefore = #splitParts }
+      \new Staff << \outline \piccoloMusic >>
+    }
   }
 
-% \score {
-%   \header { piece = "Violin 2" breakbefore = #splitParts }
-%   \new Staff \with {
-%     \consists "Merge_rests_engraver"
-%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
-%   } << \outline \violinIIMusic >>
-% }
+  \book {
+    \bookOutputSuffix "flute1"
+    \score {
+      \header { piece = "Flute 1" breakbefore = #splitParts }
+      \new Staff << \outline \fluteIMusic >>
+    }
+  }
 
-% \score {
-%   \header { piece = "Viola" breakbefore = #splitParts }
-%   \new Staff \with {
-%     \consists "Merge_rests_engraver"
-%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
-%   } << \outline \violaMusic >>
-% }
+  \book {
+    \bookOutputSuffix "flute2"
+    \score {
+      \header { piece = "Flute 2" breakbefore = #splitParts }
+      \new Staff << \outline \fluteIIMusic >>
+    }
+  }
 
-% \score {
-%   \header { piece = "Cello" breakbefore = #splitParts }
-%   \new Staff \with {
-%     \consists "Merge_rests_engraver"
-%     \override Slur.details = #'((stem-encompass-penalty . 1.0))
-%   } << \outline \celloMusic >>
-% }
+  \book {
+    \bookOutputSuffix "oboe"
+    \score {
+      \header { piece = "Oboe" breakbefore = #splitParts }
+      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \oboeMusic >>
+    }
+  }
 
-% \score {
-%   \header { piece = "Double bass" breakbefore = #splitParts }
-%   \new Staff << \outline \bassMusic >>
-% }
+  \book {
+    \bookOutputSuffix "clarinet"
+    \score {
+      \header { piece = "Clarinet in A" breakbefore = #splitParts }
+      \new Staff % Declare that written Middle C in the music
+      % to follow sounds a concert B flat, for
+      % output using sounded pitches such as MIDI.
+      %\transposition a
+      % Print music for a B-flat clarinet
+      \transpose a c' \clarinetMusic
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "bassoon"
+    \score {
+      \header { piece = "Bassoon" breakbefore = #splitParts }
+      \new Staff \bassoonMusic
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "horns1-2"
+    \score {
+      \header { piece = "Horns 1-2 in F" breakbefore = #splitParts }
+      \new Staff % \transposition f
+      \transpose f c' \hornIAndIIMusic
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "horns3-4"
+    \score {
+      \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
+      \new Staff % \transposition f
+      \transpose f c' \hornIIIAndIVMusic
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "trumpet"
+    \score {
+      \header { piece = "Trumpet in F" breakbefore = #splitParts }
+      \new Staff % \transposition f
+      \transpose f c' \trumpetMusic
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "trombones1-2"
+    \score {
+      \header { piece = "Trombones 1-2" breakbefore = #splitParts }
+      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "trombone3-tuba"
+    \score {
+      \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
+      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIIIAndTubaMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "percussion"
+    \score {
+      \header { piece = "Timpani, Crash cymbals, Triangle, Bass drum" breakbefore = #splitParts }
+      \new StaffGroup \with {
+        \override VerticalAxisGroup.staff-staff-spacing.stretchability = 10
+      } <<
+        \new Staff \timpaniMusic
+        \percussionStaff
+      >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "violin1"
+    \score {
+      \header { piece = "Violin 1" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      } << \outline \violinIMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "violin2"
+    \score {
+      \header { piece = "Violin 2" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      } << \outline \violinIIMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "viola"
+    \score {
+      \header { piece = "Viola" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      } << \outline \violaMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "cello"
+    \score {
+      \header { piece = "Cello" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      } << \outline \celloMusic >>
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "double-bass"
+    \score {
+      \header { piece = "Double bass" breakbefore = #splitParts }
+      \new Staff << \outline \bassMusic >>
+    }
+  }
