@@ -46,7 +46,8 @@
 \header {
   title = "Valse Rustique"
   composer = "Samuel Coleridge-Taylor"
-  tagline = ""
+  subtitle = "[Unfinished engraving, DO NOT USE FOR RECORDING!]"
+  tagline = "Unfinished engraving, for review only, DO NOT USE FOR RECORDING!"
 }
 
   \book {
