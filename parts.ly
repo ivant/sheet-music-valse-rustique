@@ -34,7 +34,7 @@
   system-system-spacing = #'((basic-distance . 12)
                              (minimum-distance . 8)
                              (padding . 3)
-                             (stretchability . 20))
+                             (stretchability . 40))
 }
 
 \layout {
