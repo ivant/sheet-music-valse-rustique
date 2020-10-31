@@ -12,22 +12,22 @@ oboeMusic = \relative c' {
   a2( a4--\!) |
   a2 e4( |
   a4\< e') e-- |
-  e2\!( fis4) |
-  cis2.-^\>~ |
+  e2\!( fis4\>) |
+  cis2.^^~ |
   cis4\! r r |
   R2.*7 |
   r4 r cis_\p |
   e4.\<( d8 b cis) |
   a2 a4\! |
-  a2.-^_\f~ |
+  a2.^^_\f~ |
   a4 r cis( |
   e4.->_\dim d8\! b cis) |
   a2 a4 |
   % \bar "||"
-  a2.-^~ |
+  a2.^^~ |
   a4 r e\laissezVibrer |
 
-  a2.-^~ |
+  a2.^^~ |
   a4 r r |
 
   % \bar "||" % measure 27
@@ -53,7 +53,7 @@ oboeMusic = \relative c' {
   R2.*4 |
   a2._\p\<(^"1." |
   d2_\sf\> aes4) |
-  g2.-^_\p~ |
+  g2.^^_\p~ |
   g4 r r |
   R2.*2 |
 
@@ -67,7 +67,7 @@ oboeMusic = \relative c' {
 
   % \bar "||" % measure 51
   \key c \major
-  a2-^ r4 |
+  a2^^ r4 |
   R2.*3 |
   e2._\pp(^"1." |
   fis2._\sf |
@@ -135,10 +135,9 @@ oboeMusic = \relative c' {
       s2.\! |
       s2.*7 |
       s2 s4_\f |
-      s2. |
-      s2.\< |
-      s2.*2 |
-      s2\! s4_\ff |
+      s2 s4\< |
+      s2.*3 |
+      s2 s4_\ff |
       s2.*7 |
       s2 s4\< |
       s2_\sf s4 |
@@ -155,18 +154,18 @@ oboeMusic = \relative c' {
   e4\! d b) |
   cis2.\<(
   fis2_\sf\> c4\!) |
-  b2.-^~ |
+  b2.^^~ |
   b4 r r |
   R2.*6
 
   cis,4(^"a2" gis') gis-- |
   gis2\>( fis8 e\!) |
-  cis2-^_\pp r4 |
+  cis2^^_\pp r4 |
   R2.*3 |
 
   e2._\p\<(^"1." |
   ais2\!_\sf e4\>) |
-  dis2.-^~ |
+  dis2.^^~ |
   dis4\! r r |
   R2.*7 |
 
@@ -178,18 +177,18 @@ oboeMusic = \relative c' {
   a2 e4( |
   a4\< e') e-- |
   e2\!( fis4) |
-  cis2.-^\>~ |
+  cis2.^^\>~ |
   cis4\! r r |
   R2.*7 |
 
   r4 r cis_\p(^"1." |
   e4.->\< d8 b cis) |
   a2 a4\! |
-  a2.-^_\f~ |
+  a2.^^_\f~ |
   a4 r cis( |
   e4.-> d8\dim b cis\!) |
   a2 a4 |
-  a2.-^~ |
+  a2.^^~ |
   a4 r r |
   R2. |
 
