@@ -185,7 +185,7 @@ violinIMusic = \relative c' {
   r4 r gis_\pp( |
   e'2.~\< |
   e4 fis fisis) |
-  gis2.\<~( |
+  gis2.\>~( |
   gis4 fis? dis) |
   e2.\<( |
   ais2-^_\sf\> e4\!) |
