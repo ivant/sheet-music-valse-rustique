@@ -1,15 +1,16 @@
 .PHONY: all valse parts upload upload-valse upload-parts
 DEPS=instruments/*.ly outline.ly
-PARTS=out/parts-bassoon.pdf out/parts-cello.pdf out/parts-clarinet.pdf out/parts-double-bass.pdf out/parts-flute1.pdf out/parts-flute2.pdf out/parts-horns1-2.pdf out/parts-horns3-4.pdf out/parts-oboe.pdf out/parts-percussion.pdf out/parts-piccolo.pdf out/parts-trombone3-tuba.pdf out/parts-trombones1-2.pdf out/parts-trumpet.pdf out/parts-viola.pdf out/parts-violin1.pdf out/parts-violin2.pdf out/parts.pdf
+PARTS=out/valse-rustique-bassoon.pdf out/valse-rustique-cello.pdf out/valse-rustique-clarinet.pdf out/valse-rustique-double-bass.pdf out/valse-rustique-flute1.pdf out/valse-rustique-flute2.pdf out/valse-rustique-horns1-2.pdf out/valse-rustique-horns3-4.pdf out/valse-rustique-oboe.pdf out/valse-rustique-percussion.pdf out/valse-rustique-piccolo.pdf out/valse-rustique-trombone3-tuba.pdf out/valse-rustique-trombones1-2.pdf out/valse-rustique-trumpet.pdf out/valse-rustique-viola.pdf out/valse-rustique-violin1.pdf out/valse-rustique-violin2.pdf
+SYNC_DIR=/tmp/orchestra-sync
 
 upload-parts: parts
-	cp $(PARTS) /mnt/orchestra-sync/
+	cp $(PARTS) $(SYNC_DIR)
 
 upload-valse: out/valse.pdf
-	cp valse.pdf /mnt/orchestra-sync/
+	cp valse.pdf $(SYNC_DIR)
 
 parts: parts.ly $(DEPS)
-	lilypond -o out/ parts.ly
+	lilypond -o out/valse-rustique parts.ly
 
 valse: out/valse.pdf
 all: valse parts
