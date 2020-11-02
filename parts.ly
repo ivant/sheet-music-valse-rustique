@@ -82,18 +82,21 @@
 %   }
 % }
 
-% \book {
-%   \bookOutputSuffix "clarinet"
-%   \score {
-%     \header { piece = "Clarinet in A" breakbefore = #splitParts }
-%     \new Staff % Declare that written Middle C in the music
-%     % to follow sounds a concert B flat, for
-%     % output using sounded pitches such as MIDI.
-%     %\transposition a
-%     % Print music for a B-flat clarinet
-%     \transpose a c' \clarinetMusic
-%   }
-% }
+  \book {
+    \bookOutputSuffix "clarinet-a"
+    \score {
+      \header { piece = "Clarinet in A" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+      }
+      << \outline
+        \transpose a c' {
+          \transposition a
+          \clarinetMusic
+        }
+      >>
+    }
+  }
 
 % \book {
 %   \bookOutputSuffix "bassoon"
@@ -121,45 +124,45 @@
 %   }
 % }
 
-  \book {
-    \bookOutputSuffix "trumpet"
-    \score {
-      \header { piece = "Trumpet in Bb" breakbefore = #splitParts }
-      \new Staff \with {
-        \consists "Merge_rests_engraver"
-        \override KeySignature #'break-visibility = #all-invisible
-      }
-      << \outline
-        \set Staff.explicitKeySignatureVisibility = #all-invisible
-        \transpose bes, c'
-        {
-          \transposition bes
-          \key bes \major
-          \trumpetMusic
-        }
-      >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "trumpet"
+%   \score {
+%     \header { piece = "Trumpet in Bb" breakbefore = #splitParts }
+%     \new Staff \with {
+%       \consists "Merge_rests_engraver"
+%       \override KeySignature #'break-visibility = #all-invisible
+%     }
+%     << \outline
+%       \set Staff.explicitKeySignatureVisibility = #all-invisible
+%       \transpose bes, c'
+%       {
+%         \transposition bes
+%         \key bes \major
+%         \trumpetMusic
+%       }
+%     >>
+%   }
+% }
 
-  \book {
-    \bookOutputSuffix "trumpet-f"
-    \score {
-      \header { piece = "Trumpet in F" breakbefore = #splitParts }
-      \new Staff \with {
-        \consists "Merge_rests_engraver"
-        \override KeySignature #'break-visibility = #all-invisible
-      }
-      << \outline
-        \set Staff.explicitKeySignatureVisibility = #all-invisible
-        \transpose f c'
-        {
-          \transposition f'
-          \key f \major
-          \trumpetMusic
-        }
-      >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "trumpet-f"
+%   \score {
+%     \header { piece = "Trumpet in F" breakbefore = #splitParts }
+%     \new Staff \with {
+%       \consists "Merge_rests_engraver"
+%       \override KeySignature #'break-visibility = #all-invisible
+%     }
+%     << \outline
+%       \set Staff.explicitKeySignatureVisibility = #all-invisible
+%       \transpose f c'
+%       {
+%         \transposition f'
+%         \key f \major
+%         \trumpetMusic
+%       }
+%     >>
+%   }
+% }
 
 % \book {
 %   \bookOutputSuffix "trombones1-2"
