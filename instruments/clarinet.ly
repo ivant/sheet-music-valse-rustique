@@ -215,8 +215,8 @@ clarinetMusic = \relative c' {
       R2.*3 |
       c,2.~( |
       c2. |
-      bes2.~ |
-      bes4) r r |
+      b2.~ |
+      b4) r r |
       R2.*4 |
       e2.( |
       d2. |
