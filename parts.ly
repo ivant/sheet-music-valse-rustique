@@ -98,6 +98,22 @@
     }
   }
 
+  \book {
+    \bookOutputSuffix "clarinet"
+    \score {
+      \header { piece = "Clarinet in Bb" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+      }
+      << \outline
+        \transpose bes c' {
+          \transposition bes
+          \clarinetMusic
+        }
+      >>
+    }
+  }
+
 % \book {
 %   \bookOutputSuffix "bassoon"
 %   \score {
