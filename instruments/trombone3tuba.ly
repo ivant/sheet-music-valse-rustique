@@ -54,7 +54,6 @@ tromboneIIIAndTubaMusic = \relative c, {
 
   \relative c,
 
-  %\override Hairpin.to-barline = ##f
   cis2._\pp\<~^"Tbn. 3" |
   cis2. |
   bis2.\>~ |
@@ -76,6 +75,7 @@ tromboneIIIAndTubaMusic = \relative c, {
       a4 r r |
     }
     \new Dynamics {
+      \override Hairpin.to-barline = ##f
       s2.\< |
       s4_\sf r r |
     }
