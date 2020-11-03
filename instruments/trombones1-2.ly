@@ -31,6 +31,7 @@ tromboneIAndIIMusic = \relative c, {
       r4 fis2-^ |
       r4 fis2-^ |
       r4 fis2-^ |
+      \override Hairpin.to-barline = ##f
       r4 fis2-^\<~ |
       fis2_\sf r4 |
     } \\
@@ -74,12 +75,13 @@ tromboneIAndIIMusic = \relative c, {
       gis4 r r
     }
     \new Dynamics {
+      \override DynamicTextSpanner.style = #'none
       s2._\pp\< |
       s2. |
       s2.\> |
       s2. |
       s2.\dim |
-      s2. |
+      s2.\! |
       s2.\> |
       s4_\pp s2 |
     }
@@ -89,7 +91,7 @@ tromboneIAndIIMusic = \relative c, {
   R2.*30
   <<
     \relative c' {
-      cis2.-^~ |
+      cis!2.-^~ |
       cis4 r r\fermata |
     } \\
     \relative c {
@@ -97,6 +99,7 @@ tromboneIAndIIMusic = \relative c, {
       e4 r r |
     }
     \new Dynamics {
+      \once \override Hairpin.to-barline = ##f
       s2.\< |
       s4_\sf r r |
     }
