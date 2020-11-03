@@ -50,7 +50,7 @@ celloMusic = \relative c {
 
   % \bar "||" % measure 35
   \key f \major
-  \clef "treble"
+  \clef "tenor"
 
   f''2\<(
   _\markup{\italic "dolce" }
@@ -228,7 +228,7 @@ celloMusic = \relative c {
     }
   >>
 
-  \clef "treble"
+  \clef "tenor"
   r4^"a2" gis_\pp(
   \tweak self-alignment-X #0.5
   ^"arco" |

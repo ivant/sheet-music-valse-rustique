@@ -114,16 +114,16 @@
 %   }
 % }
 
-  \book {
-    \bookOutputSuffix "bassoon"
-    \score {
-      \header { piece = "Bassoon" breakbefore = #splitParts }
-      \new Staff \with {
-        \consists "Merge_rests_engraver"
-      }
-      << \outline \bassoonMusic >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "bassoon"
+%   \score {
+%     \header { piece = "Bassoon" breakbefore = #splitParts }
+%     \new Staff \with {
+%       \consists "Merge_rests_engraver"
+%     }
+%     << \outline \bassoonMusic >>
+%   }
+% }
 
 % \book {
 %   \bookOutputSuffix "horns1-2"
@@ -245,16 +245,16 @@
 %   }
 % }
 
-% \book {
-%   \bookOutputSuffix "cello"
-%   \score {
-%     \header { piece = "Cello" breakbefore = #splitParts }
-%     \new Staff \with {
-%       \consists "Merge_rests_engraver"
-%       \override Slur.details = #'((stem-encompass-penalty . 1.0))
-%     } << \outline \celloMusic >>
-%   }
-% }
+  \book {
+    \bookOutputSuffix "cello"
+    \score {
+      \header { piece = "Cello" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+      } << \outline \celloMusic >>
+    }
+  }
 
 % \book {
 %   \bookOutputSuffix "double-bass"
