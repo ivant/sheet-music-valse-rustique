@@ -114,13 +114,16 @@
 %   }
 % }
 
-% \book {
-%   \bookOutputSuffix "bassoon"
-%   \score {
-%     \header { piece = "Bassoon" breakbefore = #splitParts }
-%     \new Staff \bassoonMusic
-%   }
-% }
+  \book {
+    \bookOutputSuffix "bassoon"
+    \score {
+      \header { piece = "Bassoon" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+      }
+      << \outline \bassoonMusic >>
+    }
+  }
 
 % \book {
 %   \bookOutputSuffix "horns1-2"
@@ -180,21 +183,21 @@
 %   }
 % }
 
-  \book {
-    \bookOutputSuffix "trombones1-2"
-    \score {
-      \header { piece = "Trombones 1-2" breakbefore = #splitParts }
-      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "trombones1-2"
+%   \score {
+%     \header { piece = "Trombones 1-2" breakbefore = #splitParts }
+%     \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
+%   }
+% }
 
-  \book {
-    \bookOutputSuffix "trombone3-tuba"
-    \score {
-      \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
-      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIIIAndTubaMusic >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "trombone3-tuba"
+%   \score {
+%     \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
+%     \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIIIAndTubaMusic >>
+%   }
+% }
 
 % \book {
 %   \bookOutputSuffix "percussion"
