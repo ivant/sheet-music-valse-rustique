@@ -129,19 +129,41 @@
 %   \bookOutputSuffix "horns1-2"
 %   \score {
 %     \header { piece = "Horns 1-2 in F" breakbefore = #splitParts }
-%     \new Staff % \transposition f
-%     \transpose f c' \hornIAndIIMusic
+%     \new Staff \with {
+%       \consists "Merge_rests_engraver"
+%       \override KeySignature #'break-visibility = #all-invisible
+%     }
+%     << \outline
+%       \set Staff.explicitKeySignatureVisibility = #all-invisible
+%       \transpose f, c'
+%       {
+%         \transposition f
+%         \key f \major
+%         \hornIAndIIMusic
+%       }
+%     >>
 %   }
 % }
 
-% \book {
-%   \bookOutputSuffix "horns3-4"
-%   \score {
-%     \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
-%     \new Staff % \transposition f
-%     \transpose f c' \hornIIIAndIVMusic
-%   }
-% }
+  \book {
+    \bookOutputSuffix "horns3-4"
+    \score {
+      \header { piece = "Horns 3-4 in F" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        \override KeySignature #'break-visibility = #all-invisible
+      }
+      << \outline
+        \set Staff.explicitKeySignatureVisibility = #all-invisible
+        \transpose f, c'
+        {
+          \transposition f
+          \key f \major
+          \hornIIIAndIVMusic
+        }
+      >>
+    }
+  }
 
 % \book {
 %   \bookOutputSuffix "trumpet"
@@ -245,16 +267,16 @@
 %   }
 % }
 
-  \book {
-    \bookOutputSuffix "cello"
-    \score {
-      \header { piece = "Cello" breakbefore = #splitParts }
-      \new Staff \with {
-        \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0))
-      } << \outline \celloMusic >>
-    }
-  }
+% \book {
+%   \bookOutputSuffix "cello"
+%   \score {
+%     \header { piece = "Cello" breakbefore = #splitParts }
+%     \new Staff \with {
+%       \consists "Merge_rests_engraver"
+%       \override Slur.details = #'((stem-encompass-penalty . 1.0))
+%     } << \outline \celloMusic >>
+%   }
+% }
 
 % \book {
 %   \bookOutputSuffix "double-bass"
