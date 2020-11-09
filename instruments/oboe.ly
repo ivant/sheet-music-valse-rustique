@@ -69,13 +69,13 @@ oboeMusic = \relative c' {
   \key c \major
   a2^^ r4 |
   R2.*3 |
-  e2._\pp(^"1." |
+  e2._\pp\<(^"1." |
   fis2._\sf |
   gis2.~\> |
   gis4 fis e\!) |
   a2( c4 |
   a2) r4 |
-  a2( c4\< |
+  a2(\< c4 |
   a2\!) r4 |
   g2._\f( |
   f2. |
@@ -124,8 +124,8 @@ oboeMusic = \relative c' {
       fis4 a) a-- |
       a2( b4) |
       fis2.-^~ |
-      fis2 fis4( |
-      fis2) r4 |
+      fis2 fis4~ |
+      fis2 r4 |
     }
     \new Dynamics {
       \override Hairpin.to-barline = ##f

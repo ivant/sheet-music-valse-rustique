@@ -5,8 +5,10 @@ outline = \new NullVoice {
   \repeat volta 2 {
     s2.*13 |
     \tempo "poco rit."
-    s2.*3 |
+    s2.*2 |
+    s2
     \tempo "a tempo"
+    s4 |
     s2.*6 |
     \bar "||"
   }
