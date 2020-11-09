@@ -54,8 +54,11 @@
     \bookOutputSuffix "piccolo"
     \score {
       \header { piece = "Piccolo" breakbefore = #splitParts }
-      \new Staff << \outline \piccoloMusic >>
+      \new Staff \with {
+        midiInstrument = "piccolo"
+      } << \outline \piccoloMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -63,8 +66,11 @@
     \bookOutputSuffix "flute1"
     \score {
       \header { piece = "Flute 1" breakbefore = #splitParts }
-      \new Staff << \outline \fluteIMusic >>
+      \new Staff \with {
+        midiInstrument = "flute"
+      } << \outline \fluteIMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -72,8 +78,11 @@
     \bookOutputSuffix "flute2"
     \score {
       \header { piece = "Flute 2" breakbefore = #splitParts }
-      \new Staff << \outline \fluteIIMusic >>
+      \new Staff \with {
+        midiInstrument = "flute"
+      } << \outline \fluteIIMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -81,8 +90,12 @@
     \bookOutputSuffix "oboe"
     \score {
       \header { piece = "Oboe" breakbefore = #splitParts }
-      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \oboeMusic >>
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        midiInstrument = "oboe"
+      } << \outline \oboeMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -92,6 +105,7 @@
       \header { piece = "Clarinet in A" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
+        midiInstrument = "clarinet"
       }
       << \outline
         \transpose a c' {
@@ -99,7 +113,8 @@
           \clarinetMusic
         }
       >>
-      \midi { }
+      % \midi { }
+      \layout { }
     }
   }
 
@@ -109,6 +124,7 @@
       \header { piece = "Clarinet in Bb" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
+        midiInstrument = "clarinet"
       }
       << \outline
         \transpose bes c' {
@@ -117,6 +133,7 @@
         }
       >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -126,9 +143,11 @@
       \header { piece = "Bassoon" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
+        midiInstrument = "bassoon"
       }
       << \outline \bassoonMusic >>
-        \midi { }
+      \midi { }
+      \layout { }
     }
   }
 
@@ -139,6 +158,7 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override KeySignature #'break-visibility = #all-invisible
+        midiInstrument = "french horn"
       }
       << \outline
         \set Staff.explicitKeySignatureVisibility = #all-invisible
@@ -150,6 +170,7 @@
         }
       >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -160,6 +181,7 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override KeySignature #'break-visibility = #all-invisible
+        midiInstrument = "french horn"
       }
       << \outline
         \set Staff.explicitKeySignatureVisibility = #all-invisible
@@ -171,6 +193,7 @@
         }
       >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -181,6 +204,7 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override KeySignature #'break-visibility = #all-invisible
+        midiInstrument = "trumpet"
       }
       << \outline
         \set Staff.explicitKeySignatureVisibility = #all-invisible
@@ -192,6 +216,7 @@
         }
       >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -202,6 +227,7 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override KeySignature #'break-visibility = #all-invisible
+        midiInstrument = "trumpet"
       }
       << \outline
         \set Staff.explicitKeySignatureVisibility = #all-invisible
@@ -212,7 +238,8 @@
           \trumpetMusic
         }
       >>
-      \midi { }
+      % \midi { }
+      \layout { }
     }
   }
 
@@ -220,8 +247,12 @@
     \bookOutputSuffix "trombones1-2"
     \score {
       \header { piece = "Trombones 1-2" breakbefore = #splitParts }
-      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIAndIIMusic >>
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        midiInstrument = "trombone"
+      } << \outline \tromboneIAndIIMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -229,8 +260,12 @@
     \bookOutputSuffix "trombone3-tuba"
     \score {
       \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
-      \new Staff \with { \consists "Merge_rests_engraver" } << \outline \tromboneIIIAndTubaMusic >>
-        \midi { }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        midiInstrument = "tuba"
+      } << \outline \tromboneIIIAndTubaMusic >>
+      \midi { }
+      \layout { }
     }
   }
 
@@ -241,10 +276,13 @@
       \new StaffGroup \with {
         \override VerticalAxisGroup.staff-staff-spacing.stretchability = 10
       } <<
-        \new Staff \timpaniMusic
+        \new Staff \with {
+          midiInstrument = "timpani"
+        } \timpaniMusic
         \percussionStaff
       >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -255,8 +293,10 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        midiInstrument = "violin"
       } << \outline \violinIMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -267,8 +307,10 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        midiInstrument = "violin"
       } << \outline \violinIIMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -279,8 +321,10 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        midiInstrument = "viola"
       } << \outline \violaMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -291,8 +335,10 @@
       \new Staff \with {
         \consists "Merge_rests_engraver"
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        midiInstrument = "cello"
       } << \outline \celloMusic >>
       \midi { }
+      \layout { }
     }
   }
 
@@ -300,7 +346,10 @@
     \bookOutputSuffix "double-bass"
     \score {
       \header { piece = "Double bass" breakbefore = #splitParts }
-      \new Staff << \outline \bassMusic >>
-        \midi { }
+      \new Staff \with {
+        midiInstrument = "contrabass"
+      } << \outline \bassMusic >>
+      \midi { }
+      \layout { }
     }
   }
