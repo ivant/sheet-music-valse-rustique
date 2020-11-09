@@ -1,7 +1,7 @@
-bassoonMusic = \relative c' {
+bassoonMusic = \relative c'' {
   \compressFullBarRests
 
-  \clef "bass_8"
+  \clef "tenor"
   \key a \major
   \time 3/4 \partial 4 
   \override DynamicTextSpanner.style = #'none
@@ -47,8 +47,9 @@ bassoonMusic = \relative c' {
   a2.-^~ |
   a4 r
 
+  \clef "bass"
   <<
-    \relative c, {
+    \relative c {
       e( |
       % \bar "||" % measure 27
       a4 e') e-- |
@@ -63,15 +64,15 @@ bassoonMusic = \relative c' {
       \key f \major
       a4 r r |
     } \\
-    \relative c,, {
+    \relative c, {
       e( |
       a4 e') e-- |
       e2 dis4( |
-      e2~ e4) |
+      e2~-> e4) |
       a,2 dis4( |
-      e2.) |
+      e2.->) |
       e2 f4 |
-      e2.~( |
+      e2.~-^( |
       e2. |
       f4) r r |
     }
@@ -91,7 +92,7 @@ bassoonMusic = \relative c' {
 
   R2.*3 |
   <<
-    \relative c {
+    \relative c' {
       a2.( |
       aes2. |
       g2) r4 |
@@ -100,7 +101,7 @@ bassoonMusic = \relative c' {
       a2. |
       c4) r r |
     } \\
-    \relative c, {
+    \relative c {
       f2.~( |
       f2. |
       c2) r4 |
@@ -141,8 +142,9 @@ bassoonMusic = \relative c' {
   a2\! r4 |
   R2.*3 |
 
+  \clef "tenor"
   <<
-    \relative c {
+    \relative c' {
       e2.( |
       d2. |
       e2.~ |
@@ -154,6 +156,7 @@ bassoonMusic = \relative c' {
       c4 g') g-- |
       g2->( f8 e) |
       c2^^
+      \clef "bass"
       \stemUp
       b!4( |
       bes2.->) |
@@ -170,21 +173,21 @@ bassoonMusic = \relative c' {
       e2) a,4~ |
       a2 r4 |
     } \\
-    \relative c {
+    \relative c' {
       c2.( |
       b2. |
       c2.~ |
       c4) r s |
       s2.*2 |
       s2 r4 |
-      c,2. |
+      c,2.-> |
       f2.~ |
       f4 f-- f-- |
       f2( g4 |
       e2) r4 |
       R2.*2 |
       r4 r r |
-      c2. |
+      c2.-> |
       f4.( e8 d4 |
       c4) bes'-- a-- |
       g2.( |
@@ -231,7 +234,7 @@ bassoonMusic = \relative c' {
   \key a \major
   R2.*4 |
   <<
-    \relative c {
+    \relative c' {
       e2.( |
       dis2. |
       e2.~ |
@@ -239,6 +242,7 @@ bassoonMusic = \relative c' {
       \override MultiMeasureRest.staff-position = #8
       R2.*4 |
       \override MultiMeasureRest.staff-position = #0
+      \clef "tenor"
       e2( gis4 |
       fis2.) |
       e4(
@@ -250,6 +254,7 @@ bassoonMusic = \relative c' {
       gis2( fis8 e) |
       cis2^^ r4 |
       R2.*3 |
+      \clef "bass"
       r4 gis-. gis-. |
       \stemUp
       fisis2.( |
@@ -257,7 +262,7 @@ bassoonMusic = \relative c' {
       fis2. |
       e4) r
     } \\
-    \relative c {
+    \relative c' {
       a2.~( |
       a2. |
       e2.~ |
@@ -303,6 +308,7 @@ bassoonMusic = \relative c' {
     }
   >>
 
+  \clef "tenor"
   <<
     {
       e'4~(
@@ -310,10 +316,10 @@ bassoonMusic = \relative c' {
       ^\markup {"a2"} |
       e4 fis fisis) |
       gis2.~( |
-      gis4 fis dis) |
+      gis4 fis? dis) |
       e2.~( |
       e4 fis fisis) |
-      gis4( fis! e |
+      gis4( fis? e |
       fis4 e d |
       % \bar "||" % measure 131
       cis4) r r |
@@ -336,7 +342,7 @@ bassoonMusic = \relative c' {
 
   R2.*10 |
   <<
-    \relative c' {
+    \relative c'' {
       r4 r a(
       \tweak self-alignment-X #0.5
       ^\markup {"1."} |
@@ -371,8 +377,9 @@ bassoonMusic = \relative c' {
     }
   >>
 
+  \clef "bass"
   <<
-    \relative c, {
+    \relative c {
       e4( |
       a4 e') e-- |
       e2 c4( |
@@ -383,7 +390,7 @@ bassoonMusic = \relative c' {
       a2.-^~ |
       a4 r r\fermata |
     } \\
-    \relative c,, {
+    \relative c, {
       e4( |
       a4 e') e-- |
       e2 dis4( |
