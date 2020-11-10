@@ -58,7 +58,7 @@ tromboneIIIAndTubaMusic = \relative c, {
   cis2. |
   bis2.\>~ |
   bis2. |
-  b2.\dim~ |
+  b?2.\dim~ |
   b2. |
   e,2.\>~ |
   e4_\pp r r |
