@@ -1,6 +1,6 @@
 \version "2.20.0"
 %\pointAndClickOff
-#(set-global-staff-size 15)
+#(set-global-staff-size 12)
 \paper {
   indent = 2\cm  % add space for instrumentName
   short-indent = 1\cm  % add less space for shortInstrumentName
@@ -53,7 +53,12 @@
       \fluteIIMusic
 
     >>
-    \new StaffGroup = "StaffGroup_woodwinds" <<
+    \new StaffGroup = "StaffGroup_woodwinds" \with {
+      % TODO: tweak this further.
+      % Docs: https://lilypond.org/doc/v2.20/Documentation/learning/vertical-spacing
+      \override StaffGrouper.staff-staff-spacing = #'((basic-distance . 10)
+                                                      (padding . 2))
+    } <<
       \new Staff = "Staff_oboe" \with {
         instrumentName = "Oboe"
         shortInstrumentName = "Ob"
@@ -65,6 +70,7 @@
         instrumentName = \markup { \center-column { "Clarinets" \line {"in A"} } }
         shortInstrumentName = "Cl"
         midiInstrument = "clarinet"
+        \consists "Merge_rests_engraver"
       }
 
       % Declare that written Middle C in the music
@@ -73,11 +79,15 @@
       %\transposition a
 
       % Print music for a B-flat clarinet
-      \transpose a c' \clarinetMusic
+      \transpose a c' {
+        \transposition a
+        \clarinetMusic
+      }
       \new Staff = "Staff_bassoon" \with {
         instrumentName = "Bassoon"
         shortInstrumentName = "Bn"
         midiInstrument = "bassoon"
+        \consists "Merge_rests_engraver"
       } \bassoonMusic
     >>
 
@@ -86,36 +96,62 @@
         instrumentName = \markup { \center-column { "Horns 1-2" \line {"in F"} } }
         shortInstrumentName = "Hn 1-2"
         midiInstrument = "french horn"
+        \consists "Merge_rests_engraver"
       }
-       % \transposition f
-        \transpose f c' \hornIAndIIMusic
+      {
+        \set Staff.explicitKeySignatureVisibility = #all-invisible
+        \transpose f, c'
+        {
+          \transposition f
+          \key f \major
+          \hornIAndIIMusic
+        }
+      }
       \new Staff = "Staff_hornsIIIAndIV" \with {
         instrumentName = \markup { \center-column { "Horns 3-4" \line {"in F"} } }
         shortInstrumentName = "Hn 3-4"
         midiInstrument = "french horn"
+        \consists "Merge_rests_engraver"
       }
-       % \transposition f
-      \transpose f c' \hornIIIAndIVMusic
+      {
+        \set Staff.explicitKeySignatureVisibility = #all-invisible
+        \transpose f, c'
+        {
+          \transposition f
+          \key f \major
+          \hornIIIAndIVMusic
+        }
+      }
     >>
 
     \new Staff = "Staff_trumpet" \with {
       instrumentName = \markup { \center-column { "Trumpet" \line {"in F"} } }
       shortInstrumentName = "Tpt"
       midiInstrument = "trumpet"
+      \consists "Merge_rests_engraver"
     }
-    % \transposition f
-    \transpose f c' \trumpetMusic
+    {
+      \set Staff.explicitKeySignatureVisibility = #all-invisible
+      \transpose f c'
+      {
+        \transposition f'
+        \key f \major
+        \trumpetMusic
+      }
+    }
 
     \new GrandStaff = "StaffGroup_low_brass" <<
       \new Staff = "Staff_tbn12" \with {
         instrumentName = "Trombones 1-2" % \markup { \center-column { "Trombones" \line {"1-2"} } }
         shortInstrumentName = "Tbn 1-2"
         midiInstrument = "trombone"
+        \consists "Merge_rests_engraver"
       } \tromboneIAndIIMusic
       \new Staff = "Staff_tbn3tuba" \with {
         instrumentName = \markup { \center-column { "Trombone 3" \line {"and Tuba"} } }
         shortInstrumentName = \markup { \center-column { "Tbn 3" \line {"Tba"} } }
         midiInstrument = "tuba"
+        \consists "Merge_rests_engraver"
       } \tromboneIIIAndTubaMusic
     >>
 
@@ -134,12 +170,14 @@
           instrumentName = "Violin 1"
           shortInstrumentName = "Vln 1"
           midiInstrument = "violin"
+          \consists "Merge_rests_engraver"
         } \violinIMusic
 
         \new Staff = "Staff_violinII" \with {
           instrumentName = "Violin 2"
           shortInstrumentName = "Vn 2"
           midiInstrument = "violin"
+          \consists "Merge_rests_engraver"
         } \violinIIMusic
       >>
 
@@ -155,12 +193,14 @@
         instrumentName = "Cello"
         shortInstrumentName = "Vc"
         midiInstrument = "cello"
+        \consists "Merge_rests_engraver"
       } \celloMusic
 
       \new Staff = "Staff_bass" \with {
         instrumentName = "Double bass"
         shortInstrumentName = "Db"
         midiInstrument = "contrabass"
+        \consists "Merge_rests_engraver"
       }
       \bassMusic
     >>

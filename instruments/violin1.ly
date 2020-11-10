@@ -208,8 +208,8 @@ violinIMusic = \relative c' {
   <e e,>2 r4 |
   R2.*2 |
   \override Hairpin.to-barline = ##f
-  r4 r cis_\mp\<( |
-  e2) e4( |
+  r4 r cis_\mp( |
+  e2\<) e4( |
   cis'2-^ b8 a\!) |
   fis2->\>( e4) |
   e2 cis4\<( |
