@@ -57,7 +57,7 @@ timpaniMusic = \relative c {
   % 99
   R2.*30 |
   e2._\pp\startTrillSpan |
-  e2.\stopTrillSpan |
+  e2. <>\stopTrillSpan |
 
   % 131
   a,4 r r |
