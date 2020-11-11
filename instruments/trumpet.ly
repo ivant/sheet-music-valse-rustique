@@ -6,6 +6,7 @@ trumpetMusic = \relative c' {
   \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*17 |
+  \once \override Hairpin.to-barline = ##f
   a2_\p\<^"1." a4 |
   a2.^^_\f~ |
   a4 r r |
@@ -80,20 +81,20 @@ trumpetMusic = \relative c' {
       dis,2 r4 |
     }
     \new Dynamics {
+      \override Hairpin.to-barline = ##f
       s2.\< |
       s2. |
       s2_\f s4\> |
       s2. |
       s2._\p |
       s2. |
-      \override Hairpin.to-barline = ##f
       s2._\p\< |
       s2. |
-      s4\! s2 |
+      s4\mf s2 |
       s2.*5 |
       s2._\p\< |
       s2. |
-      s4\! s2 |
+      s4\mf s2 |
       \override Hairpin.to-barline = ##f
       s2.*2 |
       s2 s4_\f |
@@ -120,6 +121,7 @@ trumpetMusic = \relative c' {
   R2. |
   % \bar "||" % measure 131
   R2.*17 |
+  \once \override Hairpin.to-barline = ##f
   a2_\p\<^"1." a4 |
   a2.^^_\f~ |
   a4 r r |
@@ -136,6 +138,7 @@ trumpetMusic = \relative c' {
       a4 r r |
     }
     \new Dynamics {
+      \once \override Hairpin.to-barline = ##f
       s2.\< |
       s2._\sf |
     }
