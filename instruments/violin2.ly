@@ -93,11 +93,11 @@ violinIIMusic = \relative c' {
   dis2_\sf a4\>) |
   gis2.~( |
   gis4 fis e) |
-  cis'2.\<~( |
-  cis4 d dis) |
+  c'2.\<~( |
+  c4 d dis) |
   e2.~( |
-  e4 d b) |
-  c4_\f( g') g-- |
+  e4 d? b) |
+  c4_\f( g'?) g-- |
   g2->( f8 e) |
   <e c>2.^^~ |
   <e c>4 r r |

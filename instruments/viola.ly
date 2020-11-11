@@ -191,7 +191,8 @@ violaMusic = \relative c' {
   g2->( f8 e) |
   c2 r4 |
   R2.*4 |
-  r4 r a_\ff( |
+  r4 r
+  a_\ff( |
   d4 a') a-- |
   a2->( g8 fis) |
 
@@ -348,7 +349,7 @@ violaMusic = \relative c' {
       a4-> gis2) |
       e2 f4-- |
       e2.^^ |
-      cis'4
+      <cis' e,>4
       \tweak self-alignment-X #0
       ^"pizz." r r\fermata |
     } \relative c' {

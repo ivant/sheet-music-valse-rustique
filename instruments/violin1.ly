@@ -42,7 +42,7 @@ violinIMusic = \relative c' {
 
   R2. |
   r4 r fis'_\f( |
-  a4-^ gis cis |
+  a4-> gis cis |
   a2) fis,4( |
   a4-> gis cis) |
   a2\dim a4\! |

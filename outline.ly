@@ -66,8 +66,10 @@ outline = \new NullVoice {
   \tempo "a tempo"
   s2.*12 |
   \tempo "poco rit."
-  s2.*4 |
+  s2.*3 |
+  s2
   \tempo "a tempo"
+  s4 |
   s2.*8 |
   \tempo "con anima"
   s2.*5 |

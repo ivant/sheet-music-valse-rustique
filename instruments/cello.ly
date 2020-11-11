@@ -7,7 +7,7 @@ celloMusic = \relative c {
   \override DynamicTextSpanner.style = #'none
 
   r4 |
-  <a e'>2.->~ |
+  <a e'>2.->_\mp~ |
   <a e'>2 r4 |
   <a e'>2.->~ |
   <a e'>2 r4 |
@@ -17,23 +17,24 @@ celloMusic = \relative c {
   <a e'>2 r4 |
   <a e'>4^"pizz." r r |
   R2. 
-  <a e'>4 r r | % TODO: also pizz?
+  <a e'>4 r r |
   R2. 
-  <a e'>4 r r | % TODO: also pizz?
+  <a e'>4 r r |
   R2. 
-  <a e'>4 r r | % TODO: also pizz?
-  r4 r cis'(
+  <a e'>4 r r |
+  \once \override Hairpin.to-barline = ##f
+  r4 r cis'\<(
   \tweak self-alignment-X #1
   ^"arco" |
   e4.-> d8 b cis) |
   a2 a4 |
-  a2.-^~ |
+  a2.-^_\f~ |
   a4 r cis( |
-  e4.-> d8 b cis) |
-  a2 a4 |
+  e4.->\dim d8\! b cis) |
+  a2\> a4 |
   % \bar "||"
   a2.-^~ |
-  a4 r r |
+  a4\! r r |
 
   a2.-^~ |
   a4 r e,_\pp( |
@@ -59,7 +60,7 @@ celloMusic = \relative c {
   e2.\>( |
   g2 e4) |
   f2\<( a4 |
-  aes2_\sf\> g4) |
+  aes2_\sf\> f4) |
   e2.~( |
   e4\! d c) |
   f2\<( a4 |
@@ -146,7 +147,7 @@ celloMusic = \relative c {
   ^"pizz." r8 e d4 |
   c4\< bes a |
   g4 r g' |
-  a4 r\!  a,4_\ff(
+  a,4 r\!  a4_\ff(
   \tweak self-alignment-X #0.5
   ^"arco" |
   <a d,>2) r4 |

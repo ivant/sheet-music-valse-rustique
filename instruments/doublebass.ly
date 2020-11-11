@@ -59,7 +59,7 @@ bassMusic = \relative c {
   a,2\dim a4\! |
   a2^^ r4 |
   g4
-  \tweak self-alignment-X #1
+  \tweak self-alignment-X #0
   ^"pizz." r r |
 
 
@@ -114,19 +114,19 @@ bassMusic = \relative c {
   c4) bes-- a-- |
   R2.*5 |
   c,4_\f
-  \tweak self-alignment-X #1
+  \tweak self-alignment-X #0
   ^"pizz."
   r r |
   f4 r8 e d4 |
   c4\< bes a |
   g4 r g' |
   a,4 r\! a_\ff(
-  \tweak self-alignment-X #0.5
+  \tweak self-alignment-X #-0.5
   ^"arco" |
   d2) r4 |
   R2.*4 |
   cis'4
-  \tweak self-alignment-X #0.5
+  \tweak self-alignment-X #0
   ^"pizz."
   r r |
   d4\< r r |
@@ -134,7 +134,7 @@ bassMusic = \relative c {
   b,4_\sf r r |
   R2.*2 |
   r4 r b(
-  \tweak self-alignment-X #1
+  \tweak self-alignment-X #0
   ^"arco" |
   e2) r4 |
   R2.*3 |
@@ -142,7 +142,7 @@ bassMusic = \relative c {
   % \bar "||" % measure 99
   \key a \major
   a4_\mp
-  \tweak self-alignment-X #1
+  \tweak self-alignment-X #0
   ^"pizz."
   r r |
   R2. |
