@@ -1,4 +1,6 @@
 outline = \new NullVoice {
+  \set Score.markFormatter = #format-mark-box-alphabet
+
   \time 3/4 \partial 4
   \tempo "Tempo di Valse." 2. = 72
   s4 |
@@ -18,12 +20,14 @@ outline = \new NullVoice {
   }
 
   \bar "||" % measure 27
+  \mark \default
   \tempo "con anima"
   s2.*5 |
   \tempo "rit."
   s2.*3 |
 
   \bar "||" % measure 35
+  \mark \default
   \tweak self-alignment-X #CENTER
   \tempo "Tempo I˚"
   s2.*4 |
@@ -33,28 +37,35 @@ outline = \new NullVoice {
   s2.*10 |
 
   \bar "||" % measure 51
+  \mark \default
   s2.*5
   \tempo "poco rit."
   s2. |
   \tempo "a tempo"
-  s2.*24 |
+  s2.*14 |
+  \mark \default
+  s2.*10 |
 
   \tempo "rit."
   s2. |
   s2
   \tempo "a tempo"
   s4 |
+  \mark \default
   s2.*14 |
   \tempo "rall."
   s2.*2 |
 
   \bar "||" % measure 99
+  \mark \default
   \tempo "a tempo"
   s2.*5 |
   \tempo "poco rit."
   s2. |
   \tempo "a tempo"
-  s2.*14 |
+  s2.*10 |
+  \mark \default
+  s2.*4 |
   \tempo "poco rit."
   s2.*2 |
   \tempo "a tempo"
@@ -63,6 +74,7 @@ outline = \new NullVoice {
   s2.*2 |
 
   \bar "||" % measure 131
+  \mark \default
   \tempo "a tempo"
   s2.*12 |
   \tempo "poco rit."
@@ -71,6 +83,7 @@ outline = \new NullVoice {
   \tempo "a tempo"
   s4 |
   s2.*8 |
+  \mark \default
   \tempo "con anima"
   s2.*5 |
   \tempo "rit."
