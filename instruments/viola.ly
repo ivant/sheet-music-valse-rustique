@@ -6,9 +6,9 @@ violaMusic = \relative c' {
   \time 3/4 \partial 4
   \override DynamicTextSpanner.style = #'none
   r4 |
-  r4 r a_\mp( |
+  r4 r a_\mp\ub( |
   b2.->) |
-  r4 r a( |
+  r4 r a\db( |
   b2.->) |
   r4 r a( |
   b2.->) |
@@ -17,11 +17,11 @@ violaMusic = \relative c' {
 
   <<
     {
-      r4 r a_( |
+      r4 r a\ub_( |
       <a e'>2.) |
-      r4 r a_( |
+      r4 r a\db_( |
       <a e'>2.) |
-      r4 r b_( |
+      r4 r b\ub_( |
       <b gis'>2.) |
       r4 r b_( |
       <b gis'>2)
@@ -46,20 +46,20 @@ violaMusic = \relative c' {
   f2.\dim( |
   d2.\>) |
   % \bar "||"
-  cis2.-^~ |
+  cis2.-^\db~ |
   cis4\! r r |
 
-  cis2.-^~ |
-  cis4\! r e,_\pp( |
+  cis2.-^\db~ |
+  cis4\! r e,_\pp\db( |
 
   % \bar "||" % measure 27
-  a4\< e') e-- |
+  a4\< e') e--\ub |
   e2 c4_\f( |
   <d b>2.->) |
   <e cis?>2 fis,4( |
   a4-> gis2) |
-  e2\dim f4--\! |
-  e2.^^~( |
+  e2\dim\db f4--\!\ub |
+  e2.^^\db~( |
   e2. |
 
   % \bar "||" % measure 35
@@ -67,21 +67,23 @@ violaMusic = \relative c' {
   f4_\p)
   <<
     \relative c' {
-      a4--( a--) |
+      a4--\ub( a--\ub) |
       a2-- r4 |
-      r4 bes4--( bes--) |
+      r4 bes4--\ub( bes--\ub) |
       bes2-- r4 |
-      r4 a--( a--) |
+      r4 a--\ub( a--\ub) |
       aes2. |
-      r4 e--( e--) |
+      r4 e--\ub( e--\ub) |
       e2-- r4 |
-      r4 a--( a--) |
+      r4 a--\ub( a--\ub) |
       a2-- r4 |
-      r4 f--( f--) |
+      r4 f--\ub( f--\ub) |
       f2-> r4 |
       r4 c'--( c--) |
       d2-> r4 |
-      r4 e--( e--) |
+      r4 e--(
+      ^\markup { \teeny "tip" }
+      e--) |
       e2-> r4 |
     } \relative c {
       f4--( f--) |
@@ -98,7 +100,9 @@ violaMusic = \relative c' {
       s2. | % f2-> r4 |
       r4 e--( e--) |
       e2-> r4 |
-      r4 a--( a--) |
+      r4 a--(
+      _\markup { \teeny "tip" }
+      a--) |
       a2-> r4 |
     }
     \new Dynamics {
@@ -138,7 +142,7 @@ violaMusic = \relative c' {
       fis4 r r |
       r4 e e |
       f4 r r |
-      e2.^^~
+      e2.^^\db~
       \tweak self-alignment-X #1.5
       ^\markup {"arco"} |
       e4 r r |
@@ -181,7 +185,7 @@ violaMusic = \relative c' {
     }
   >>
   R2.*2 |
-  r4 r d''( |
+  r4 r d''\db( |
   a2->\cresc g4\!) |
   f2( g4 |
   a4) bes-- c-- |
@@ -192,26 +196,26 @@ violaMusic = \relative c' {
   c2 r4 |
   R2.*4 |
   r4 r
-  a_\ff( |
+  a_\ff\db( |
   d4 a') a-- |
-  a2->( g8 fis) |
+  a2->( g8\ub fis) |
 
   <<
     \relative c'' {
-      a2-> a4 |
+      a2->\db a4\ub |
     } \relative c' {
       fis2-> fis4 |
     }
   >>
-  e2-> e4 |
-  d4 fis,2-> |
-  r4 fis2-> |
-  r4 fis2->\< |
-  r4 fis2-> |
-  fis4_\sf( a) a-- |
-  a2( gis8 fis) |
+  e2-> e4\ub |
+  d4\ub fis,2->\db |
+  r4 fis2->\db |
+  r4 fis2->\<\db |
+  r4 fis2->\ub |
+  fis4_\sf\db( a) a-- |
+  a2( gis8\ub fis) |
   fis2-> fis4 |
-  fis2-> a4( |
+  fis2-> a4\ub( |
   gis4 gis')
 
   gis--\< |
@@ -255,23 +259,23 @@ violaMusic = \relative c' {
 
   <<
     {
-      gis'2(
+      gis'2\ub(
       \tweak self-alignment-X #1
       ^"arco" cis4 |
       gis2 e'4) |
       dis2.( |
       bis2 fis4) |
       gis2( cis4~ |
-      cis2 ais4) |
+      cis2^\db ais4) |
       gis2.-^(
-      dis4 cis bis) |
-      gis'2( cis4 |
+      dis4 cis\db bis) |
+      gis'2\ub( cis4 |
       gis2) r4 |
-      bis2( dis4 |
+      bis2\db( dis4 |
       bis2) r4 |
-      gis2( b?4 |
+      gis2\ub( b?4 |
       gis2) r4 |
-      b2( gis4 |
+      b2\db( gis4 |
       fis4 e d |
       % \bar "||" % measure 131
       cis4)
@@ -297,9 +301,9 @@ violaMusic = \relative c' {
     }
   >>
 
-  r a_\mp( |
+  r a_\mp\ub( |
   b2.->) |
-  r4 r a( |
+  r4 r a\db( |
   b2.->) |
   r4 r a( |
   b2.->) |
@@ -308,13 +312,13 @@ violaMusic = \relative c' {
 
   <<
     {
-      r4 r a_( |
+      r4 r a\ub_( |
       <a e'>2.) |
-      r4 r a_( |
+      r4 r a\db_( |
       <a e'>2.) |
-      r4 r b_( |
+      r4 r b\ub_( |
       <b gis'>2.) |
-      r4 r b_( |
+      r4 r b\db_( |
       <b gis'>2)
     }
     \new Dynamics {
@@ -337,18 +341,18 @@ violaMusic = \relative c' {
   f2.\dim( |
   d2.\>) |
   cis2.-^~ |
-  cis4\! r e,_\pp( |
+  cis4\! r e,_\pp\db( |
   \override Hairpin.to-barline = ##f
-  a4\< e') e-- |
-  e2\!
+  a4\< e') e--\db |
+  e2\!\ub
   <<
     \relative c' {
-      c4( |
+      c4\db( |
       d2.->) |
       e2 fis,4( |
-      a4-> gis2) |
-      e2 f4-- |
-      e2.^^ |
+      a4-> gis2\ub) |
+      e2\db( f4--\db) |
+      e2.^^\ub |
       <cis' e,>4
       \tweak self-alignment-X #0
       ^"pizz." r r\fermata |
