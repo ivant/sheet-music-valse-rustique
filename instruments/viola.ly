@@ -355,7 +355,7 @@ violaMusic = \relative c' {
     } \relative c' {
       s4 | % c4( |
       b2.-> | % b2.->) |
-      cis2 s4 | % cis2 fis,4( |
+      cis?2 s4 | % cis2 fis,4( |
       s2. | % a4-> gis2) |
       s2. | % e2 f4-- |
       s2. | % e2.-^ |

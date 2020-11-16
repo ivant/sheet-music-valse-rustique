@@ -59,7 +59,7 @@ hornIIIAndIVMusic = \relative c' {
       a2.( |
       b2. |
       c2. |
-      bes!2.) |
+      bes?2.) |
       a2.~ |
       a2.~ |
       a2.~ |

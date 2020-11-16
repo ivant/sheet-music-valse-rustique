@@ -41,13 +41,19 @@
   indent = #0
   ragged-last = ##t
   ragged-bottom = ##t
+
+  \context {
+    \Score
+    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+  }
 }
 
 \header {
   title = "Valse Rustique"
   composer = "Samuel Coleridge-Taylor"
-  subtitle = "[Unfinished engraving, DO NOT USE FOR RECORDING!]"
-  tagline = "Unfinished engraving, for review only, DO NOT USE FOR RECORDING!"
+% subtitle = "[Unfinished engraving, DO NOT USE FOR RECORDING!]"
+% tagline = "Unfinished engraving, for review only, DO NOT USE FOR RECORDING!"
+  tagline = ""
 }
 
   \book {

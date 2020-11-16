@@ -315,10 +315,10 @@ clarinetMusic = \relative c' {
       ^\markup {"a2"}
       fisis) |
       gis2.~( |
-      gis4 fis! dis)
+      gis4 fis? dis)
       e2.~( |
       e4 fis fisis) |
-      gis4( fis! e |
+      gis4( fis? e |
       d4 cis b |
       % \bar "||" % measure 131
       a4) r r |

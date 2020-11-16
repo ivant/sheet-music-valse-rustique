@@ -91,7 +91,7 @@ tromboneIAndIIMusic = \relative c, {
   R2.*30
   <<
     \relative c' {
-      cis!2.-^~ |
+      cis?2.-^~ |
       cis4 r r\fermata |
     } \\
     \relative c {

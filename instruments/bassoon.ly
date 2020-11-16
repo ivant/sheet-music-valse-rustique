@@ -54,7 +54,7 @@ bassoonMusic = \relative c'' {
       % \bar "||" % measure 27
       a4 e') e-- |
       e2 c4( |
-      b2-> cis!4) |
+      b2-> cis?4) |
       a2 c4( |
       b2-> gis4) |
       a2 a4 |
@@ -158,14 +158,14 @@ bassoonMusic = \relative c'' {
       c2^^
       \clef "bass"
       \stemUp
-      b!4( |
+      b?4( |
       bes2.->) |
       a2( g4 |
       a4) bes-- a-- |
       bes2.( |
       g2) r4 |
       R2.*2 |
-      r4 r b!( |
+      r4 r b?( |
       bes2.->) |
       a2( g4 |
       a4) d-- c-- |
@@ -226,7 +226,7 @@ bassoonMusic = \relative c'' {
   d2 r4 |
   cis2 r4 |
   d2 r4 |
-  c!2\< r4\! |
+  c?2\< r4\! |
   b2_\sf r4 |
   R2.*7 |
 

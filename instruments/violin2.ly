@@ -40,13 +40,13 @@ violinIIMusic = \relative c' {
   r4 r fis_\f( |
   a4-> gis cis |
   a2) c,4^( |
-  <d b>2-> cis!4) |
+  <d b>2-> cis?4) |
   cis2\dim d4--\! |
   cis2.^^~( |
   cis2. |
   % \bar "||" % measure 35
   \key f \major
-  c!4_\p) c--( d--) |
+  c?4_\p) c--( d--) |
   c2-- r4 |
   r4 c--( d--) |
   c2-- r4 |

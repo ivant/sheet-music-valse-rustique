@@ -1,3 +1,13 @@
+rit = {
+  \once \override Score.MetronomeMark.direction = #DOWN
+  \tempo "rit."
+}
+
+pocoRit = {
+  \once \override Score.MetronomeMark.direction = #DOWN
+  \tempo "poco rit."
+}
+
 outline = \new NullVoice {
   \set Score.markFormatter = #format-mark-box-alphabet
 
@@ -6,7 +16,7 @@ outline = \new NullVoice {
   s4 |
   \repeat volta 2 {
     s2.*13 |
-    \tempo "poco rit."
+    \pocoRit
     s2.*2 |
     s2
     \tempo "a tempo"
@@ -23,7 +33,7 @@ outline = \new NullVoice {
   \mark \default
   \tempo "con anima"
   s2.*5 |
-  \tempo "rit."
+  \rit
   s2.*3 |
 
   \bar "||" % measure 35
@@ -31,7 +41,7 @@ outline = \new NullVoice {
   \tweak self-alignment-X #CENTER
   \tempo "Tempo I˚"
   s2.*4 |
-  \tempo "poco rit."
+  \pocoRit
   s2.*2 |
   \tempo "a tempo"
   s2.*10 |
@@ -39,14 +49,14 @@ outline = \new NullVoice {
   \bar "||" % measure 51
   \mark \default
   s2.*5
-  \tempo "poco rit."
+  \pocoRit
   s2. |
   \tempo "a tempo"
   s2.*14 |
   \mark \default
   s2.*10 |
 
-  \tempo "rit."
+  \rit
   s2. |
   s2
   \tempo "a tempo"
@@ -60,13 +70,13 @@ outline = \new NullVoice {
   \mark \default
   \tempo "a tempo"
   s2.*5 |
-  \tempo "poco rit."
+  \pocoRit
   s2. |
   \tempo "a tempo"
   s2.*10 |
   \mark \default
   s2.*4 |
-  \tempo "poco rit."
+  \pocoRit
   s2.*2 |
   \tempo "a tempo"
   s2.*8 |
@@ -77,7 +87,7 @@ outline = \new NullVoice {
   \mark \default
   \tempo "a tempo"
   s2.*12 |
-  \tempo "poco rit."
+  \pocoRit
   s2.*3 |
   s2
   \tempo "a tempo"
@@ -86,7 +96,7 @@ outline = \new NullVoice {
   \mark \default
   \tempo "con anima"
   s2.*5 |
-  \tempo "rit."
+  \rit
   s2.*2 |
   s2. % \fermata should be added to each instrument explicitly, since some have it on the 3rd beat
   \bar "|."
