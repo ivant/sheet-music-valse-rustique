@@ -156,7 +156,8 @@ violinIIMusic = \relative c' {
   dis2 bis4) |
   cis2\<\ub( gis'4 |
   fisis2_\sf\>\db cis4) |
-  bis2.^^\!~\ub( |
+  bis2.^^\!~\ub(
+  _\markup { \teeny "Save bow" } |
   bis4 a?\db gis) |
   \override Hairpin.to-barline = ##f
   cis2\<\ub( e4 |
@@ -202,7 +203,7 @@ violinIIMusic = \relative c' {
   a4-> gis cis |
   a2) c,4^( |
   <d b>2-> e4) |
-  cis2\dim\db d4--\!\db |
+  cis2\dim\db( d4--\!\db) |
   cis2.^^\ub |
   <cis' e, a,>4_\sf
   \tweak self-alignment-X #0.5
