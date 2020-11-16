@@ -31,7 +31,7 @@
   markup-system-spacing = #'((basic-distance . 5)
                              (padding . 0.5)
                              (stretchability . 2))
-  system-system-spacing = #'((basic-distance . 12)
+  system-system-spacing = #'((basic-distance . 20)
                              (minimum-distance . 8)
                              (padding . 3)
                              (stretchability . 40))
