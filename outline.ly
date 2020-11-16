@@ -12,7 +12,7 @@ outline = \new NullVoice {
   \set Score.markFormatter = #format-mark-box-alphabet
 
   \time 3/4 \partial 4
-  \tempo "Tempo di Valse." 2. = 72
+  \tempo "Tempo di Valse." %2. = 72
   s4 |
   \repeat volta 2 {
     s2.*13 |
