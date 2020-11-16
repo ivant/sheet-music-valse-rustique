@@ -45,8 +45,8 @@ violinIMusic = \relative c' {
   a4-> gis cis |
   a2) fis,4( |
   a4-> gis cis) |
-  a2\dim a4\! |
-  a2.^^~ |
+  a2\dim\db a4\!\ub |
+  a2.^^\db~ |
   a4 r e'\ub( |
 
   % \bar "||" % measure 35
