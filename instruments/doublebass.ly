@@ -54,7 +54,7 @@ bassMusic = \relative c {
   a4\< e') e--\ub |
   e2 r4\! |
   R2. |
-  r4 r dis,_\f( |
+  r4 r dis,_\f\ub( |
   e2.->) |
   a,2\dim\db a4\!\ub |
   a2^^\db r4 |
