@@ -113,7 +113,7 @@ violinIIMusic = \relative c' {
   c2 r4 |
   R2.*4 |
   r4 r a_\ff^\db( |
-  <f a,>4 a) a-- |
+  <fis a,>4 a) a-- |
   a2->( g8\ub fis) |
   <a fis>2->\db <a fis>4\ub |
   g2->\db g4\ub |
