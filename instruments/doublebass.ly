@@ -4,7 +4,6 @@ bassMusic = \relative c {
   \clef "bass_8"
   \key a \major
   \time 3/4 \partial 4
-  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*8 |
   <<
@@ -109,7 +108,6 @@ bassMusic = \relative c {
   c2.\db
   \tweak self-alignment-X #1
   ^"arco" |
-  \override DynamicTextSpanner.style = #'none
   f4.\cresc( e8 d4 |
   c4) bes-- a-- |
   R2.*5 |

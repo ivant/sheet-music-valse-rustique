@@ -4,7 +4,6 @@ violaMusic = \relative c' {
   \clef "alto"
   \key a \major
   \time 3/4 \partial 4
-  \override DynamicTextSpanner.style = #'none
   r4 |
   r4 r a_\mp\ub( |
   b2.->) |
@@ -237,7 +236,6 @@ violaMusic = \relative c' {
       cis4\! r r |
       r4 cis_\f dis |
       cis4 r r |
-      %\override DynamicTextSpanner.style = #'none
       r4 cis\dim cis\! |
       dis4 r r |
     } \relative c' {
@@ -370,7 +368,6 @@ violaMusic = \relative c' {
       s2. |
       s2. |
       s2. |
-      \override DynamicTextSpanner.style = #'none
       s2.\dim |
       s2. |
       s2._\sf |

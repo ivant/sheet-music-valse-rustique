@@ -3,7 +3,6 @@ timpaniMusic = \relative c {
 
   \clef "bass"
   \time 3/4 \partial 4 
-  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*8 |
   <a e'>4_\pp r r |

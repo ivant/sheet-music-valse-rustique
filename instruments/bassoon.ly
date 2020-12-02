@@ -4,7 +4,6 @@ bassoonMusic = \relative c'' {
   \clef "tenor"
   \key a \major
   \time 3/4 \partial 4 
-  \override DynamicTextSpanner.style = #'none
 
   r4 |
   R2.*11 |
@@ -25,7 +24,6 @@ bassoonMusic = \relative c'' {
       a2 a4 |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2 s4_\p |
       s2.\< |
@@ -77,7 +75,6 @@ bassoonMusic = \relative c'' {
       f4) r r |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s_\pp |
       s2.\< |
@@ -111,7 +108,6 @@ bassoonMusic = \relative c'' {
       e4) r r |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2._\p\< |
       s2._\sf\> |
@@ -195,7 +191,6 @@ bassoonMusic = \relative c'' {
       d2) r4 |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       s2._\f |
       s2.*2 |
       s2 s4_\pp |
@@ -284,7 +279,6 @@ bassoonMusic = \relative c'' {
       cis4) r
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2._\mp\< |
       s2._\sf\> |
@@ -360,7 +354,6 @@ bassoonMusic = \relative c'' {
       a4 r
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2 s4_\p |
       s2.\< |
@@ -402,7 +395,6 @@ bassoonMusic = \relative c'' {
       e4 r r |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s4_\pp |
       s2.\< |

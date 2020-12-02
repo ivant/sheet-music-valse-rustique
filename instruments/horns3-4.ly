@@ -3,7 +3,6 @@ hornIIIAndIVMusic = \relative c' {
 
 %  \key a \major
   \time 3/4 \partial 4 
-  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*22 |
   % \bar "||"
@@ -36,7 +35,6 @@ hornIIIAndIVMusic = \relative c' {
       e2. |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s4_\pp |
       s2.\< |
@@ -88,7 +86,6 @@ hornIIIAndIVMusic = \relative c' {
       a2) r4 |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s4_\p s2_\markup{\italic "dolce" } |
       s2.*3 |
@@ -143,7 +140,6 @@ hornIIIAndIVMusic = \relative c' {
       fis2 r4 |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2._\mf |
       s2.\< |
@@ -177,7 +173,6 @@ hornIIIAndIVMusic = \relative c' {
       cis4 r r |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s2._\p |
       s2.\> |
@@ -214,7 +209,6 @@ hornIIIAndIVMusic = \relative c' {
       e4 r r |
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
       s4_\pp |
       s2.\< |
@@ -234,7 +228,6 @@ hornIIIAndIVMusic = \relative c' {
     \relative c, {
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       \override Hairpin.to-barline = ##f
     }
   >>

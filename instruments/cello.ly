@@ -4,7 +4,6 @@ celloMusic = \relative c {
   \clef "bass"
   \key a \major
   \time 3/4 \partial 4 
-  \override DynamicTextSpanner.style = #'none
 
   r4 |
   <a e'>2.->_\mp\db~ |
@@ -212,7 +211,6 @@ celloMusic = \relative c {
       r4
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       s2. |
       s2. |
       s2. |

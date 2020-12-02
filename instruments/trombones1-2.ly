@@ -4,7 +4,6 @@ tromboneIAndIIMusic = \relative c, {
   \clef "tenor"
   \key a \major
   \time 3/4 \partial 4
-  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*22
   % \bar "||"
@@ -75,7 +74,6 @@ tromboneIAndIIMusic = \relative c, {
       gis4 r r
     }
     \new Dynamics {
-      \override DynamicTextSpanner.style = #'none
       s2._\pp\< |
       s2. |
       s2.\> |

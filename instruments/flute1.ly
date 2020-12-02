@@ -3,7 +3,6 @@ fluteIMusic = \relative c''' {
 
   \key a \major
   \time 3/4 \partial 4 
-  \override DynamicTextSpanner.style = #'none
   r4 |
   R2.*6 |
   a4_\p\<( e') e-- |
