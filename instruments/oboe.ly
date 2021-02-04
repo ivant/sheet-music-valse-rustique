@@ -92,8 +92,8 @@ oboeMusic = \relative c' {
       a'2-> g4) |
       f2( g4 |
       a4) bes-- c-- |
-      d2( e4 |
-      cis2)
+      d,2( e4 |
+      cis'2)
       a,4( |
       d4 a') a-- |
       a2->( g8 fis) |
