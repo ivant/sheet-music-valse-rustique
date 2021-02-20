@@ -1,5 +1,5 @@
 \version "2.20.0"
-%\pointAndClickOff
+\pointAndClickOff
 #(define splitParts #t)
 db = \downbow
 ub = \upbow
@@ -30,13 +30,13 @@ ub = \upbow
   print-all-headers = ##t
   %page-breaking = #ly:page-turn-breaking
   bookTitleMarkup = ""
-  markup-system-spacing = #'((basic-distance . 5)
-                             (padding . 0.5)
-                             (stretchability . 2))
-  system-system-spacing = #'((basic-distance . 20)
-                             (minimum-distance . 8)
-                             (padding . 3)
-                             (stretchability . 40))
+% markup-system-spacing = #'((basic-distance . 5)
+%                            (padding . 0.5)
+%                            (stretchability . 10))
+% system-system-spacing = #'((basic-distance . 20)
+%                            (minimum-distance . 8)
+%                            (padding . 10)
+%                            (stretchability . 40))
 }
 
 \layout {
@@ -47,6 +47,24 @@ ub = \upbow
   \context {
     \Score
     \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+%   \override StaffGrouper.staff-staff-spacing =
+%       #'((basic-distance . 20)
+%          (minimum-distance . 7)
+%          (padding . 1)
+%          (stretchability . 5))
+%   \override StaffGrouper.staffgroup-staff-spacing =
+%       #'((basic-distance . 20.5)
+%          (minimum-distance . 8)
+%          (padding . 1)
+%          (stretchability . 9))
+  }
+  \context {
+    \Staff
+    \override DynamicTextSpanner.style = #'none
+  }
+  \context {
+    \Dynamics
+    \override DynamicTextSpanner.style = #'none
   }
 }
 
@@ -55,7 +73,7 @@ ub = \upbow
   composer = "Samuel Coleridge-Taylor"
 % subtitle = "[Unfinished engraving, DO NOT USE FOR RECORDING!]"
 % tagline = "Unfinished engraving, for review only, DO NOT USE FOR RECORDING!"
-  tagline = "[2020-11-16, v.1]"
+  tagline = "[2020-12-15, v.4]"
 }
 
   \book {
@@ -358,6 +376,55 @@ ub = \upbow
         midiInstrument = "contrabass"
       } << \outline \bassMusic >>
       \midi { }
+      \layout { }
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "strings"
+    \score {
+      \header { piece = "Strings" breakbefore = #splitParts }
+      \new StaffGroup = "StaffGroup_strings"
+      <<
+        \new GrandStaff = "GrandStaff_violins" <<
+          \new Staff = "Staff_violinI" \with {
+            instrumentName = "Violin 1"
+            shortInstrumentName = "Vln 1"
+            midiInstrument = "violin"
+            \consists "Merge_rests_engraver"
+          } << \outline \violinIMusic >>
+
+          \new Staff = "Staff_violinII" \with {
+            instrumentName = "Violin 2"
+            shortInstrumentName = "Vn 2"
+            midiInstrument = "violin"
+            \consists "Merge_rests_engraver"
+          } \violinIIMusic
+        >>
+
+        \new Staff = "Staff_viola" \with {
+          instrumentName = "Viola"
+          shortInstrumentName = "Va"
+          midiInstrument = "viola"
+          \consists "Merge_rests_engraver"
+          \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        } \violaMusic
+
+        \new Staff = "Staff_cello" \with {
+          instrumentName = "Cello"
+          shortInstrumentName = "Vc"
+          midiInstrument = "cello"
+          \consists "Merge_rests_engraver"
+        } \celloMusic
+
+        \new Staff = "Staff_bass" \with {
+          instrumentName = "Double bass"
+          shortInstrumentName = "Db"
+          midiInstrument = "contrabass"
+          \consists "Merge_rests_engraver"
+        }
+        \bassMusic
+      >>
       \layout { }
     }
   }
