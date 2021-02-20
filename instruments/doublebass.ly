@@ -45,18 +45,18 @@ bassMusic = \relative c {
   R2. |
 
   a4_\p r r |
-  r4 r e'_\pp\db(
+  r4 r e'_\pp(
   \tweak self-alignment-X #1
   ^"arco" |
 
   % \bar "||" % measure 27
-  a4\< e') e--\ub |
+  a4\< e') e-- |
   e2 r4\! |
   R2. |
-  r4 r dis,_\f\ub( |
+  r4 r dis,_\f( |
   e2.->) |
-  a,2\dim\db a4\!\ub |
-  a2^^\db r4 |
+  a,2\dim a4\! |
+  a2^^ r4 |
   g4
   \tweak self-alignment-X #0
   ^"pizz." r r |
@@ -105,7 +105,7 @@ bassMusic = \relative c {
   c4 e g |
   c4 r r |
   R2.*3 |
-  c2.\db
+  c2.
   \tweak self-alignment-X #1
   ^"arco" |
   f4.\cresc( e8 d4 |
@@ -118,7 +118,7 @@ bassMusic = \relative c {
   f4 r8 e d4 |
   c4\< bes a |
   g4 r g' |
-  a,4 r\! a_\ff\db(
+  a,4 r\! a_\ff(
   \tweak self-alignment-X #-0.5
   ^"arco" |
   d2) r4 |
@@ -131,7 +131,7 @@ bassMusic = \relative c {
   c?4 r\! r |
   b,4_\sf r r |
   R2.*2 |
-  r4 r b\db(
+  r4 r b(
   \tweak self-alignment-X #0
   ^"arco" |
   e2) r4 |
@@ -193,16 +193,16 @@ bassMusic = \relative c {
   d4\dim r\! r |
   R2. |
   a4_\p r r |
-  r4 r e'_\pp\db(
+  r4 r e'_\pp(
   \tweak self-alignment-X #1
   ^"arco" |
-  a4\< e') e--\db |
-  e2\ub r4\! |
+  a4\< e') e-- |
+  e2 r4\! |
   R2. |
-  r4 r dis,\db( |
+  r4 r dis,( |
   e2.->) |
-  a,2\dim\db( a4--\db) |
-  a2.^^\ub~ |
+  a,2\dim( a4--) |
+  a2.^^~ |
   a4_\sf r r\fermata |
 }
 

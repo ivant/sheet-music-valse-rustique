@@ -6,13 +6,13 @@ celloMusic = \relative c {
   \time 3/4 \partial 4 
 
   r4 |
-  <a e'>2.->_\mp\db~ |
+  <a e'>2.->_\mp~ |
   <a e'>2 r4 |
-  <a e'>2.->\ub~ |
+  <a e'>2.->~ |
   <a e'>2 r4 |
-  <a e'>2.->\db~ |
+  <a e'>2.->~ |
   <a e'>2 r4 |
-  <a e'>2.->\ub~ |
+  <a e'>2.->~ |
   <a e'>2 r4 |
   <a e'>4^"pizz." r r |
   R2. 
@@ -22,53 +22,53 @@ celloMusic = \relative c {
   R2. 
   <a e'>4 r r |
   \once \override Hairpin.to-barline = ##f
-  r4 r cis'\<\db(
+  r4 r cis'\<(
   \tweak self-alignment-X #1
   ^"arco" |
   e4.-> d8 b cis) |
-  a2\ub a4\ub |
+  a2 a4 |
   a2.-^_\f~ |
-  a4 r cis\db( |
+  a4 r cis( |
   e4.->\dim d8\! b cis) |
-  a2\>\ub a4\ub |
+  a2\> a4 |
   % \bar "||"
   a2.-^~ |
   a4\! r r |
 
   a2.-^~ |
-  a4 r e,_\pp\db( |
+  a4 r e,_\pp( |
 
   % \bar "||" % measure 27
-  a4\< e') e--\ub |
+  a4\< e') e-- |
   e2 dis4_\f( |
   e2.->) |
   a2 dis,,4( |
   e2.->) |
-  a2\dim\db a4\!\ub |
-  a2.-^\db~ |
+  a2\dim a4\! |
+  a2.-^~ |
   a4 r r |
 
   % \bar "||" % measure 35
   \key f \major
   \clef "tenor"
 
-  f''2\<\db(
+  f''2\<(
   _\markup{\italic "dolce" }
   a4 |
-  f2\ub d4) |
-  e2.\>\db( |
+  f2 d4) |
+  e2.\>( |
   g2 e4) |
-  f2\<\ub( a4 |
-  aes2_\sf\>\db f4) |
-  e2.\ub~( |
-  e4\! d\db c) |
-  f2\<\ub( a4 |
-  f2.\db) |
-  f2\cresc\ub( a4 |
-  f2.\db) |
-  e2_\f\ub( a4\dim) |
-  e2\db( d8 c) |
-  a2.-^_\pp\ub~ |
+  f2\<( a4 |
+  aes2_\sf\> f4) |
+  e2.~( |
+  e4\! d c) |
+  f2\<( a4 |
+  f2.) |
+  f2\cresc( a4 |
+  f2.) |
+  e2_\f( a4\dim) |
+  e2( d8 c) |
+  a2.-^_\pp~ |
   a4 r r |
 
   % \bar "||" % measure 51
@@ -130,7 +130,7 @@ celloMusic = \relative c {
   c,,4 e g |
   c4 r r |
   R2.*3
-  c2.\db
+  c2.
   \tweak self-alignment-X #0.5
   ^"arco" |
   f4.\cresc( e8 d4 |
@@ -146,12 +146,12 @@ celloMusic = \relative c {
   ^"pizz." r8 e d4 |
   c4\< bes a |
   g4 r g' |
-  a,4 r\!  a4_\ff\db(
+  a,4 r\!  a4_\ff(
   \tweak self-alignment-X #0.5
   ^"arco" |
   <a d,>2) r4 |
   R2. |
-  d4\db( a') a-- |
+  d4( a') a-- |
   a2->( g8 fis) |
   d4 r r |
   cis4
@@ -160,17 +160,17 @@ celloMusic = \relative c {
   r r |
   d4\< r r |
   c?4 r\! r |
-  b_\sf\db(
+  b_\sf(
   \tweak self-alignment-X #0.5
   ^"arco"
   a') a-- |
-  a2( gis8\ub fis) |
+  a2( gis8 fis) |
   b,2-> b4 |
-  b2-> b4\ub( |
+  b2-> b4( |
   <b e,>2) <b' e,>4\< |
   <b e,>2.-> |
   <b e,>2\>( d,4 |
-  cis2\ub b4 |
+  cis2 b4 |
 
   % \bar "||" % measure 99
   \key a \major
@@ -228,17 +228,17 @@ celloMusic = \relative c {
   >>
 
   \clef "tenor"
-  r4^"a2" gis_\pp\ub(
+  r4^"a2" gis_\pp(
   \tweak self-alignment-X #0.5
   ^"arco" |
   e'2.\<~ |
   e4 fis fisis) |
   gis2.\>~( |
   gis4 fis dis)
-  e2.\<\ub( |
-  ais2_\sf\>\db e4) |
-  dis2.-^\!~\ub |
-  dis4 r gis,\db( |
+  e2.\<( |
+  ais2_\sf\> e4) |
+  dis2.-^\!~ |
+  dis4 r gis,( |
   e'2.\<~ |
   e4 fis fisis) |
   gis2.\>~( |
@@ -297,20 +297,20 @@ celloMusic = \relative c {
   \tweak self-alignment-X #1
   ^"arco" |
   e4.-> d8 b cis) |
-  a2\ub a4\ub |
+  a2 a4 |
   a2.-^~_\f |
-  a4 r cis\ub( |
+  a4 r cis( |
   e4.-> d8\dim b\! cis) |
   a2 a4 |
   a2.-^~ |
-  a4 r e,_\pp\db( |
-  a4\< e') e--\db |
-  e2\ub dis4_\f\db( |
+  a4 r e,_\pp( |
+  a4\< e') e-- |
+  e2 dis4_\f( |
   e2.->) |
-  a2 dis,,4\db( |
+  a2 dis,,4( |
   e2.->) |
-  a2\dim(\db a4--\!\db) |
-  a2.-^\ub~ |
+  a2\dim( a4--\!) |
+  a2.-^~ |
   a4_\sf r r\fermata |
 }
 
