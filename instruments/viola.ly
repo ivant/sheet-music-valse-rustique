@@ -5,19 +5,19 @@ violaMusic = \relative c' {
   \key a \major
   \time 3/4 \partial 4
   r4 |
-  r4 r a-1_\mp( |
+  r4 r a_\mp( |
   b2.->) |
   r4 r a( |
   b2.->) |
   r4 r a( |
   b2.->) |
   \break
-  r4 r e,-1( |
+  r4 r e,( |
   a2.) | % TODO: no articulation marks from here?
 
   <<
     {
-      r4 r a-1_( |
+      r4 r a_( |
       <a e'>2.) |
       r4 r a_( |
       <a e'>2.) |
@@ -40,9 +40,9 @@ violaMusic = \relative c' {
   >>
 
   gis'4\<( |
-  g2.-3 |
-  cis,2.-4) |
-  d2.-2_\f( |
+  g2. |
+  cis,2.) |
+  d2._\f( |
   fis2.) |
   f2.\dim( |
   d2.\>) |
@@ -52,13 +52,13 @@ violaMusic = \relative c' {
 
   \break
   cis2.-^~ |
-  cis4\! r e,-2_\pp( |
+  cis4\! r e,_\pp( |
 
   % \bar "||" % measure 27
   a4\< e') e-- |
   e2 c4_\f( |
   <d b>2.->) |
-  <e-3 cis?>2 fis,4-1( |
+  <e cis?>2 fis,4( |
   a4-> gis2) |
   e2\dim f4--\! |
   e2.^^~( |
@@ -83,9 +83,7 @@ violaMusic = \relative c' {
       f2-> r4 |
       r4 c'--( c--) |
       d2-> r4 |
-      r4 e--(
-      ^\markup { \teeny "tip" }
-      e--) |
+      r4 e--( e--) |
       e2-> r4 |
     } \relative c {
       f4--( f--) |
@@ -102,9 +100,7 @@ violaMusic = \relative c' {
       s2. | % f2-> r4 |
       r4 e--( e--) |
       e2-> r4 |
-      r4 a--(
-      _\markup { \teeny "tip" }
-      a--) |
+      r4 a--( a--) |
       a2-> r4 |
     }
     \new Dynamics {
@@ -144,7 +140,7 @@ violaMusic = \relative c' {
       fis4 r r |
       r4 e e |
       f4 r r |
-      e2.-1^^~
+      e2.^^~
       \tweak self-alignment-X #1.5
       ^\markup {"arco"} |
       e4 r r |
@@ -163,7 +159,7 @@ violaMusic = \relative c' {
       c4 r r |
       r4 g g |
       g4 r r |
-      g2._\thumb~ |
+      g2.~ |
       g4 r r |
     }
     \new Dynamics {
@@ -192,14 +188,14 @@ violaMusic = \relative c' {
   f2( g4 |
   a4) bes-- c-- |
   d2_\f( e4) |
-  c2 g,4_\thumb( |
+  c2 g,4( |
   c4 g') g-- |
   g2->( f8 e) |
   c2 r4 |
   R2.*4 |
   r4 r
   a_\ff( |
-  d4 a'-4) a-- |
+  d4 a') a-- |
   a2->( g8 fis) |
 
   <<
@@ -214,16 +210,16 @@ violaMusic = \relative c' {
   r4 fis2-> |
   r4 fis2->\< |
   r4 fis2-> |
-  fis4-1_\sf( a-3) a-- |
+  fis4_\sf( a) a-- |
   a2( gis8 fis) |
   fis2-> fis4 |
-  fis2-> a4-2( |
-  gis4-1 gis')
+  fis2-> a4( |
+  gis4 gis')
 
   gis--\< |
   <fis a,>2.-> | \break
-  <e-3 gis,>2\>( fis,4-1 |
-  e2-3 d4 |
+  <e gis,>2\>( fis,4 |
+  e2 d4 |
   % \bar "||" % measure 99
   \key a \major
   cis4_\mp) r r |
@@ -260,21 +256,21 @@ violaMusic = \relative c' {
 
   <<
     {
-      gis'2-1(
+      gis'2(
       \tweak self-alignment-X #1
       ^"arco" cis4 |
       gis2 e'4) |
-      dis2.-4( |
+      dis2.( |
       bis2 fis4) |
-      gis2-1( cis4~ |
+      gis2( cis4~ |
       cis2 ais4) |
       gis2.-^(
-      dis4 cis-3 bis) |
-      gis'2-1( cis4 |
+      dis4 cis bis) |
+      gis'2( cis4 |
       gis2) r4 |
-      bis2-1( dis4 | \noBreak
+      bis2( dis4 | \noBreak
       bis2) r4 |
-      gis2-1( b?4 |
+      gis2( b?4 |
       gis2) r4 |
       b2( gis4 |
       fis4 e d |
@@ -302,7 +298,7 @@ violaMusic = \relative c' {
     }
   >>
 
-  r a-1_\mp( |
+  r a_\mp( |
   b2.->) |
   r4 r a( |
   b2.->) | \break
@@ -350,9 +346,9 @@ violaMusic = \relative c' {
     \relative c' {
       c4( |
       d2.->) | \break
-      e2 fis,4-1( |
+      e2 fis,4( |
       a4-> gis2) |
-      e2-2( f4--) |
+      e2( f4--) |
       e2.^^ |
       <cis' e,>4
       \tweak self-alignment-X #0
