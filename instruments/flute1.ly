@@ -9,7 +9,7 @@ fluteIMusic = \relative c''' {
   e2( fis4\!) |
   cis2.-^\>~( |
   cis2 b8 a) |
-  fis2->\!( e4) |
+  fis2->\!( e4) | \break
   e2 cis4( |
   \override Hairpin.to-barline = ##f
   e2\<) e4( |
@@ -50,7 +50,7 @@ fluteIMusic = \relative c''' {
   R2.*7
   r4 r e_\pp( |
   c'2.\<~ |
-  c4 d dis) |
+  c4 d dis) | \break
   e2.~( |
   e4 d b) |
   c4_\f( g') g-- |
@@ -67,7 +67,7 @@ fluteIMusic = \relative c''' {
   r4 r d_\f( |
   a2-> g4\<) |
   f2( g4 |
-  a4) bes-- c-- |
+  a4) bes-- c-- | \break
   d2( e4 |
   cis2) a4_\ff( |
   d4 a') a-- |
@@ -100,6 +100,10 @@ fluteIMusic = \relative c''' {
   gis2->( fis8 e) |
   cis2.-^~ |
   cis4 r r |
+
+  \break
+
+  % Mark G
   R2.*8 |
   \override Hairpin.to-barline = ##f
   cis2_\mp\<( e4 |
@@ -114,7 +118,7 @@ fluteIMusic = \relative c''' {
 
   % \bar "||" % measure 131
   a4_\p) r r |
-  R2.*5 |
+  R2.*5 | \break
   a4_\p( e'\<) e-- |
   e2( fis4) |
   cis2.-^\>~( |
@@ -127,7 +131,12 @@ fluteIMusic = \relative c''' {
   \override Hairpin.to-barline = ##t
   f2->( e4) |
   e2 r4 |
-  R2.*9 |
+  R2.*8 |
+
+  \break
+
+  % Mark I
+  R2. |
   r4 r fis_\f( |
   a4-> gis cis) |
   a2 r4 |

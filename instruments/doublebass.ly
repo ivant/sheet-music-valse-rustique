@@ -7,6 +7,7 @@ bassMusic = \relative c {
   r4 |
   R2.*8 |
   <<
+    \repeat unfold 7 { s2. | \noBreak s2. | }
     {
       a4^"pizz." r r |
       R2. |
@@ -44,6 +45,7 @@ bassMusic = \relative c {
   a4_\p r r |
   R2. |
 
+  \break
   a4_\p r r |
   r4 r e'_\pp(
   \tweak self-alignment-X #1
@@ -53,7 +55,7 @@ bassMusic = \relative c {
   a4\< e') e-- |
   e2 r4\! |
   R2. |
-  r4 r dis,_\f( |
+  r4 r dis,_\f( | \noBreak
   e2.->) |
   a,2\dim a4\! |
   a2^^ r4 |
@@ -64,22 +66,27 @@ bassMusic = \relative c {
 
   % \bar "||" % measure 35
   \key f \major
-  f4_\p r r |
-  R2. |
-  f'4 r r |
-  R2. |
-  f4 r r |
-  R2. |
-  c4 r r |
-  R2. |
-  f4 r r |
-  R2. |
-  d4 r\cresc r\! |
-  R2. |
-  e4_\f r r\dim |
-  e4\! r r |
-  a,4_\pp r r |
-  R2. |
+  <<
+    \repeat unfold 8 { s2. | \noBreak s2. | }
+    {
+      f4_\p r r |
+      R2. |
+      f'4 r r |
+      R2. |
+      f4 r r |
+      R2. |
+      c4 r r |
+      R2. |
+      f4 r r |
+      R2. |
+      d4 r\cresc r\! |
+      R2. |
+      e4_\f r r\dim |
+      e4\! r r |
+      a,4_\pp r r |
+      R2. |
+    }
+  >>
 
   % \bar "||" % measure 51
   \key c \major
@@ -138,71 +145,90 @@ bassMusic = \relative c {
   R2.*3 |
 
   % \bar "||" % measure 99
+  \break
   \key a \major
-  a4_\mp
-  \tweak self-alignment-X #0
-  ^"pizz."
-  r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  e4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  fis4_\f r r |
-  R2. |
-  gis4 r r |
-  R2. |
-  cis,4 r r |
-  R2. |
-  cis'4 r r |
-  R2. |
-  cis4 r r |
-  R2. |
-  cis4 r r |
-  R2. |
-  gis4 r r |
-  R2. |
-  cis4 r r |
-  R2. |
-  bis4 r r |
-  R2. |
-  b?4 r r |
-  R2. |
-  e,4 r r |
-  R2. |
+  <<
+    \repeat unfold 16 { s2. | \noBreak s2. | }
+    {
+      a4_\mp
+      \tweak self-alignment-X #0
+      ^"pizz."
+      r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      e4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      fis4_\f r r |
+      R2. |
+      gis4 r r |
+      R2. |
+      cis,4 r r |
+      R2. |
+      cis'4 r r |
+      R2. |
+      cis4 r r |
+      R2. |
+      cis4 r r |
+      R2. |
+      gis4 r r |
+      R2. |
+      cis4 r r |
+      R2. |
+      bis4 r r |
+      R2. |
+      b?4 r r |
+      R2. |
+      e,4 r r |
+      R2. |
+    }
+  >>
 
   % \bar "||" % measure 131
   a,4_\mp r r |
   R2.*7 |
-  a'4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  a4 r r |
-  R2. |
-  d,4_\f r r |
-  R2. |
-  d4\dim r\! r |
-  R2. |
+  <<
+    \repeat unfold 7 { s2. | \noBreak s2. | }
+    {
+      a'4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      a4 r r |
+      R2. |
+      d,4_\f r r |
+      R2. |
+      d4\dim r\! r |
+      R2. |
+    }
+  >>
   a4_\p r r |
-  r4 r e'_\pp(
-  \tweak self-alignment-X #1
-  ^"arco" |
-  a4\< e') e-- |
-  e2 r4\! |
-  R2. |
-  r4 r dis,( |
-  e2.->) |
-  a,2\dim( a4--) |
-  a2.^^~ |
-  a4_\sf r r\fermata |
+
+  \break
+  <<
+    \repeat unfold 9 { s2. | \noBreak }
+    {
+      r4 r e'_\pp(
+      \tweak self-alignment-X #1
+      ^"arco" |
+      a4\< e') e-- |
+      e2 r4\! |
+      R2. |
+      r4 r dis,( |
+      e2.->) |
+      a,2\dim( a4--) |
+      a2.^^~ |
+      \noBreak
+      a4_\sf r r\fermata |
+    }
+  >>
 }
 

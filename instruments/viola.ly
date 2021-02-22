@@ -11,6 +11,7 @@ violaMusic = \relative c' {
   b2.->) |
   r4 r a( |
   b2.->) |
+  \break
   r4 r e,-1( |
   a2.) | % TODO: no articulation marks from here?
 
@@ -22,6 +23,7 @@ violaMusic = \relative c' {
       <a e'>2.) |
       r4 r b_( |
       <b gis'>2.) |
+      \break
       r4 r b_( |
       <b gis'>2)
     }
@@ -48,6 +50,7 @@ violaMusic = \relative c' {
   cis2.-^~ |
   cis4\! r r |
 
+  \break
   cis2.-^~ |
   cis4\! r e,-2_\pp( |
 
@@ -218,7 +221,7 @@ violaMusic = \relative c' {
   gis4-1 gis')
 
   gis--\< |
-  <fis a,>2.-> |
+  <fis a,>2.-> | \break
   <e-3 gis,>2\>( fis,4-1 |
   e2-3 d4 |
   % \bar "||" % measure 99
@@ -269,7 +272,7 @@ violaMusic = \relative c' {
       dis4 cis-3 bis) |
       gis'2-1( cis4 |
       gis2) r4 |
-      bis2-1( dis4 |
+      bis2-1( dis4 | \noBreak
       bis2) r4 |
       gis2-1( b?4 |
       gis2) r4 |
@@ -302,7 +305,7 @@ violaMusic = \relative c' {
   r a-1_\mp( |
   b2.->) |
   r4 r a( |
-  b2.->) |
+  b2.->) | \break
   r4 r a( |
   b2.->) |
   r4 r e,( |
@@ -313,7 +316,7 @@ violaMusic = \relative c' {
       r4 r a_( |
       <a e'>2.) |
       r4 r a_( |
-      <a e'>2.) |
+      <a e'>2.) | \break
       r4 r b_( |
       <b gis'>2.) |
       r4 r b_( |
@@ -336,9 +339,9 @@ violaMusic = \relative c' {
   cis,2.) |
   d2._\f( |
   fis2.) |
-  f2.\dim( |
+  f2.\dim( | \noBreak
   d2.\>) |
-  cis2.-^~ |
+  cis2.-^~ | \noBreak
   cis4\! r e,_\pp( |
   \override Hairpin.to-barline = ##f
   a4\< e') e-- |
@@ -346,7 +349,7 @@ violaMusic = \relative c' {
   <<
     \relative c' {
       c4( |
-      d2.->) |
+      d2.->) | \break
       e2 fis,4-1( |
       a4-> gis2) |
       e2-2( f4--) |

@@ -21,6 +21,7 @@ tromboneIAndIIMusic = \relative c, {
   \key c \major
   R2.*31 |
 
+  \break
   <<
     \relative c' {
       r4 r cis_\f |
@@ -46,12 +47,14 @@ tromboneIAndIIMusic = \relative c, {
       a2 r4 |
     }
   >>
+  \break
   R2.*7 |
 
   % \bar "||" % measure 99
   \key a \major
   R2.*24 |
 
+  \break
   <<
     \relative c' {
       e2.~ |
@@ -85,6 +88,7 @@ tromboneIAndIIMusic = \relative c, {
     }
   >>
 
+  \break
   % \bar "||" % measure 131
   R2.*30
   <<

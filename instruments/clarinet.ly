@@ -17,6 +17,7 @@ clarinetMusic = \relative c' {
       cis2 a4( |
       b2) b4( |
       b'2-> e,8 d) |
+      \break
       a2->( gis4) |
       gis2. |
       g2.( |
@@ -28,6 +29,7 @@ clarinetMusic = \relative c' {
       e2.-^~ |
       e4) r r |
 
+      \break
       e2.-^~ |
       e4
       -\tweak control-points #'((-7 . 4) (-6 . 4.5) (0 . 3.8) (1 . 3)) ( <> )
@@ -177,6 +179,7 @@ clarinetMusic = \relative c' {
       e2.~ |
       e4) r r |
       R2.*2 |
+      \break
       a2( c4 |
       a2) r4 |
       c2.(
@@ -206,7 +209,7 @@ clarinetMusic = \relative c' {
       fis2( d4) |
       a2.-^~ |
       a2 a4( |
-      a2) r4 |
+      a2) r4 | \break
       R2.*7 |
     } \\
     \relative c'' {
@@ -230,6 +233,7 @@ clarinetMusic = \relative c' {
       d2.( |
       c2) r4 |
       R2.*2 |
+      \pageBreak
       r4 r f( |
       c2.->) |
       c2( b?4 | % strange reminder accidental
@@ -290,7 +294,7 @@ clarinetMusic = \relative c' {
       gis2.( |
       b2 gis4) |
       a2( e'4 |
-      dis2 a4) |
+      dis2 a4) | \break
       gis2.-^~( |
       gis4 fis e) |
       cis'2.~( |
@@ -298,7 +302,7 @@ clarinetMusic = \relative c' {
       e2.~( |
       e4 dis bis) |
       cis( gis') gis-- |
-      gis2->( fis8 e) |
+      gis2->( fis8 e) | \break
       cis2.-^~ |
       cis4 r r |
       R2.*4 |
@@ -312,7 +316,7 @@ clarinetMusic = \relative c' {
       fis
       \tweak self-alignment-X #0.5
       ^\markup {"a2"}
-      fisis) |
+      fisis) | \break
       gis2.~( |
       gis4 fis? dis)
       e2.~( |
@@ -367,7 +371,7 @@ clarinetMusic = \relative c' {
       s2._\sf\> |
       s2. |
       s2.\! |
-      \override Hairpin.to-barline = ##f
+      \override Hairpin.to-barline = ##t
       s2 s4\< |
       s2 s4 |
       \override Hairpin.to-barline = ##t
@@ -392,6 +396,7 @@ clarinetMusic = \relative c' {
       b2) b4( |
       b'2-> e,8 d) |
       a2->( gis4) |
+      \pageBreak
       gis2. |
       g2.( |
       e2. |
@@ -411,6 +416,7 @@ clarinetMusic = \relative c' {
       a4 r r\fermata |
     } \\
     \relative c' {
+      \break
       r4 r cis( |
       e2) e4( |
       cis'2-> b8 a) |

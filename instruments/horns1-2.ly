@@ -23,6 +23,7 @@ hornIAndIIMusic = \relative c {
       a2.-^~ |
       a4 r r |
 
+      \break
       a2.-^~ |
       a4 r 
     } \\
@@ -66,6 +67,7 @@ hornIAndIIMusic = \relative c {
       e2.->~ | % NOTE: original score is missing this tie
       e2 fis4( |
       a4-> gis2) |
+      \break
       a2 a4\! |
       a2.^^~ |
       a2.~ |
@@ -110,6 +112,7 @@ hornIAndIIMusic = \relative c {
       g2.~ |
       g4 r r |
       R2.*3 |
+      \break
       c,2.-> |
       f2.~ |
       f4 f-- f-- |
@@ -122,6 +125,7 @@ hornIAndIIMusic = \relative c {
       cis2) a4( |
       d4 a') a-- |
       a2-> r4 |
+      \break
       a2-> a4-- |
       g2-> r4 |
       r4 fis2-^ |
@@ -222,6 +226,8 @@ hornIAndIIMusic = \relative c {
     }
   >>
   R2.*17 |
+
+  \pageBreak
   % \bar "||" % measure 131
   R2.*8 |
   <<
@@ -280,6 +286,7 @@ hornIAndIIMusic = \relative c {
       e4( |
       a4 e) e-- |
       e2-^ r4 |
+      \break
       b'2->( cis4) |
       a2 r4 |
       R2.*2 |

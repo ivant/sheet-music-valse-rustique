@@ -35,6 +35,7 @@ celloMusic = \relative c {
   a2.-^~ |
   a4\! r r |
 
+  \break
   a2.-^~ |
   a4 r e,_\pp( |
 
@@ -52,6 +53,7 @@ celloMusic = \relative c {
   \key f \major
   \clef "tenor"
 
+  \break
   f''2\<(
   _\markup{\italic "dolce" }
   a4 |
@@ -74,6 +76,7 @@ celloMusic = \relative c {
   % \bar "||" % measure 51
   \clef "bass"
   \key c \major
+  \break
   <<
     \relative c {
       <e a,>4
@@ -139,6 +142,7 @@ celloMusic = \relative c {
   c,2 g4( |
   c4 g') g-- |
   g2->( f8 e) |
+  \break
   c2.~ |
   c4 r r |
   f4
@@ -235,6 +239,7 @@ celloMusic = \relative c {
   e4 fis fisis) |
   gis2.\>~( |
   gis4 fis dis)
+  \break
   e2.\<( |
   ais2_\sf\> e4) |
   dis2.-^\!~ |
@@ -298,6 +303,7 @@ celloMusic = \relative c {
   ^"arco" |
   e4.-> d8 b cis) |
   a2 a4 |
+  \break
   a2.-^~_\f |
   a4 r cis( |
   e4.-> d8\dim b\! cis) |

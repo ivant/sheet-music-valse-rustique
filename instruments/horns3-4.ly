@@ -8,6 +8,7 @@ hornIIIAndIVMusic = \relative c' {
   % \bar "||"
   R2.*2 |
 
+  \break
   R2. |
   r4 r
 
@@ -47,6 +48,7 @@ hornIIIAndIVMusic = \relative c' {
     }
   >>
 
+  \break
   % \bar "||" % measure 35
   <<
     \relative c {
@@ -62,6 +64,7 @@ hornIIIAndIVMusic = \relative c' {
       a2.~ |
       a2.~ |
       a2. |
+      \break
       a2.( |
       d2. |
       c2.~ |
@@ -106,6 +109,7 @@ hornIIIAndIVMusic = \relative c' {
 
   % \bar "||" % measure 51
   R2.*27 |
+  \break
   <<
     \relative c {
       c2. |
@@ -153,6 +157,7 @@ hornIIIAndIVMusic = \relative c' {
   R2.*7 |
   % \bar "||" % measure 99
   R2.*14 |
+  \break
   <<
     \relative c {
       cis2.~ |
@@ -180,7 +185,9 @@ hornIIIAndIVMusic = \relative c' {
       s2.*4 |
     }
   >>
-  R2.*11 |
+  R2. |
+  \break
+  R2.*10 |
   % \bar "||" % measure 131
   R2.*23 |
 
@@ -219,16 +226,6 @@ hornIIIAndIVMusic = \relative c' {
       s2\dim s4\! |
       s2.\< |
       s2._\sf |
-    }
-  >>
-
-  <<
-    \relative c, {
-    } \\
-    \relative c, {
-    }
-    \new Dynamics {
-      \override Hairpin.to-barline = ##f
     }
   >>
 }

@@ -27,6 +27,7 @@ trumpetMusic = \relative c' {
   % \bar "||" % measure 51
   % \key c \major
   R2.*12 |
+  \break
   << \relative c' {
       r2. |
       r2. |
@@ -108,7 +109,7 @@ trumpetMusic = \relative c' {
   R2.*28 |
   << \relative c' {
       e2._\pp~ |
-      e2.~ |
+      e2.~ | \noBreak
       e2 r4 |
     } \\
     \relative c {

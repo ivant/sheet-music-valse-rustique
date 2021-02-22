@@ -1,5 +1,5 @@
 \version "2.20.0"
-\pointAndClickOff
+%\pointAndClickOff
 #(define splitParts #t)
 db = \downbow
 ub = \upbow
@@ -18,7 +18,8 @@ ub = \upbow
 \include "instruments/horns3-4.ly"
 \include "instruments/trumpet.ly"
 \include "instruments/trombones1-2.ly"
-\include "instruments/trombone3tuba.ly"
+\include "instruments/trombone3.ly"
+\include "instruments/tuba.ly"
 \include "instruments/percussion.ly"
 \include "instruments/violin1.ly"
 \include "instruments/violin2.ly"
@@ -71,9 +72,8 @@ ub = \upbow
 \header {
   title = "Valse Rustique"
   composer = "Samuel Coleridge-Taylor"
-% subtitle = "[Unfinished engraving, DO NOT USE FOR RECORDING!]"
-% tagline = "Unfinished engraving, for review only, DO NOT USE FOR RECORDING!"
-  tagline = "[2020-12-15, v.4]"
+% tagline = "[2020-02-22, v.5]"
+  tagline = ""
 }
 
   \book {
@@ -83,7 +83,7 @@ ub = \upbow
       \new Staff \with {
         midiInstrument = "piccolo"
       } << \outline \piccoloMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -95,7 +95,7 @@ ub = \upbow
       \new Staff \with {
         midiInstrument = "flute"
       } << \outline \fluteIMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -107,7 +107,7 @@ ub = \upbow
       \new Staff \with {
         midiInstrument = "flute"
       } << \outline \fluteIIMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -120,7 +120,7 @@ ub = \upbow
         \consists "Merge_rests_engraver"
         midiInstrument = "oboe"
       } << \outline \oboeMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -139,7 +139,7 @@ ub = \upbow
           \clarinetMusic
         }
       >>
-      % \midi { }
+      % %\midi { }
       \layout { }
     }
   }
@@ -158,7 +158,7 @@ ub = \upbow
           \clarinetMusic
         }
       >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -172,7 +172,7 @@ ub = \upbow
         midiInstrument = "bassoon"
       }
       << \outline \bassoonMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -195,7 +195,7 @@ ub = \upbow
           \hornIAndIIMusic
         }
       >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -218,7 +218,7 @@ ub = \upbow
           \hornIIIAndIVMusic
         }
       >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -241,7 +241,7 @@ ub = \upbow
           \trumpetMusic
         }
       >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -264,7 +264,7 @@ ub = \upbow
           \trumpetMusic
         }
       >>
-      % \midi { }
+      % %\midi { }
       \layout { }
     }
   }
@@ -277,20 +277,33 @@ ub = \upbow
         \consists "Merge_rests_engraver"
         midiInstrument = "trombone"
       } << \outline \tromboneIAndIIMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
 
   \book {
-    \bookOutputSuffix "trombone3-tuba"
+    \bookOutputSuffix "trombone3"
     \score {
-      \header { piece = "Trombone 3 and Tuba" breakbefore = #splitParts }
+      \header { piece = "Trombone 3" breakbefore = #splitParts }
+      \new Staff \with {
+        \consists "Merge_rests_engraver"
+        midiInstrument = "trombone"
+      } << \outline \tromboneIII >>
+      %\midi { }
+      \layout { }
+    }
+  }
+
+  \book {
+    \bookOutputSuffix "tuba"
+    \score {
+      \header { piece = "Tuba" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
         midiInstrument = "tuba"
-      } << \outline \tromboneIIIAndTubaMusic >>
-      \midi { }
+      } << \outline \tubaMusic >>
+      %\midi { }
       \layout { }
     }
   }
@@ -307,7 +320,7 @@ ub = \upbow
         } \timpaniMusic
         \percussionStaff
       >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -321,7 +334,7 @@ ub = \upbow
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
         midiInstrument = "violin"
       } << \outline \violinIMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -335,7 +348,7 @@ ub = \upbow
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
         midiInstrument = "violin"
       } << \outline \violinIIMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -349,7 +362,7 @@ ub = \upbow
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
         midiInstrument = "viola"
       } << \outline \violaMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -363,7 +376,7 @@ ub = \upbow
         \override Slur.details = #'((stem-encompass-penalty . 1.0))
         midiInstrument = "cello"
       } << \outline \celloMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
@@ -375,56 +388,56 @@ ub = \upbow
       \new Staff \with {
         midiInstrument = "contrabass"
       } << \outline \bassMusic >>
-      \midi { }
+      %\midi { }
       \layout { }
     }
   }
 
-  \book {
-    \bookOutputSuffix "strings"
-    \score {
-      \header { piece = "Strings" breakbefore = #splitParts }
-      \new StaffGroup = "StaffGroup_strings"
-      <<
-        \new GrandStaff = "GrandStaff_violins" <<
-          \new Staff = "Staff_violinI" \with {
-            instrumentName = "Violin 1"
-            shortInstrumentName = "Vln 1"
-            midiInstrument = "violin"
-            \consists "Merge_rests_engraver"
-          } << \outline \violinIMusic >>
+% \book {
+%   \bookOutputSuffix "strings"
+%   \score {
+%     \header { piece = "Strings" breakbefore = #splitParts }
+%     \new StaffGroup = "StaffGroup_strings"
+%     <<
+%       \new GrandStaff = "GrandStaff_violins" <<
+%         \new Staff = "Staff_violinI" \with {
+%           instrumentName = "Violin 1"
+%           shortInstrumentName = "Vln 1"
+%           midiInstrument = "violin"
+%           \consists "Merge_rests_engraver"
+%         } << \outline \violinIMusic >>
 
-          \new Staff = "Staff_violinII" \with {
-            instrumentName = "Violin 2"
-            shortInstrumentName = "Vn 2"
-            midiInstrument = "violin"
-            \consists "Merge_rests_engraver"
-          } \violinIIMusic
-        >>
+%         \new Staff = "Staff_violinII" \with {
+%           instrumentName = "Violin 2"
+%           shortInstrumentName = "Vn 2"
+%           midiInstrument = "violin"
+%           \consists "Merge_rests_engraver"
+%         } \violinIIMusic
+%       >>
 
-        \new Staff = "Staff_viola" \with {
-          instrumentName = "Viola"
-          shortInstrumentName = "Va"
-          midiInstrument = "viola"
-          \consists "Merge_rests_engraver"
-          \override Slur.details = #'((stem-encompass-penalty . 1.0))
-        } \violaMusic
+%       \new Staff = "Staff_viola" \with {
+%         instrumentName = "Viola"
+%         shortInstrumentName = "Va"
+%         midiInstrument = "viola"
+%         \consists "Merge_rests_engraver"
+%         \override Slur.details = #'((stem-encompass-penalty . 1.0))
+%       } \violaMusic
 
-        \new Staff = "Staff_cello" \with {
-          instrumentName = "Cello"
-          shortInstrumentName = "Vc"
-          midiInstrument = "cello"
-          \consists "Merge_rests_engraver"
-        } \celloMusic
+%       \new Staff = "Staff_cello" \with {
+%         instrumentName = "Cello"
+%         shortInstrumentName = "Vc"
+%         midiInstrument = "cello"
+%         \consists "Merge_rests_engraver"
+%       } \celloMusic
 
-        \new Staff = "Staff_bass" \with {
-          instrumentName = "Double bass"
-          shortInstrumentName = "Db"
-          midiInstrument = "contrabass"
-          \consists "Merge_rests_engraver"
-        }
-        \bassMusic
-      >>
-      \layout { }
-    }
-  }
+%       \new Staff = "Staff_bass" \with {
+%         instrumentName = "Double bass"
+%         shortInstrumentName = "Db"
+%         midiInstrument = "contrabass"
+%         \consists "Merge_rests_engraver"
+%       }
+%       \bassMusic
+%     >>
+%     \layout { }
+%   }
+% }

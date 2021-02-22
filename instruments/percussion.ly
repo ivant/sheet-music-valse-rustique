@@ -17,6 +17,7 @@ timpaniMusic = \relative c {
   a4 r r |
   R2. |
 
+  \break
   a4 r r |
   r4 r e'-._\pp |
 
@@ -24,6 +25,7 @@ timpaniMusic = \relative c {
   e4-. r r |
   R2.*6 |
   
+  \break
   % Tempo primo
   R2.*12 |
   e4-._\pp r r |
@@ -31,21 +33,23 @@ timpaniMusic = \relative c {
   a,4-. r r |
   R2. |
 
+  \break
   % 51
-  <a e'>4-._\ppp r r |
+  <a e'>4-._\ppp r r | \noBreak
   R2. |
-  <a e'>4-. r r |
+  <a e'>4-. r r | \noBreak
   R2. |
-  <a e'>4-. r r |
+  <a e'>4-. r r | \noBreak
   R2. |
-  e'4-. r r |
+  e'4-. r r | \noBreak
   R2. |
-  <a, e'>4 r r |
+  <a, e'>4 r r | \noBreak
   R2.^\markup { "E in D" }
-  R2.*21 |
+  R2.*10 | \break
+  R2.*11 |
   r4 r a_\f |
   d4 r r |
-  R2.*3 |
+  R2.*3 | \break
   d4 r r |
   a4 r r |
   d2.\startTrillSpan |
@@ -53,21 +57,22 @@ timpaniMusic = \relative c {
   R2.^\markup { "D in E" }
   R2.*7 |
 
+  \break
   % 99
-  R2.*30 |
+  R2.*30 | \break
   e2._\pp\startTrillSpan |
   e2. <>\stopTrillSpan |
 
   % 131
   a,4 r r |
   R2.*7 |
-  <a e'>4_\pp r r |
+  <a e'>4_\pp r r | \noBreak
   R2.*3 |
-  <a e'>4 r r |
+  <a e'>4 r r | \noBreak
   R2.*3 |
-  a4 r r |
+  a4 r r | \noBreak
   R2.*3 |
-  a4_\p r r |
+  a4_\p r r | \noBreak
   R2. |
   a4 r r |
   r4 r e'-._\pp |

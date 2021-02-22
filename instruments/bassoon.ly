@@ -138,6 +138,9 @@ bassoonMusic = \relative c'' {
   a2\! r4 |
   R2.*3 |
 
+  % A break here to keep the slurred phrase together.
+  \break
+
   \clef "tenor"
   <<
     \relative c' {
@@ -156,14 +159,14 @@ bassoonMusic = \relative c'' {
       \stemUp
       b?4( |
       bes2.->) |
-      a2( g4 |
+      a2( g4 | \noBreak
       a4) bes-- a-- |
       bes2.( |
       g2) r4 |
       R2.*2 |
       r4 r b?( |
       bes2.->) |
-      a2( g4 |
+      a2( g4 | \noBreak
       a4) d-- c-- |
       f2.( |
       e2) a,4~ |

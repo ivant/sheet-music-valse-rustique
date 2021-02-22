@@ -37,7 +37,8 @@ fluteIIMusic = \relative c''' {
 
   % \bar "||" % measure 51
   \key c \major
-  R2.*7
+  R2.*7 |
+  \break
   r4 r e_\pp( |
   a2.\<~ |
   a4 b c) |
@@ -77,7 +78,7 @@ fluteIIMusic = \relative c''' {
   a2.\<~ |
   a2._\sf\> |
   gis2.\!~ |
-  gis4 fis e) |
+  gis4 fis e) | \break
   a2.\<~( |
   a4 b bis) |
   cis2._\f( |
@@ -86,6 +87,10 @@ fluteIIMusic = \relative c''' {
   bis2->( a8 gis) |
   e2.-^~ |
   e4 r r |
+
+  \pageBreak
+
+  % Mark G
   R2.*8 |
   \override Hairpin.to-barline = ##f
   gis2_\mp\<( cis4 |
@@ -102,7 +107,7 @@ fluteIIMusic = \relative c''' {
   cis4_\p) r r |
   R2.*15 |
   a'2._\p\<~ |
-  a2 a4 |
+  a2 a4 | \break
   a2._\f~ |
   a2.~ |
   a2.\dim~ |
@@ -112,7 +117,7 @@ fluteIIMusic = \relative c''' {
   R2. |
   r4 r fis_\f( |
   a4-> gis cis) |
-  a2 r4 |
+  a2 r4 | \break
   R2.*3 |
   R2.^\fermataMarkup |
 

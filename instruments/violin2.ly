@@ -21,7 +21,7 @@ violinIIMusic = \relative c' {
   r4\! r d\>( |
   <d b'>2) e4\<( |
   a2. |
-  e2.) |
+  e2.) | \break
   fis2._\f( |
   a2.) |
   a2.\dim( |
@@ -34,6 +34,7 @@ violinIIMusic = \relative c' {
   e2.^^~ |
   e4\! r r |
 
+  \break
   % \bar "||" % measure 27
   R2. |
   r4 r fis_\f( |
@@ -82,6 +83,8 @@ violinIIMusic = \relative c' {
       s2. |
     }
   >>
+
+  \break
   % \bar "||" % measure 51
   \key c \major
   a'2\<( c4 |
@@ -92,7 +95,7 @@ violinIIMusic = \relative c' {
   dis2_\sf a4\>) |
   gis2.~( |
   gis4 fis e) |
-  c'2.\<~( |
+  c'2.\<~( | \noBreak
   c4 d dis) |
   e2.~( |
   e4 d? b) |
@@ -132,6 +135,7 @@ violinIIMusic = \relative c' {
   gis4\! r r |
   \override Hairpin.to-barline = ##t
 
+  \break
   % \bar "||" % measure 99
   \key a \major
 
@@ -140,7 +144,7 @@ violinIIMusic = \relative c' {
   r4 <d b>--( <d b>--) |
   <d b>4 r r |
   R2.*3 |
-  r4 r e( |
+  r4 r e( | \noBreak
   cis'2.\<~ |
   cis4 d dis) |
   e2._\f~( |
@@ -196,16 +200,23 @@ violinIIMusic = \relative c' {
   e2.^^~ |
   e4 r r |
 
-  R2. |
-
-  r4 r fis_\f( |
-  a4-> gis cis |
-  a2) c,4^( |
-  <d b>2-> e4) |
-  cis2\dim( d4--\!) |
-  cis2.^^ |
-  <cis' e, a,>4_\sf
-  \tweak self-alignment-X #0.5
-  ^"pizz." r r\fermata |
+  \break
+  % Mark I
+  <<
+    % Prevent breaks in the last line.
+    \repeat unfold 8 { s2. | \noBreak }
+    {
+      R2. |
+      r4 r fis_\f( |
+      a4-> gis cis |
+      a2) c,4^( |
+      <d b>2-> e4) |
+      cis2\dim( d4--\!) |
+      cis2.^^ |
+      <cis' e, a,>4_\sf
+      \tweak self-alignment-X #0.5
+      ^"pizz." r r\fermata |
+    }
+  >>
 }
 

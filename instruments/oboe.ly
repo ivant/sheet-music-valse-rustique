@@ -29,6 +29,7 @@ oboeMusic = \relative c' {
   a2.^^~ |
   a4 r r |
 
+  \break
   % \bar "||" % measure 27
   R2. |
   <<
@@ -76,6 +77,7 @@ oboeMusic = \relative c' {
   a2) r4 |
   a2(\< c4 |
   a2\!) r4 |
+  \break
   g2._\f( |
   f2. |
   e2.~ |
@@ -110,6 +112,7 @@ oboeMusic = \relative c' {
       g2->( f8 e) |
       c2-^ r4 |
       R2.*7
+      \break
       r4 r f( |
       a2-> g4) |
       f2( g4 |
@@ -144,6 +147,8 @@ oboeMusic = \relative c' {
   >>
   R2.*6
 
+  \pageBreak
+
   r4 r e_\mp(^"1." |
   % \bar "||" % measure 99
   \key a \major
@@ -156,6 +161,7 @@ oboeMusic = \relative c' {
   b2.^^~ |
   b4 r r |
   R2.*6
+  \break
 
   cis,4(^"a2" gis') gis-- |
   gis2\>( fis8 e\!) |
@@ -167,6 +173,7 @@ oboeMusic = \relative c' {
   dis2.^^~ |
   dis4\! r r |
   R2.*7 |
+  \break
 
   r4 r e_\mp(^"1." |
   % \bar "||" % measure 131
@@ -189,6 +196,9 @@ oboeMusic = \relative c' {
   a2 a4 |
   a2.^^~ |
   a4 r r |
+
+  \break
+  % Mark I
   R2. |
 
   <<

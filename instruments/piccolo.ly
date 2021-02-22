@@ -57,6 +57,7 @@ piccoloMusic = \relative c'''' {
   %\bar "||" % measure 99
   \key a \major
   R2.*23 |
+  \break
   r4 r gis_\mp~ |
   gis2.\<~ |
   gis2.~ |
@@ -69,6 +70,7 @@ piccoloMusic = \relative c'''' {
 
   %\bar "||" % measure 131
   a4_\p) r r |
+  \break
   R2.*15 |
   a2._\p\<~ |
   a2 a4 |
@@ -78,6 +80,7 @@ piccoloMusic = \relative c'''' {
   a2\! a4 |
   a2.-^~ |
   a4 r r |
+  \break
   R2. |
   r4 r fis_\f( |
   a4-> gis cis) |

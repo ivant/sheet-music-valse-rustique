@@ -14,7 +14,7 @@ violinIMusic = \relative c' {
   \override Hairpin.to-barline = ##f
   r4 r cis'_\mp\<( |
   e2) e4( |
-  cis'2-> b8 a\!) |
+  cis'2-> b8 a\!) | \break
   fis2->\>( e4) |
   e2 cis4\<( |
   e2) e4( |
@@ -37,6 +37,7 @@ violinIMusic = \relative c' {
   a2.^^~ |
   a4 r r |
 
+  \break
   % \bar "||" % measure 27
 
   R2. |
@@ -52,7 +53,7 @@ violinIMusic = \relative c' {
   \key f \major
   a2.~\<~
   _\markup{\italic "dolce" } |
-  a4 bes b) |
+  a4 bes b) | \break
   c2.\>~( |
   c4 bes g) |
   a2.\<( |
@@ -64,7 +65,7 @@ violinIMusic = \relative c' {
   c,\<( |
   a'2.~ |
   a4 bes\! b) |
-  c2.~\cresc( |
+  c2.~\cresc( | \noBreak
   c4\! b gis) |
   a4_\f( e') e--\dim |
   e2->\!( d8 c) |
@@ -127,7 +128,7 @@ violinIMusic = \relative c' {
 
   r4 r d,( |
   a2->\cresc g4\!) |
-  f2( g4 |
+  f2( g4 | \noBreak
   a4) bes-- c-- |
   d2_\f( e4) |
   c2 g4( |
@@ -136,13 +137,14 @@ violinIMusic = \relative c' {
   c2 r4 |
   R2.*4 |
 
-  r4 r a_\ff( |
+  r4 r a_\ff( | \noBreak
   <d d,>4 a') a-- |
   a2->( g8 fis) |
   <d d,>2-> d4 |
   <d d,>2-> a4( |
   <d d,>4 a') a-- |
   a2( b4) |
+  \break
   <<
     \relative c'' {
       \stemDown
@@ -194,7 +196,7 @@ violinIMusic = \relative c' {
   e4 fis fisis) |
   gis2.~\>~( |
   gis4 fis? dis) |
-  e2.\<~( |
+  e2.\<~( | \noBreak
   e4 fis fisis) |
   gis4\>( fis? e |
   d4 cis b |
@@ -206,6 +208,7 @@ violinIMusic = \relative c' {
   <e e,>2.~ |
   <e e,>2 r4 |
   R2.*2 |
+  \break
   \override Hairpin.to-barline = ##f
   r4 r cis_\mp( |
   e2\<) e4( |
@@ -225,16 +228,25 @@ violinIMusic = \relative c' {
   a2 a4 |
   a2.^^~ |
   a4 r r |
-  R2. |
-  r4 r fis'_\f( |
-  a4-> gis cis |
-  a2) fis,4( |
-  a4-> gis cis) |
-  a2\dim( a4--\!) |
-  a2.^^ |
-  <a' cis, e, a,>4_\sf
-  \tweak self-alignment-X #0.5
-  ^\markup {"pizz."}
-  r r\fermata |
-  \bar "|."
+
+  \break
+  % Mark I
+  <<
+    % Prevent breaks in the last line.
+    \repeat unfold 8 { s2. | \noBreak }
+    {
+      R2. |
+      r4 r fis'_\f( |
+      a4-> gis cis |
+      a2) fis,4( |
+      a4-> gis cis) |
+      a2\dim( a4--\!) |
+      a2.^^ |
+      <a' cis, e, a,>4_\sf
+      \tweak self-alignment-X #0.5
+      ^\markup {"pizz."}
+      r r\fermata |
+      \bar "|."
+    }
+  >>
 }
