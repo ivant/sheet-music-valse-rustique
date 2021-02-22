@@ -69,21 +69,21 @@ violaMusic = \relative c' {
   f4_\p)
   <<
     \relative c' {
-      a4--( a--) |
+      a4--( a--) | \noBreak
       a2-- r4 |
-      r4 bes4--( bes--) |
+      r4 bes4--( bes--) | \noBreak
       bes2-- r4 |
-      r4 a--( a--) |
-      aes2. |
-      r4 e--( e--) |
+      r4 a--( a--) | \noBreak
+      aes2. | \noBreak
+      r4 e--( e--) | \noBreak
       e2-- r4 |
-      r4 a--( a--) |
+      r4 a--( a--) | \noBreak
       a2-- r4 |
-      r4 f--( f--) |
+      r4 f--( f--) | \noBreak
       f2-> r4 |
-      r4 c'--( c--) |
+      r4 c'--( c--) | \noBreak
       d2-> r4 |
-      r4 e--( e--) |
+      r4 e--( e--) | \noBreak
       e2-> r4 |
     } \relative c {
       f4--( f--) |
@@ -126,23 +126,23 @@ violaMusic = \relative c' {
     \relative c' {
       r4 e
       \tweak self-alignment-X #1
-      ^"pizz." f |
+      ^"pizz." f | \noBreak
       e4 r r |
-      r4 d d |
+      r4 d d | \noBreak
       d4 r r |
-      r4 e e |
+      r4 e e | \noBreak
       fis4 r r |
-      r4 b, c |
+      r4 b, c | \noBreak
       b4 r r |
-      r4 e f |
+      r4 e f | \noBreak
       e4 r r |
-      r4 e f |
+      r4 e f | \noBreak
       fis4 r r |
-      r4 e e |
+      r4 e e | \noBreak
       f4 r r |
       e2.^^~
       \tweak self-alignment-X #1.5
-      ^\markup {"arco"} |
+      ^\markup {"arco"} | \noBreak
       e4 r r |
     } \relative c' {
       r4 a a |
@@ -183,18 +183,18 @@ violaMusic = \relative c' {
     }
   >>
   R2.*2 |
-  r4 r d''( |
+  r4 r d''( | \noBreak
   a2->\cresc g4\!) |
-  f2( g4 |
+  f2( g4 | \noBreak
   a4) bes-- c-- |
   d2_\f( e4) |
-  c2 g,4( |
+  c2 g,4( | \noBreak
   c4 g') g-- |
   g2->( f8 e) |
   c2 r4 |
   R2.*4 |
   r4 r
-  a_\ff( |
+  a_\ff( | \noBreak
   d4 a') a-- |
   a2->( g8 fis) |
 
@@ -213,7 +213,7 @@ violaMusic = \relative c' {
   fis4_\sf( a) a-- |
   a2( gis8 fis) |
   fis2-> fis4 |
-  fis2-> a4( |
+  fis2-> a4( | \noBreak
   gis4 gis')
 
   gis--\< |
@@ -226,16 +226,16 @@ violaMusic = \relative c' {
 
   R2.*3 |
   << \relative c' {
-      r4 cis^"pizz." cis |
+      r4 cis^"pizz." cis | \noBreak
       dis4 r r |
-      r4 gis, gis |
+      r4 gis, gis | \noBreak
       gis4 r r |
       \override Hairpin.to-barline = ##f
-      r4 cis\< cis |
+      r4 cis\< cis | \noBreak
       cis4\! r r |
-      r4 cis_\f dis |
+      r4 cis_\f dis | \noBreak
       cis4 r r |
-      r4 cis\dim cis\! |
+      r4 cis\dim cis\! | \noBreak
       dis4 r r |
     } \relative c' {
       s2. | % r4 cis cis |
@@ -258,22 +258,22 @@ violaMusic = \relative c' {
     {
       gis'2(
       \tweak self-alignment-X #1
-      ^"arco" cis4 |
+      ^"arco" cis4 | \noBreak
       gis2 e'4) |
-      dis2.( |
+      dis2.( | \noBreak
       bis2 fis4) |
-      gis2( cis4~ |
+      gis2( cis4~ | \noBreak
       cis2 ais4) |
       gis2.-^(
       dis4 cis bis) |
-      gis'2( cis4 |
+      gis'2( cis4 | \noBreak
       gis2) r4 |
       bis2( dis4 | \noBreak
       bis2) r4 |
-      gis2( b?4 |
+      gis2( b?4 | \noBreak
       gis2) r4 |
-      b2( gis4 |
-      fis4 e d |
+      b2( gis4 | \noBreak
+      fis4 e d | \noBreak
       % \bar "||" % measure 131
       cis4)
     }
