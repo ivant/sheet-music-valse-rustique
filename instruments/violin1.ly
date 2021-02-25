@@ -54,7 +54,8 @@ violinIMusic = \relative c' {
   a2.~\<~
   _\markup{\italic "dolce" } |
   a4 bes b) | \break
-  c2.\>~( |
+  \shape #'((0 . 0) (0 . 0.8) (0 . 0) (0 . 0)) Slur
+  c2.\>~( | \noBreak
   c4 bes g) |
   a2.\<( |
   \override Hairpin.to-barline = ##f
@@ -62,9 +63,11 @@ violinIMusic = \relative c' {
   g2.-^~ |
   g4\! r
   \override Hairpin.to-barline = ##t
-  c,\<( |
-  a'2.~ |
+  \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
+  c,\<( | \noBreak
+  a'2.~ | \noBreak
   a4 bes\! b) |
+  \shape #'((0 . 0) (0 . 0.8) (0 . 0) (0 . 0)) Slur
   c2.~\cresc( | \noBreak
   c4\! b gis) |
   a4_\f( e') e--\dim |
@@ -113,12 +116,14 @@ violinIMusic = \relative c' {
     }
   >>
 
+  \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
   e4(
   \tweak self-alignment-X #0.5
   ^\markup {"a2"} |
   c'2.~\< |
   c4 d dis) |
-  e2.~( |
+  \shape #'((0 . 0) (0 . 0.8) (0 . 0) (0 . 0)) Slur
+  e2.~( | \noBreak
   e4 d b) |
   c4_\f( g') g-- |
   g2->( f8 e) |
