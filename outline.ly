@@ -1,10 +1,10 @@
 rit = {
-  \once \override Score.MetronomeMark.direction = #DOWN
+%  \once \override Score.MetronomeMark.direction = #DOWN
   \tempo "rit."
 }
 
 pocoRit = {
-  \once \override Score.MetronomeMark.direction = #DOWN
+%  \once \override Score.MetronomeMark.direction = #DOWN
   \tempo "poco rit."
 }
 
@@ -49,7 +49,10 @@ outline = \new NullVoice {
   \bar "||" % measure 51
   \mark \default
   s2.*5
-  \pocoRit
+  \tweak self-alignment-X #-0.25
+  \tempo "poco rit."
+  % Doesn't work with self-alignment-X tweak
+  %\pocoRit
   s2. |
   \tempo "a tempo"
   s2.*14 |
@@ -70,7 +73,10 @@ outline = \new NullVoice {
   \mark \default
   \tempo "a tempo"
   s2.*5 |
-  \pocoRit
+  \tweak self-alignment-X #-0.25
+  \tempo "poco rit."
+  % Doesn't work with self-alignment-X tweak
+  %\pocoRit
   s2. |
   \tempo "a tempo"
   s2.*10 |

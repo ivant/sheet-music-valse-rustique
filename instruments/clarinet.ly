@@ -99,10 +99,10 @@ clarinetMusic = \relative c' {
       e4( | \noBreak
       a4 e') e-- |
       e2 fis4( | \noBreak
-      d2.) |
-      cis2 a4( | \noBreak
-      d2.) |
-      cis2 d4 |
+      d2.-> |
+      cis2) a4( | \noBreak
+      d2.-> |
+      cis2) d4 |
       cis2.-^~ | \noBreak
       cis4 r r |
     }
@@ -129,7 +129,9 @@ clarinetMusic = \relative c' {
       a2.( | \noBreak
       d2 aes4) |
       g2.-^~ | \noBreak
-      g4 r c,( | \noBreak
+      g4 r
+      \shape #'((0 . 2) (0 . 0) (0 . 0) (0 . 2)) Slur
+      c,( | \noBreak
       a'2.~ | \noBreak
       a4 bes b) |
       c2.~( | \noBreak
@@ -202,7 +204,7 @@ clarinetMusic = \relative c' {
       bes2.( | \noBreak
       a2) a4( | \noBreak
       d4 a') a-- |
-      \pageBreak
+%      \pageBreak
       a2->( g8 fis) |
       a,2-> a4 |
       a2-> a4( | \noBreak
@@ -234,6 +236,7 @@ clarinetMusic = \relative c' {
       d2.( | \noBreak
       c2) r4 |
       R2.*2 |
+      \pageBreak
       r4 r f( | \noBreak
       c2.->) |
       c2( b?4 | \noBreak % strange reminder accidental
@@ -306,6 +309,7 @@ clarinetMusic = \relative c' {
       cis2.-^~ | \noBreak
       cis4 r r |
       R2.*4 |
+      \shape #'((0 . -1) (0 . 0) (0 . 0) (0 . -1)) Slur
       e2.^\p( | \noBreak
       ais2 e4) |
       dis2.-^~ | \noBreak
@@ -342,6 +346,7 @@ clarinetMusic = \relative c' {
       e4 r r |
       R2.*4 |
       r4_\pp e,-. e-. |
+      \shape #'((0 . 1) (0 . 0) (0 . 0) (0 . 1)) Slur
       e2.( | \noBreak
       dis2. |
       dis'2. |
@@ -435,7 +440,7 @@ clarinetMusic = \relative c' {
       cis4) r e,( | \noBreak
       a4 e') e-- |
       e2 fis4( | \noBreak
-      d2. |
+      d2.-> |
       cis2) a4( | \noBreak
       d2.-> |
       cis2) d4 |

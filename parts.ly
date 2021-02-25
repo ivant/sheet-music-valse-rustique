@@ -132,6 +132,7 @@ ub = \upbow
       \header { piece = "Clarinet in A" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
+        \override Slur.details.free-head-distance = #0.5
         midiInstrument = "clarinet"
       }
       << \outline
@@ -142,9 +143,9 @@ ub = \upbow
       >>
       % %\midi { }
       \layout {
-        system-system-spacing.basic-distance = #12
+        system-system-spacing.basic-distance = #10
         system-system-spacing.minimum-distance = #8
-        system-system-spacing.padding = #3
+        system-system-spacing.padding = #1
       }
     }
   }
@@ -155,6 +156,7 @@ ub = \upbow
       \header { piece = "Clarinet in Bb" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
+        \override Slur.details.free-head-distance = #0.5
         midiInstrument = "clarinet"
       }
       << \outline
@@ -165,9 +167,9 @@ ub = \upbow
       >>
       %\midi { }
       \layout {
-        system-system-spacing.basic-distance = #12
+        system-system-spacing.basic-distance = #10
         system-system-spacing.minimum-distance = #8
-        system-system-spacing.padding = #3
+        system-system-spacing.padding = #1
       }
     }
   }
@@ -342,9 +344,7 @@ ub = \upbow
       \header { piece = "Violin 1" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0)
-                                    (free-head-distance . 0.5)
-                                   )
+        \override Slur.details.free-head-distance = #0.5
         midiInstrument = "violin"
       } << \outline \violinIMusic >>
       %\midi { }
@@ -358,9 +358,7 @@ ub = \upbow
       \header { piece = "Violin 2" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0)
-                                    (free-head-distance . 0.5)
-                                   )
+        \override Slur.details.free-head-distance = #0.5
         midiInstrument = "violin"
       } << \outline \violinIIMusic >>
       %\midi { }
@@ -374,7 +372,6 @@ ub = \upbow
       \header { piece = "Viola" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0))
         midiInstrument = "viola"
       } << \outline \violaMusic >>
       %\midi { }
@@ -389,9 +386,7 @@ ub = \upbow
       \header { piece = "Cello" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0)
-                                    (free-head-distance . 0.5)
-                                   )
+        \override Slur.details.free-head-distance = #0.5
         midiInstrument = "cello"
       } << \outline \celloMusic >>
       %\midi { }

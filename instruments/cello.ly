@@ -6,47 +6,47 @@ celloMusic = \relative c {
   \time 3/4 \partial 4 
 
   r4 |
-  <a e'>2.->_\mp~ |
+  <a e'>2.->_\mp~ | \noBreak
   <a e'>2 r4 |
-  <a e'>2.->~ |
+  <a e'>2.->~ | \noBreak
   <a e'>2 r4 |
-  <a e'>2.->~ |
+  <a e'>2.->~ | \noBreak
   <a e'>2 r4 |
-  <a e'>2.->~ |
+  <a e'>2.->~ | \noBreak
   <a e'>2 r4 |
-  <a e'>4^"pizz." r r |
+  <a e'>4^"pizz." r r | \noBreak
   R2. 
-  <a e'>4 r r |
+  <a e'>4 r r | \noBreak
   R2. 
-  <a e'>4 r r |
+  <a e'>4 r r | \noBreak
   R2. 
   <a e'>4 r r |
   \once \override Hairpin.to-barline = ##f
   r4 r cis'\<(
   \tweak self-alignment-X #1
-  ^"arco" |
+  ^"arco" | \noBreak
   e4.-> d8 b cis) |
   a2 a4 |
-  a2.-^_\f~ |
-  a4 r cis( |
+  a2.-^_\f~ | \noBreak
+  a4 r cis( | \noBreak
   e4.->\dim d8\! b cis) |
   a2\> a4 |
   % \bar "||"
-  a2.-^~ |
+  a2.-^~ | \noBreak
   a4\! r r |
 
   \break
-  a2.-^~ |
-  a4 r e,_\pp( |
+  a2.-^~ | \noBreak
+  a4 r e,_\pp( | \noBreak
 
   % \bar "||" % measure 27
   a4\< e') e-- |
-  e2 dis4_\f( |
+  e2 dis4_\f( | \noBreak
   e2.->) |
-  a2 dis,,4( |
+  a2 dis,,4( | \noBreak
   e2.->) |
   a2\dim a4\! |
-  a2.-^~ |
+  a2.-^~ | \noBreak
   a4 r r |
 
   % \bar "||" % measure 35
@@ -58,19 +58,20 @@ celloMusic = \relative c {
   _\markup{\italic "dolce" }
   a4 |
   f2 d4) |
-  e2.\>( |
+  e2.\>( | \noBreak
   g2 e4) |
-  f2\<( a4 |
+  f2\<( a4 | \noBreak
   aes2_\sf\> f4) |
-  e2.~( |
+  \shape #'((0 . 0) (0 . 0.5) (0 . 0) (0 . 0)) Slur
+  e2.~( | \noBreak
   e4\! d c) |
-  f2\<( a4 |
+  f2\<( a4 | \noBreak
   f2.) |
-  f2\cresc( a4 |
+  f2\cresc( a4 | \noBreak
   f2.) |
   e2_\f( a4\dim) |
   e2( d8 c) |
-  a2.-^_\pp~ |
+  a2.-^_\pp~ | \noBreak
   a4 r r |
 
   % \bar "||" % measure 51
@@ -136,14 +137,14 @@ celloMusic = \relative c {
   c2.
   \tweak self-alignment-X #0.5
   ^"arco" |
-  f4.\cresc( e8 d4 |
+  f4.\cresc( e8 d4 | \noBreak
   c4) bes-- a-- |
   g2_\f( g'4) |
-  c,2 g4( |
+  c,2 g4( | \noBreak
   c4 g') g-- |
   g2->( f8 e) |
   \break
-  c2.~ |
+  c2.~ | \noBreak
   c4 r r |
   f4
   \tweak self-alignment-X #0.5
@@ -155,6 +156,8 @@ celloMusic = \relative c {
   ^"arco" |
   <a d,>2) r4 |
   R2. |
+
+  \pageBreak
   d4( a') a-- |
   a2->( g8 fis) |
   d4 r r |
@@ -170,33 +173,33 @@ celloMusic = \relative c {
   a') a-- |
   a2( gis8 fis) |
   b,2-> b4 |
-  b2-> b4( |
+  b2-> b4( | \noBreak
   <b e,>2) <b' e,>4\< |
   <b e,>2.-> |
-  <b e,>2\>( d,4 |
+  <b e,>2\>( d,4 | \noBreak
   cis2 b4 |
 
   % \bar "||" % measure 99
   \key a \major
-  a4_\mp) r r |
+  a4_\mp) r r | \noBreak
   R2. |
   <e' a,>4
   \tweak self-alignment-X #0.5
   ^"pizz."
-  r r |
+  r r | \noBreak
   R2. |
 
   <<
     \relative c' {
-      r4^"I." <a e> <a e> |
+      r4^"I." <a e> <a e> | \noBreak
       <a fis>4 r r |
-      r4 <b e,> <cis e,> |
+      r4 <b e,> <cis e,> | \noBreak
       <b e,>4 r r |
-      r4 <a e> <a fis> |
+      r4 <a e> <a fis> | \noBreak
       <a e>4 r r |
-      r4 <a fis> <a fis> |
+      r4 <a fis> <a fis> | \noBreak
       <a fis>4 r r |
-      r4 gis ais |
+      r4 gis ais | \noBreak
       bis4 r r |
       r4 <cis e,> <cis fis,> |
       <cis e,>4
@@ -237,26 +240,26 @@ celloMusic = \relative c {
   gis_\pp(
   \tweak self-alignment-X #0.5
   ^"arco" |
-  e'2.\<~ |
+  e'2.\<~ | \noBreak
   e4 fis fisis) |
   \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
-  gis2.\>~( |
+  gis2.\>~( | \noBreak
   gis4 fis dis)
   \break
-  e2.\<( |
+  e2.\<( | \noBreak
   ais2_\sf\> e4) |
-  dis2.-^\!~ |
+  dis2.-^\!~ | \noBreak
   dis4 r
   \shape #'((0 . 0) (0 . 1.5) (0 . 0) (0 . 0)) Slur
-  gis,( |
-  e'2.\<~ |
+  gis,( | \noBreak
+  e'2.\<~ | \noBreak
   e4 fis fisis) |
   \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
-  gis2.\>~( |
+  gis2.\>~( | \noBreak
   gis4 fis? dis)
-  e2.\<~( |
+  e2.\<~( | \noBreak
   e4 fis fisis) |
-  gis4\>( fis? e |
+  gis4\>( fis? e | \noBreak
   d4 cis b\!) |
 
   % \bar "||" % measure 131
@@ -264,33 +267,33 @@ celloMusic = \relative c {
 
   <<
     \relative c {
-      e2.~ |
+      e2.~ | \noBreak
       e2 r4 |
-      e2.~ |
+      e2.~ | \noBreak
       e2 r4 |
-      e2.~ |
+      e2.~ | \noBreak
       e2 r4 |
-      e2.~ |
+      e2.~ | \noBreak
       e2 r4 |
       e4
       \tweak self-alignment-X #0.5
       ^"pizz."
-      r r |
+      r r | \noBreak
       R2. |
-      e4 r r |
+      e4 r r | \noBreak
       R2. |
-      e4 r r |
+      e4 r r | \noBreak
       R2. |
       e4 r r |
     }
     \relative c {
-      a2.->~ |
+      a2.->~ | \noBreak
       a2 r4 |
-      a2.->~ |
+      a2.->~ | \noBreak
       a2 r4 |
-      a2.->~ |
+      a2.->~ | \noBreak
       a2 r4 |
-      a2.->~ |
+      a2.->~ | \noBreak
       a2 r4 |
       a4 r r |
       R2. |
@@ -306,23 +309,23 @@ celloMusic = \relative c {
   >>
   r4 r cis(\<
   \tweak self-alignment-X #1
-  ^"arco" |
+  ^"arco" | \noBreak
   e4.-> d8 b cis) |
   a2 a4 |
   \break
   a2.-^~_\f |
-  a4 r cis( |
+  a4 r cis( | \noBreak
   e4.-> d8\dim b\! cis) |
   a2 a4 |
-  a2.-^~ |
-  a4 r e,_\pp( |
+  a2.-^~ | \noBreak
+  a4 r e,_\pp( | \noBreak
   a4\< e') e-- |
-  e2 dis4_\f( |
+  e2 dis4_\f( | \noBreak
   e2.->) |
-  a2 dis,,4( |
+  a2 dis,,4( | \noBreak
   e2.->) |
   a2\dim( a4--\!) |
-  a2.-^~ |
+  a2.-^~ | \noBreak
   a4_\sf r r\fermata |
 }
 

@@ -114,7 +114,6 @@ violaMusic = \relative c' {
       e--( e--) |
       e2-> r4 |
       r4
-      \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -0.5)) Slur
       a--( a--) |
       a2-> r4 |
     }
