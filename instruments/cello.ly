@@ -232,20 +232,26 @@ celloMusic = \relative c {
   >>
 
   \clef "tenor"
-  r4^"a2" gis_\pp(
+  r4^"a2"
+  \shape #'((0 . 0) (0 . 1.5) (0 . 0) (0 . 0)) Slur
+  gis_\pp(
   \tweak self-alignment-X #0.5
   ^"arco" |
   e'2.\<~ |
   e4 fis fisis) |
+  \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
   gis2.\>~( |
   gis4 fis dis)
   \break
   e2.\<( |
   ais2_\sf\> e4) |
   dis2.-^\!~ |
-  dis4 r gis,( |
+  dis4 r
+  \shape #'((0 . 0) (0 . 1.5) (0 . 0) (0 . 0)) Slur
+  gis,( |
   e'2.\<~ |
   e4 fis fisis) |
+  \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
   gis2.\>~( |
   gis4 fis? dis)
   e2.\<~( |
