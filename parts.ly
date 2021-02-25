@@ -31,13 +31,10 @@ ub = \upbow
   print-all-headers = ##t
   %page-breaking = #ly:page-turn-breaking
   bookTitleMarkup = ""
-% markup-system-spacing = #'((basic-distance . 5)
-%                            (padding . 0.5)
-%                            (stretchability . 10))
-% system-system-spacing = #'((basic-distance . 20)
-%                            (minimum-distance . 8)
-%                            (padding . 10)
-%                            (stretchability . 40))
+  system-system-spacing = #'((basic-distance . 12)
+                             (minimum-distance . 10)
+                             (padding . 2)
+                             (stretchability . 60))
 }
 
 \layout {
@@ -96,7 +93,9 @@ ub = \upbow
         midiInstrument = "flute"
       } << \outline \fluteIMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+        system-system-spacing.padding = #3
+      }
     }
   }
 
@@ -108,7 +107,9 @@ ub = \upbow
         midiInstrument = "flute"
       } << \outline \fluteIIMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+        system-system-spacing.padding = #3
+      }
     }
   }
 
@@ -140,7 +141,11 @@ ub = \upbow
         }
       >>
       % %\midi { }
-      \layout { }
+      \layout {
+        system-system-spacing.basic-distance = #12
+        system-system-spacing.minimum-distance = #8
+        system-system-spacing.padding = #3
+      }
     }
   }
 
@@ -159,7 +164,11 @@ ub = \upbow
         }
       >>
       %\midi { }
-      \layout { }
+      \layout {
+        system-system-spacing.basic-distance = #12
+        system-system-spacing.minimum-distance = #8
+        system-system-spacing.padding = #3
+      }
     }
   }
 
@@ -173,7 +182,9 @@ ub = \upbow
       }
       << \outline \bassoonMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+        system-system-spacing.padding = #3
+      }
     }
   }
 
@@ -359,11 +370,13 @@ ub = \upbow
       \header { piece = "Viola" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        \override Slur.details = #'((stem-encompass-penalty . 1.0)
+                                   )
         midiInstrument = "viola"
       } << \outline \violaMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+      }
     }
   }
 
@@ -377,7 +390,8 @@ ub = \upbow
         midiInstrument = "cello"
       } << \outline \celloMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+      }
     }
   }
 
@@ -389,7 +403,8 @@ ub = \upbow
         midiInstrument = "contrabass"
       } << \outline \bassMusic >>
       %\midi { }
-      \layout { }
+      \layout {
+      }
     }
   }
 

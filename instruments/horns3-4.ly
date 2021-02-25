@@ -191,41 +191,46 @@ hornIIIAndIVMusic = \relative c' {
   % \bar "||" % measure 131
   R2.*23 |
 
-  r4 r 
   <<
-    \relative c, {
-      e4( |
-      a4 e') e-- |
-      e2-^ r4 |
-      d2.->( |
-      cis2) r4 |
-      d2.->( |
-      cis2) d4 |
-      cis2.-^~ |
-      cis4 r r\fermata |
-    } \\
-    \relative c, {
-      e4( |
-      a4 e) e-- |
-      e2-^ r4 |
-      e2.->~ |
-      e2 r4 |
-      e2.->~ |
-      e2 f4 |
-      e2.-^~ |
-      e4 r r |
-    }
-    \new Dynamics {
-      \override Hairpin.to-barline = ##f
-      s4_\pp |
-      s2.\< |
-      s2\! s4 |
-      s2._\f |
-      s2. |
-      s2. |
-      s2\dim s4\! |
-      s2.\< |
-      s2._\sf |
+    \repeat unfold 9 { s2. | \noBreak }
+    {
+      r4 r 
+      <<
+        \relative c, {
+          e4( |
+          a4 e') e-- |
+          e2-^ r4 |
+          d2.->( |
+          cis2) r4 |
+          d2.->( |
+          cis2) d4 |
+          cis2.-^~ |
+          cis4 r r\fermata |
+        } \\
+        \relative c, {
+          e4( |
+          a4 e) e-- |
+          e2-^ r4 |
+          e2.->~ |
+          e2 r4 |
+          e2.->~ |
+          e2 f4 |
+          e2.-^~ |
+          e4 r r |
+        }
+        \new Dynamics {
+          \override Hairpin.to-barline = ##f
+          s4_\pp |
+          s2.\< |
+          s2\! s4 |
+          s2._\f |
+          s2. |
+          s2. |
+          s2\dim s4\! |
+          s2.\< |
+          s2._\sf |
+        }
+      >>
     }
   >>
 }

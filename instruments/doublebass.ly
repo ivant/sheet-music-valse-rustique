@@ -145,7 +145,7 @@ bassMusic = \relative c {
   R2.*3 |
 
   % \bar "||" % measure 99
-  \break
+  \pageBreak
   \key a \major
   <<
     \repeat unfold 16 { s2. | \noBreak s2. | }
