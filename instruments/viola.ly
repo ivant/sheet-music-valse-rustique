@@ -79,28 +79,43 @@ violaMusic = \relative c' {
       e2-- r4 |
       r4 a--( a--) | \noBreak
       a2-- r4 |
-      r4 f--( f--) | \noBreak
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      f--( f--) | \noBreak
       f2-> r4 |
       r4 c'--( c--) | \noBreak
       d2-> r4 |
       r4 e--( e--) | \noBreak
       e2-> r4 |
     } \relative c {
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
       f4--( f--) |
       f2-- r4 |
-      r4 f4--( f--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      f4--( f--) |
       f2-- r4 |
-      r4 f--( f--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      f--( f--) |
       f2. |
-      r4 c--( c--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      c--( c--) |
       c2-- r4 |
-      r4 f--( f--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      f--( f--) |
       f2-- r4 |
       s2. | % r4 f--( f--) |
       s2. | % f2-> r4 |
-      r4 e--( e--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      e--( e--) |
       e2-> r4 |
-      r4 a--( a--) |
+      r4
+      \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -0.5)) Slur
+      a--( a--) |
       a2-> r4 |
     }
     \new Dynamics {
@@ -262,10 +277,12 @@ violaMusic = \relative c' {
       gis2 e'4) |
       dis2.( | \noBreak
       bis2 fis4) |
+      \shape #'((0 . 0.0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
       gis2( cis4~ | \noBreak
       cis2 ais4) |
       gis2.-^(
       dis4 cis bis) |
+      \shape #'((0 . 0.0) (0 . 0.5) (0 . 0.5) (0 . 0)) Slur
       gis'2( cis4 | \noBreak
       gis2) r4 |
       bis2( dis4 | \noBreak
@@ -348,6 +365,7 @@ violaMusic = \relative c' {
       d2.->) | \break
       e2 fis,4( |
       a4-> gis2) |
+      \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -0.2)) Slur
       e2( f4--) |
       e2.^^ |
       <cis' e,>4
