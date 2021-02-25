@@ -358,7 +358,9 @@ ub = \upbow
       \header { piece = "Violin 2" breakbefore = #splitParts }
       \new Staff \with {
         \consists "Merge_rests_engraver"
-        \override Slur.details = #'((stem-encompass-penalty . 1.0))
+        \override Slur.details = #'((stem-encompass-penalty . 1.0)
+                                    (free-head-distance . 0.5)
+                                   )
         midiInstrument = "violin"
       } << \outline \violinIIMusic >>
       %\midi { }

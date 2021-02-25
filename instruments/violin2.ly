@@ -46,24 +46,40 @@ violinIIMusic = \relative c' {
   cis2. |
   % \bar "||" % measure 35
   \key f \major
-  c?4_\p) c--( d--) |
+  c?4_\p)
+  \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+  c--( d--) |
   c2-- r4 |
-  r4 c--( d--) |
+  r4
+  \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+  c--( d--) |
   c2-- r4 |
   <<
     {
-      r4 c--( c--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      c--( c--) |
       <d b>2. |
-      r4 g,--( a--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      g,--( a--) |
       g2-- r4 |
 
-      r4 c--( d--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      c--( d--) |
       c2-- r4 |
-      r4 <d a>--( <d b>--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      <d a>--( <d b>--) |
       <d a>2^> r4 |
-      r4 <e a,>--( <fis a,>--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      <e a,>--( <fis a,>--) |
       <gis b,>2^> r4 |
-      r4 c,--( <d b>--) |
+      r4
+      \shape #'((0 . -0.2) (0 . 0) (0 . 0) (0 . -0.2)) Slur
+      c,--( <d b>--) |
       c2-> r4 |
     }
     \new Dynamics {
@@ -144,7 +160,9 @@ violinIIMusic = \relative c' {
   r4 <d b>--( <d b>--) |
   <d b>4 r r |
   R2.*3 |
-  r4 r e( | \noBreak
+  r4 r
+  \shape #'((0 . 0) (0 . 1) (0 . 0) (0 . 0)) Slur
+  e( | \noBreak
   cis'2.\<~ |
   cis4 d dis) |
   e2._\f~( |
@@ -159,8 +177,7 @@ violinIIMusic = \relative c' {
   dis2 bis4) |
   cis2\<( gis'4 |
   fisis2_\sf\> cis4) |
-  bis2.^^\!~(
-  _\markup { \teeny "Save bow" } |
+  bis2.^^\!~( | \noBreak
   bis4 a? gis) |
   \override Hairpin.to-barline = ##f
   cis2\<( e4 |
