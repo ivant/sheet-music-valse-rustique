@@ -228,6 +228,7 @@ bassoonMusic = \relative c'' {
   b2_\sf r4 |
   R2.*7 |
 
+  \pageBreak
   % \bar "||" % measure 99
   \key a \major
   R2.*4 |
