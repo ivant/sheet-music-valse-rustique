@@ -67,7 +67,7 @@ ub = \upbow
 }
 
 \header {
-  title = "Valse Rustique"
+  title = "Valse rustique"
   composer = "Samuel Coleridge-Taylor"
 % tagline = "[2020-02-22, v.5]"
   tagline = ""
